@@ -24,3 +24,12 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.titulosResponsive{
+  @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4;
+}
+
+.textoResponsive{
+  @apply font-bold text-lg text-2xl text-justify;
+}
+
