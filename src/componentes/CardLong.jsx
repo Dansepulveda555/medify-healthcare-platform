@@ -8,7 +8,8 @@ import Typography from '@mui/material/Typography';
 
 export default function ImgMediaCard({imagen, titulo, descripcion}) {
   return (
-    <Card sx={{ maxWidth: 345, backgroundColor: '#1e1e1e', color: '#fff' }}>
+<div className='flex flex-col h-full'>
+      <Card className='h-full' sx={{ maxWidth: 345, backgroundColor: '#1e1e1e', color: '#fff' }}>
       <CardMedia
         component="img"
         alt="green iguana"
@@ -28,5 +29,6 @@ export default function ImgMediaCard({imagen, titulo, descripcion}) {
         <Button size="small" sx={{ color: '#90caf9' }}>Mas Informacion</Button>
       </CardActions>
     </Card>
+</div>
   );
 }

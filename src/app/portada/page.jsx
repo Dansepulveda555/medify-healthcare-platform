@@ -1,10 +1,12 @@
 "use client"
 import { Michroma } from "next/font/google";
+import GradientText from "@/componentes/GradientText";
 const michroma = Michroma({ subsets: ["latin"], weight: "400" });
-
 
 import Navbar from "@/componentes/navbar";
 import Orb from "@/componentes/orbe";
+import SplashCursor from "@/componentes/Splash";
+
 
 export default function Portada(){
   return(
@@ -17,9 +19,11 @@ export default function Portada(){
     </div>
   </div>
 
-
-
-
+  <div className="flex justify-start w-full">
+<GradientText colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]} animationSpeed={3} showBorder={false} className="custom-class">
+<h3 className="titulosResponsive2">Desarrollo web de alto nivel para negocios de alto nivel</h3>
+</GradientText>
+  </div>
 
 </div>
   )

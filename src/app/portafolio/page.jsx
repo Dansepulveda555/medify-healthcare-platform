@@ -1,5 +1,7 @@
 "use client"
+import TextType from '@/componentes/TextType';
 import FlowingMenu from "@/componentes/FlowingMenu";
+
 
 export default function Portafolio() {
   const demoItems = [
@@ -26,14 +28,23 @@ export default function Portafolio() {
   ];
   return (
     
-    <div className="">
+    <div>
 
       <div>
-        <h1 className="titulosResponsive" >Nuestros Proyectos</h1><br /><br />
+        <TextType className='titulosResponsive'
+  text={["Conoce Nuestros Proyectos", " Y Sumate a la era digital", "Junto a Desarrolladores expertos"]}
+  typingSpeed={50}
+  pauseDuration={2500}
+  showCursor={true}
+  cursorCharacter="|"
+/>
       </div>
-
       <div style={{ height: "600px", position: "relative" }}>
         <FlowingMenu items={demoItems} />
+      </div>
+
+      <div>
+        
       </div>
     </div>
   );
