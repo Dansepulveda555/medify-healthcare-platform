@@ -30,8 +30,8 @@ export default function Servicios() {
 
   return (
     <div className="grid grid-cols-1 p-12">
-      <h1 className="titulosResponsive">
-        Conoce Nuestros Servicios de Desarrollo y publicidad
+      <h1 className="text text-4xl md:text-5xl lg:text-7xl font-black justify-center px-8 mb-8">
+        Nuestros Servicios
       </h1>
 
       <div className="

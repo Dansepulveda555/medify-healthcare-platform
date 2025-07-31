@@ -10,7 +10,7 @@ import AccordionUsage from "@/componentes/Acordeon";
 
 export default function LandingPage() {
   const cuerpo3 = "";
-
+<SplashCursor></SplashCursor>
   return (
     <div>
      

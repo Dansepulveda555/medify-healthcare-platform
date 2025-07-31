@@ -29,10 +29,11 @@ export default function Portafolio() {
   return (
     
     <div>
+      <br /><br /><br /><br /><br />
 
       <div>
-        <TextType className='titulosResponsive'
-  text={["Conoce Nuestros Proyectos", " Y Sumate a la era digital", "Junto a Desarrolladores expertos"]}
+        <TextType className='text text-3xl md:text-7xl font-black px-16 mb-16'
+  text={["Conoce Nuestros Proyectos", " Y trabaja tu negocio", "Junto a Desarrolladores expertos"]}
   typingSpeed={50}
   pauseDuration={2500}
   showCursor={true}
