@@ -1,13 +1,25 @@
 import ScrollVelocity from "@/componentes/InfiniteScroll";
+import GradientText from "@/componentes/GradientText";
 
 export default function Footer(){
     return(
        <>
 <div>
+
+
+  <div>
+  <div className="flex justify-center w-full">
+<GradientText colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]} animationSpeed={3} showBorder={false} className="">
+<h3 className="text-3xl font-black">Desarrollo web de alto nivel para negocios de alto nivel</h3>
+</GradientText><br /><br /><br /><br />
+  </div>
+
+  
+  </div>
     <div>
 
 <ScrollVelocity
-  texts={['JavaScript - React - Taildwind - Bootstrap - CSS - HTML5 -']} 
+  texts={['JavaScript - React - Taildwind - Bootstrap - CSS - HTML5 - C# - Java - Python - NextJS -']} 
   velocity={30} 
   className="custom-scroll-text"
 

@@ -5,8 +5,9 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import Link from 'next/link';
 
-export default function ImgMediaCard({imagen, titulo, descripcion}) {
+export default function ImgMediaCard({imagen, titulo, descripcion, pagina}) {
   return (
 <div className='flex flex-col h-full'>
       <Card className='h-full' sx={{ maxWidth: 345, backgroundColor: '#1e1e1e', color: '#fff' }}>
@@ -25,8 +26,10 @@ export default function ImgMediaCard({imagen, titulo, descripcion}) {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small" sx={{ color: '#90caf9' }}>Mas</Button>
-        <Button size="small" sx={{ color: '#90caf9' }}>Mas Informacion</Button>
+        <Link href={pagina} passHref>
+        <Button size="small" sx={{ color: '#90caf9' }}>Mas Informacion</Button> 
+        </Link>
+      
       </CardActions>
     </Card>
 </div>

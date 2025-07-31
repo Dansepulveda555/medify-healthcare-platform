@@ -36,16 +36,22 @@ export default function Servicios() {
 
       <div className="
       grid
-      grid-cols-4
-      gap-x-6
-      p-10
-      
+      grid-cols-1
+      md:grid-cols-4
+      lg:grid-cols-4
+      xl:grid-cols-4
+
+      justify-center
+      gap-8
+      px-8
+
       ">
         <div>
           <CardLong
             imagen={imagen1}
             titulo={titulo1}
             descripcion={descripcion1}
+            pagina={"/landingpages"}
           ></CardLong>
         </div>
 
@@ -54,6 +60,7 @@ export default function Servicios() {
             imagen={imagen2}
             titulo={titulo2}
             descripcion={descripcion2}
+            pagina={"/landingpages"}
           ></CardLong>
         </div>
 
@@ -62,6 +69,7 @@ export default function Servicios() {
             imagen={imagen3}
             titulo={titulo3}
             descripcion={descripcion3}
+            pagina={"/landingpages"}
           ></CardLong>
         </div>
 
@@ -70,6 +78,7 @@ export default function Servicios() {
             imagen={imagen4}
             titulo={titulo4}
             descripcion={descripcion4}
+            pagina={"/landingpages"}
           ></CardLong>
         </div>
       </div>

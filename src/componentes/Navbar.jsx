@@ -10,7 +10,7 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Typography from '@mui/material/Typography';
 
-const pages = ['Products', 'Pricing', 'Blog'];
+const pages = ['Portafolio', 'Contacto', 'Servicios'];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -49,7 +49,7 @@ function ResponsiveAppBar() {
                 textDecoration: 'none',
               }}
             >
-              NexusDev
+              NEX.IO
             </Typography>
 
             <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>

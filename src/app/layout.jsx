@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Poppins, Dancing_Script } from "next/font/google";
+import FloatingActionButtons from "@/componentes/FloatingActionButtons";
 
 
 
@@ -29,7 +30,11 @@ const geistMono = Geist_Mono({
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <header>
+        
+      </header>
       <body className={`${poppins.className} antialiased`}>
+        <FloatingActionButtons position={{ bottom: 16, right: 16 }} />
         {children}
       </body>
     </html>
