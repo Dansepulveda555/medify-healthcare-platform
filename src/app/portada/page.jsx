@@ -4,8 +4,8 @@ import { Michroma } from "next/font/google";
 import GradientText from "@/componentes/GradientText";
 const michroma = Michroma({ subsets: ["latin"], weight: "400" });
 
-import Navbar from "@/componentes/navbar";
-import Orb from "@/componentes/orbe";
+import Navbar from '@/componentes/Navbar'
+import Orb from '@/componentes/Orbe'
 import SplashCursor from "@/componentes/Splash";
 import GooeyNav from '@/componentes/GooeyNav';
 import ScrollVelocity from "@/componentes/InfiniteScroll";
