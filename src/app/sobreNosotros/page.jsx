@@ -29,12 +29,13 @@ export default function SobreNosotros() {
         </p>
       </div>
       <div>
-        <Image
-          src="/portada1.jpg"
-          width={600}
-          height={600}
-          className="w-full h-auto hidden md:block rounded-4xl"
-        />
+     <Image
+  src="/portada1.jpg"
+  width={600}
+  height={600}
+  className="w-full h-auto hidden md:block rounded-4xl"
+  alt="Equipo de desarrollo trabajando en una solución web"
+/>
       </div>
     </div>
   );

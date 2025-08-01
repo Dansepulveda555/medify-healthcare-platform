@@ -1,10 +1,6 @@
-import Image from "next/image";
 import Portada from "./portada/page";
 import SobreNosotros from "./sobreNosotros/page";
 import Servicios from "./servicios/page";
-import proceso from "./proceso/page";
-import Beneficios from "./beneficios/page";
-import Accion from "./accion/page";
 import Footer from "./Footer/page";
 import Portafolio from "./portafolio/page";
 

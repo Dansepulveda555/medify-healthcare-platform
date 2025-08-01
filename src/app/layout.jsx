@@ -29,11 +29,11 @@ const geistMono = Geist_Mono({
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <header>
-        
-      </header>
-      <body className={`${poppins.className} antialiased`}>
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </head>
+      <body className={`${poppins.className} ${geistSans.variable} ${geistMono.variable} antialiased`}>
         <FloatingActionButtons position={{ bottom: 16, right: 16 }} />
         {children}
       </body>

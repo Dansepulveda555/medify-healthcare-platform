@@ -9,8 +9,6 @@ const michroma = Michroma({ subsets: ["latin"], weight: "400" });
 import AccordionUsage from "@/componentes/Acordeon";
 
 export default function LandingPage() {
-  const cuerpo3 = "";
-<SplashCursor></SplashCursor>
   return (
     <div>
      
@@ -59,10 +57,11 @@ gap-7
         <div>
           <Image
             src={"/landing1.png"}
+            alt="Imagen de ejemplo de una landing page"
             width={600}
             height={400}
             className="rounded-4xl"
-          ></Image>
+          />
         </div>
       </div>
 
@@ -96,10 +95,11 @@ gap-7
         <div>
           <Image
             src={"/landing2.png"}
+            alt="Imagen de ejemplo de una landing page"
             width={600}
             height={400}
             className="rounded-4xl"
-          ></Image>
+          />
         </div>
       </div>
 </div>
