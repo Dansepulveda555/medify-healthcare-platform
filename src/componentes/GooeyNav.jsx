@@ -16,6 +16,7 @@ const GooeyNav = ({
   const filterRef = useRef(null);
   const textRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(initialActiveIndex);
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
 
   const noise = (n = 1) => n / 2 - Math.random() * n;
 
@@ -157,20 +158,25 @@ const GooeyNav = ({
     <div className="gooey-nav-container" ref={containerRef}>
       <nav>
         <ul ref={navRef}>
-          {items.map((item, index) => (
-            <li
-              key={index}
-              className={activeIndex === index ? "active" : ""}
-            >
-              <a
-                href={item.href}
-                onClick={(e) => handleClick(e, index)}
-                onKeyDown={(e) => handleKeyDown(e, index)}
+          {items.map((item, index) => {
+            if (isMobile && index === 0) {
+              return null; // Skip the first item on mobile to prevent duplication
+            }
+            return (
+              <li
+                key={index}
+                className={activeIndex === index ? "active" : ""}
               >
-                {item.label}
-              </a>
-            </li>
-          ))}
+                <a
+                  href={item.href}
+                  onClick={(e) => handleClick(e, index)}
+                  onKeyDown={(e) => handleKeyDown(e, index)}
+                >
+                  {item.label}
+                </a>
+              </li>
+            );
+          })}
         </ul>
       </nav>
       <span className="effect filter" ref={filterRef} />

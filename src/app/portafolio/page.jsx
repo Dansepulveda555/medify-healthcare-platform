@@ -32,8 +32,8 @@ export default function Portafolio() {
       <br /><br /><br /><br /><br />
 
       <div>
-        <TextType className='text text-3xl md:text-7xl font-black px-16 mb-16'
-  text={["Conoce Nuestros Proyectos", " Y trabaja tu negocio", "Junto a Desarrolladores expertos"]}
+        <TextType className='text text-2xl md:text-7xl font-black px-16 mb-16'
+  text={["Conoce Nuestros Proyectos", "Trabaja con", "Expertos en Desarrollo"]}
   typingSpeed={50}
   pauseDuration={2500}
   showCursor={true}

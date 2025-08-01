@@ -13,8 +13,7 @@ export default function Footer(){
   </div>
 
 </div>
-
-       <footer className="bg-white dark:bg-gray-900">
+       <footer className="bg-gray-900 text-white">
   <div className="mx-auto max-w-screen-xl px-4 pt-16 pb-8 sm:px-6 lg:px-8 lg:pt-24">
     <div className="text-center">
       <h2 className="text-3xl font-extrabold text-gray-900 sm:text-5xl dark:text-white">

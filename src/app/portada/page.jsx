@@ -16,7 +16,7 @@ export default function Portada(){
 const items = [
   { label: "Contratacion", href: "#" },
   { label: "Cotizar", href: "#" },
-  { label: "Nuestro Método", href: "#" },
+  { label: "Método", href: "#" },
 ];
 
 
