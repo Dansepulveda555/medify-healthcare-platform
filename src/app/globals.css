@@ -24,11 +24,12 @@ body {
   @apply text-5xl font-bold mb-4 p-8 text-justify;
 }
 
-.titulosResponsive2{
-  @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 p-8;
+
+.subtitulosResponsive{
+  @apply   md:text-3xl font-bold mb-4 p-8 text-center;
 }
 
 .textoResponsive{
-  @apply font-bold text-justify text-lg md:text-2xl lg:text-3xl xl:text-3xl text-justify;
+  @apply md:text-2xl font-bold text-justify ;
 }
 

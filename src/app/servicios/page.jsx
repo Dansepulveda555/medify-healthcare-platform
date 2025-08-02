@@ -40,10 +40,13 @@ export default function Servicios() {
       md:grid-cols-4
       lg:grid-cols-4
       xl:grid-cols-4
-
       justify-center
       gap-8
-      px-8
+
+      px-2 sm:px-4 md:px-8
+      py-2 sm:py-6 md:py-12
+      
+
 
       ">
         <div>

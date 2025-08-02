@@ -55,8 +55,8 @@ const items = [
 
             <div className="flex justify-center w-full">
 <GradientText colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]} animationSpeed={3} showBorder={false} className="">
-<h3 className="text-3xl font-black">Desarrollo web de alto nivel para negocios de alto nivel</h3>
-</GradientText><br /><br /><br /><br />
+<h3 className="text-2xl md:text-3xl font-black text-center">Desarrollo web de alto nivel para negocios de alto nivel</h3>
+</GradientText><br /><br /><br /><br /><br /><br />
   </div>
 
 
