@@ -10,7 +10,7 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Typography from '@mui/material/Typography';
 
-const pages = ['Soporte Tecnico', ' Contacto ', 'Contratacion'];
+const pages = ['Soporte', 'Contacto ', 'Contratacion'];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -43,7 +43,7 @@ function ResponsiveAppBar() {
               sx={{
                 mr: 2,
                 display: { xs: 'none', md: 'flex' },
-                fontFamily: 'monospace',
+                fontFamily: 'michroma',
                 fontWeight: 700,
                 letterSpacing: '.3rem',
                 textDecoration: 'none',
@@ -80,7 +80,7 @@ function ResponsiveAppBar() {
                     <Typography
                       className={michroma.className}
                       style={{ color: 'white' }}
-                      sx={{ textAlign: 'center' }}
+                      sx={{ textAlign: 'center', fontFamily: 'michroma' }}
                     >
                       {page}
                     </Typography>
@@ -104,9 +104,10 @@ function ResponsiveAppBar() {
                 fontWeight: 700,
                 letterSpacing: '.3rem',
                 textDecoration: 'none',
+                fontSize: { xs: '0.9rem', sm: '1rem', md: '1.25rem' }
               }}
             >
-              Intelligence Operative
+             Next Intelligence Online
             </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
               {pages.map((page) => (
@@ -115,7 +116,7 @@ function ResponsiveAppBar() {
                   onClick={handleCloseNavMenu}
                   className={michroma.className}
                   style={{ color: 'white' }}
-                  sx={{ my: 2, display: 'block' }}
+                  sx={{ my: 2, display: 'block', fontFamily: 'michroma' }}
                 >
                   {page}
                 </Button>

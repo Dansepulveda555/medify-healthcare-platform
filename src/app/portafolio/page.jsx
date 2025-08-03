@@ -31,9 +31,15 @@ export default function Portafolio() {
     <div>
       <br /><br /><br /><br /><br />
 
-      <div>
+      <div className='block md:hidden'>
+          <h1 className="text text-4xl md:text-5xl lg:text-7xl font-black justify-center px-8 mb-8">
+        Nuestros Proyectos
+      </h1>
+      </div>
+
+      <div className='hidden sm:block'>
         <TextType className='text text-2xl md:text-7xl font-black px-16 mb-16'
-  text={["Conoce Nuestros Proyectos", "Trabaja con", "Expertos en Desarrollo"]}
+  text={["Conoce Nuestros Proyectos", "Y Trabaja con", "Expertos en Desarrollo de Software"]}
   typingSpeed={50}
   pauseDuration={2500}
   showCursor={true}

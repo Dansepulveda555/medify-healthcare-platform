@@ -1,8 +1,10 @@
+'use client'
 import Portada from "./portada/page";
 import SobreNosotros from "./sobreNosotros/page";
 import Servicios from "./servicios/page";
 import Footer from "./Footer/page";
 import Portafolio from "./portafolio/page";
+import ScrollReveal from "../componentes/ScrollReveal";
 
 export default function Home() {
   return (

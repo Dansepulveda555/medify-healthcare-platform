@@ -1,22 +1,29 @@
 import Link from "next/link"
-
+import BotoinMui from "@/componentes/BotonMui";
 
 
 export default function NavbarTai(){
+
+    const precios = 'Precios'
+    const Servicios = 'Servicios'
+    const contacto = 'Proyectos'
     return(
         <div className="
         flex 
         justify-center 
         p-8 
         space-x-8
-        text-2xl
+        text-base
         font-bold
+        md:text-2xl
+
+
 
          ">
         
-        <h5 className="hover:text-blue-900 transition duration-300">Precios</h5>
-        <h5 className="hover:text-blue-900 transition duration-300">Servicios</h5>
-        <h5 className="hover:text-blue-900 transition duration-300">Proyectos</h5>
+  <BotoinMui contenido={precios}></BotoinMui>
+   <BotoinMui contenido={Servicios}></BotoinMui>
+    <BotoinMui contenido={contacto}></BotoinMui>
         
         </div>
     )

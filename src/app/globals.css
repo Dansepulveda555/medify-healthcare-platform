@@ -33,3 +33,12 @@ body {
   @apply md:text-2xl font-bold text-justify ;
 }
 
+
+.estiloPlanes{
+  @apply 
+border
+rounded-2xl
+p-8
+bg-blue-950
+}
+

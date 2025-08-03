@@ -10,16 +10,19 @@ import SplashCursor from "@/componentes/Splash";
 import GooeyNav from '@/componentes/GooeyNav';
 import ScrollVelocity from "@/componentes/InfiniteScroll";
 import NavbarTai from '@/componentes/NavbarTai';
+import Aurora from '@/componentes/Aurora';
 
 
 export default function Portada(){
-
-  // update with your own items
 
   return(
 <div>
 
   <Navbar></Navbar>
+  <div>
+<Aurora></Aurora>
+
+  </div>
   
 
   <div>
@@ -36,16 +39,13 @@ export default function Portada(){
   </div>
 
 
-
-  
-
   <div>
         <div>
 
             <div className="flex justify-center w-full">
 <GradientText colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]} animationSpeed={3} showBorder={false} className="">
 <h3 className="text-2xl md:text-3xl font-black text-center">Desarrollo web de alto nivel para negocios de alto nivel</h3>
-</GradientText><br /><br /><br /><br /><br /><br />
+</GradientText><br /><br /><br /><br />
   </div>
 
 

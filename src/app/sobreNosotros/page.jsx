@@ -29,11 +29,11 @@ export default function SobreNosotros() {
         </div>
         <div>
           <Image
-            src="/grandes.jpg"
-            width={200}
-            height={100}
+            src="/cima.jpg"
+            width={600}
+            height={400}
             alt="Equipo de desarrollo trabajando en soluciones web"
-            className="rounded-4xl w-full h-auto object-cover hidden md:block lg:block"
+            className="rounded-4xl w-200 h-auto object-cover hidden md:block lg:block"
           />
         </div>
       </div>
