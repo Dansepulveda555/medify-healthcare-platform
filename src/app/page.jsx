@@ -21,9 +21,7 @@ export default function Home() {
       <div>
         <SobreNosotros></SobreNosotros>
       </div>
-      <div>
-        <Footer></Footer>
-      </div>
+  
     </div>
   );
 }

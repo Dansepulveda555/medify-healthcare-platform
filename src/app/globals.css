@@ -33,6 +33,9 @@ body {
   @apply md:text-2xl font-bold text-justify ;
 }
 
+.textoResponsive2{
+  @apply text-xs md:text-2xl font-bold text-justify ;
+}
 
 .estiloPlanes{
   @apply 

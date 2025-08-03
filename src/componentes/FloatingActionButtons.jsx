@@ -15,7 +15,18 @@ export default function FloatingActionButtons({
 }) {
   return (
     <Box>
-      <Tooltip title={tooltip} placement="left">
+      <Tooltip 
+        title={tooltip} 
+        placement="left"
+        componentsProps={{
+          tooltip: {
+            sx: {
+              fontSize: "16px",   // tamaño de letra más grande
+              padding: "8px 12px" // más espacio interno
+            }
+          }
+        }}
+      >
         <Fab
           color={color}
           aria-label={tooltip}

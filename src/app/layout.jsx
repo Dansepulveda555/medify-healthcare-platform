@@ -1,7 +1,10 @@
+'use client'
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Poppins, Dancing_Script } from "next/font/google";
 import FloatingActionButtons from "@/componentes/FloatingActionButtons";
+import Footer from "./Footer/page";
+
 
 
 
@@ -34,8 +37,11 @@ export default function RootLayout({ children }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body className={`${poppins.className} ${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <FloatingActionButtons position={{ bottom: 16, right: 16 }} />
+        <FloatingActionButtons tooltip={'Hablar con Manager IT'} position={{ bottom: 16, right: 16 }} />
         {children}
+            <div>
+        <Footer></Footer>
+      </div>
       </body>
     </html>
   );
