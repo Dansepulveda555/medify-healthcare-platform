@@ -13,7 +13,7 @@ export default function BasicButtons({contenido}) {
     <Stack spacing={2} direction="row">
       <Button 
         variant="contained"
-        className={michroma.className}
+        className={michroma.className }
         sx={{ 
           backgroundColor: '#2E0057',
           '&:hover': { backgroundColor: '#1E003A' },
@@ -24,7 +24,9 @@ export default function BasicButtons({contenido}) {
           paddingBottom: { xs: '6px', sm: '8px', md: '10px' },
           fontSize: { xs: '0.75rem', sm: '0.875rem', md: '1rem' },
           fontWeight: 'bold',
-          fontFamily: 'michroma'
+          fontFamily: 'michroma',
+          minWidth: '140px',
+          textAlign: 'center'
         }}
       >
         {contenido}
