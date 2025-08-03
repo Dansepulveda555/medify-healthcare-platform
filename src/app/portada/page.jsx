@@ -34,7 +34,7 @@ export default function Portada(){
 
 
 
-  <div>
+  <div className='w-full'>
 <NavbarTai></NavbarTai>
   </div>
 

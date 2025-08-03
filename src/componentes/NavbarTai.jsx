@@ -9,16 +9,12 @@ export default function NavbarTai(){
     const contacto = 'Proyectos'
     return(
         <div className="
-        flex 
+        flex flex-row
         justify-center 
         p-8 
         space-x-8
-        text-base
+        text-base md:text-2xl
         font-bold
-        md:text-2xl
-
-
-
          ">
         
   <BotoinMui contenido={precios}></BotoinMui>
