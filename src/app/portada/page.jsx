@@ -9,16 +9,12 @@ import Orb from '@/componentes/Orbe'
 import SplashCursor from "@/componentes/Splash";
 import GooeyNav from '@/componentes/GooeyNav';
 import ScrollVelocity from "@/componentes/InfiniteScroll";
+import NavbarTai from '@/componentes/NavbarTai';
+
 
 export default function Portada(){
 
   // update with your own items
-const items = [
-  { label: "Contratacion", href: "#" },
-  { label: "Cotizar", href: "#" },
-  { label: "Método", href: "#" },
-];
-
 
   return(
 <div>
@@ -34,19 +30,12 @@ const items = [
   </div>
 
 
-<div style={{ height: '60px', position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-  <GooeyNav
-    items={items}
-    particleCount={15}
-    particleDistances={[90, 10]}
-    particleR={100}
-    initialActiveIndex={0}
-    animationTime={600}
-    timeVariance={300}
-    colors={[1, 2, 3, 1, 2, 3, 1, 4]}
-  />
-</div><br />
- 
+
+  <div>
+<NavbarTai></NavbarTai>
+  </div>
+
+
 
   
 

@@ -10,7 +10,7 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Typography from '@mui/material/Typography';
 
-const pages = ['Portafolio', 'Contacto', 'Servicios'];
+const pages = ['Soporte Tecnico', ' Contacto ', 'Contratacion'];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -106,7 +106,7 @@ function ResponsiveAppBar() {
                 textDecoration: 'none',
               }}
             >
-              Next Level Web
+              Intelligence Operative
             </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
               {pages.map((page) => (
