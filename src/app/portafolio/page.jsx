@@ -6,7 +6,7 @@ import FlowingMenu from "@/componentes/FlowingMenu";
 export default function Portafolio() {
   const demoItems = [
     {
-      link: "#",
+      link: "/paginasWeb",
       text: "Paginas Web",
       image: "",
     },

@@ -54,7 +54,7 @@ export default function Servicios() {
             imagen={imagen1}
             titulo={titulo1}
             descripcion={descripcion1}
-            pagina={"/landingpages"}
+            pagina={"/paginasWeb"}
           ></CardLong>
         </div>
 
@@ -72,7 +72,7 @@ export default function Servicios() {
             imagen={imagen3}
             titulo={titulo3}
             descripcion={descripcion3}
-            pagina={"/landingpages"}
+            pagina={"/eCommerce"}
           ></CardLong>
         </div>
 
@@ -81,7 +81,7 @@ export default function Servicios() {
             imagen={imagen4}
             titulo={titulo4}
             descripcion={descripcion4}
-            pagina={"/landingpages"}
+            pagina={"/"}
           ></CardLong>
         </div>
       </div>
