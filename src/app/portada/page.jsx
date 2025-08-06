@@ -65,7 +65,7 @@ export default function Portada() {
               className=""
             >
               <h3 className="text-2xl md:text-3xl font-black text-center">
-                Desarrollo web de premium para negocios de alto nivel
+                Desarrollo web premium para negocios de alto nivel
               </h3>
             </GradientText>
             <br />
@@ -76,8 +76,8 @@ export default function Portada() {
 
           <ScrollVelocity
             texts={[
-              "JavaScript - React - Taildwind - Bootstrap - CSS - HTML5 - C# - Java - Python - NextJS -",
-            ]}
+  "Tecnología de Alto Nivel - Experiencia Premium - Soporte Dedicado - Diseño Único - Carga Ultra Rápida -",
+]}
             velocity={30}
             className="custom-scroll-text"
           />
