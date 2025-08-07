@@ -7,7 +7,8 @@ const michroma = Michroma({ subsets: ["latin"], weight: "400" });
 export default function SobreNosotros() {
   return (
     <div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-30 p-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-30 p-10 
+     ">
         <div>
           <h1 className="titulosResponsive">Sobre Nosotros</h1>
           <br />
@@ -25,15 +26,15 @@ export default function SobreNosotros() {
             creando plataformas que transmitan profesionalismo y brinden a sus
             clientes una experiencia excepcional, reflejando la calidad y
             dedicación de su trabajo.
-          </p>
+          </p><br /><br /><br />
         </div>
         <div>
           <Image
-            src="/cima.jpg"
+            src="webstorm.svg"
             width={600}
             height={400}
             alt="Equipo de desarrollo trabajando en soluciones web"
-            className="rounded-4xl w-200 h-auto object-cover hidden md:block lg:block"
+            className="rounded-4xl w-200 h-auto object-cover"
           />
         </div>
       </div>
