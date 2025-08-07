@@ -18,22 +18,24 @@ export default function Home() {
         className=" 
       bg-[url('/wall.png')] bg-cover 
       w-full 
-      h-[80vh]
+     
       grid grid-cols-1 md:grid-cols-5
       justify-center
       "
       >
         <div className="col-span-4">
-          <h2 className="text-3xl md:text-5xl font-bold p-12 text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]">
+      <div className="mt-12">
+            <h2 className="text-3xl md:text-6xl font-bold p-12 text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]">
             Impulsa tu proyecto con tecnología de alto rendimiento
           </h2>
-          <p className="text-2xl md:text-3xl p-12">
+          <p className="text-2xl md:text-3xl  lg:text-6xl p-12">
             Desde arquitecturas escalables hasta experiencias digitales ultra
             rápidas: todas nuestras soluciones están diseñadas para maximizar el
             rendimiento, optimizar procesos y escalar tu negocio con eficiencia.
           </p><br /><br />
-          <div className="flex justify-end mr-6">
-            <BotonBlanco contenido={'Impulsar Mi Negocio'}/>
+      </div>
+          <div className="flex justify-end mr-6 mb-20">
+            <BotonBlanco contenido={'CONTRATAR UN PLAN'}/>
           </div>
         </div>
         <div></div>
