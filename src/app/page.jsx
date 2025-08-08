@@ -27,9 +27,10 @@ export default function Home() {
         <div className="col-span-4">
       <div className="mt-12">
             <h2 className="text-3xl md:text-6xl font-bold p-12 text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]">
-            Impulsa tu proyecto con tecnología de alto rendimiento
+           ¿Buscas una página web para tu empresa?o
           </h2>
           <p className="text-2xl md:text-3xl   p-12">
+            Impulsa tu proyecto con tecnología de alto rendimiento. <br />
             Desde arquitecturas escalables hasta experiencias digitales ultra
             rápidas: todas nuestras soluciones están diseñadas para maximizar el
             rendimiento, optimizar procesos y escalar tu negocio con eficiencia.
