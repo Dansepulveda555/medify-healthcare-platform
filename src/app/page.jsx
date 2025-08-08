@@ -16,11 +16,12 @@ export default function Home() {
       </div>
       <div
         className=" 
-      bg-[url('/wall.png')] bg-cover 
+      bg-[url('/wall3.png')] bg-cover 
       w-full 
      
       grid grid-cols-1 md:grid-cols-5
       justify-center
+      rounded-2xl
       "
       >
         <div className="col-span-4">
@@ -28,7 +29,7 @@ export default function Home() {
             <h2 className="text-3xl md:text-6xl font-bold p-12 text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]">
             Impulsa tu proyecto con tecnología de alto rendimiento
           </h2>
-          <p className="text-2xl md:text-3xl  lg:text-6xl p-12">
+          <p className="text-2xl md:text-3xl   p-12">
             Desde arquitecturas escalables hasta experiencias digitales ultra
             rápidas: todas nuestras soluciones están diseñadas para maximizar el
             rendimiento, optimizar procesos y escalar tu negocio con eficiencia.
@@ -51,7 +52,7 @@ export default function Home() {
       </div>
 
       <div className="
-       bg-[url('/otro.png')] bg-cover 
+       bg-[url('/wall.png')] bg-cover 
       w-full 
       ">
         <SobreNosotros></SobreNosotros>
