@@ -76,6 +76,45 @@ bg-fuchsia-950
   font-bold
 }
 
+.textoNormalResposivo{
+  @apply
+  text-sm
+  md:text-3xl
+  
+}
+
+.textoBoldResponsivo{
+  @apply
+  text-sm
+  md:text-3xl
+  font-bold
+  my-4
+
+}
+
+.inputMorado{
+  @apply
+  bg-black 
+  border-2 border-purple-500 rounded-2xl 
+  w-100 md:w-120 
+  h-8 md:h-12 
+  text-sm md:text-2xl
+  p-4
+}
+
+
+
+.textAreaMorado{
+  @apply
+  bg-black 
+  border-2 border-purple-500 rounded-2xl 
+  w-100 md:w-120 
+  h-30 md:h-60
+  text-sm md:text-2xl
+  
+}
+
+
 
 
 
