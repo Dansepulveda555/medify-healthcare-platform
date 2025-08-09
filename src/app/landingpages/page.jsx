@@ -10,6 +10,7 @@ import AccordionUsage from "@/componentes/Acordeon";
 import BotonMui from "@/componentes/BotonMui";
 import Threads from "@/componentes/Threads";
 import BotonBlanco from "@/componentes/BotonBlanco";
+import Link from "next/link";
 
 export default function LandingPage() {
   return (
@@ -100,14 +101,17 @@ gap-7
                 <li className="list-disc">3 Modificaciones al Año</li>
               
                 <li className="list-disc">Sistema de Agendamiento</li>
-                <br />
+              
+                <h2 className="titulosResponsive">$99.000 CLP</h2>
               </ul>
+              <Link href={'/comprar'}><BotonMui contenido={"Comprar"} /></Link>
+              
             </div>
             <br />
             <br />
-             <h2 className="titulosResponsive">$99.000 CLP</h2>
+             
             <br />
-            <BotonBlanco contenido={'Contratar'}/>
+            
             <br />
             <br />
           </div>

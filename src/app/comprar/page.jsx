@@ -10,7 +10,6 @@ export default function Comprar(){
                     <Aurora></Aurora>
                   </div>
                    <div>
-                                <h1 className="titulosResponsive">Somos tu socio tecnológico. Tú marcas el rumbo, nosotros construimos el camino.</h1>
 
                    </div>
 <div className="">

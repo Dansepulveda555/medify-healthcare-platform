@@ -9,6 +9,9 @@ const michroma = Michroma({ subsets: ["latin"], weight: "400" });
 import AccordionUsage from "@/componentes/Acordeon";
 import BotonMui from "@/componentes/BotonMui";
 import Threads from "@/componentes/Threads";
+
+import Link from "next/link";
+
 export default function PaginasWeb() {
   return (
     <div>
@@ -99,7 +102,7 @@ export default function PaginasWeb() {
               <h3 className="tituloResponsive">350.000 CLP</h3>
               <br />
               <br />
-              <BotonMui contenido={"Comprar"} />
+               <Link href={'/comprar'}><BotonMui contenido={"Comprar"} /></Link>
             </div>
 
             <br />

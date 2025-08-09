@@ -9,8 +9,13 @@ import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Typography from '@mui/material/Typography';
+import { Label } from '@headlessui/react';
 
-const pages = ['Soporte', 'Contacto ', 'Contratacion'];
+const pages = [
+  { label: 'Soporte', href: '/soporte' },
+  { label: 'Contacto', href: '/contacto' },
+  { label: 'Contratación', href: '/comprar' }
+];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -76,13 +81,15 @@ function ResponsiveAppBar() {
                 }}
               >
                 {pages.map((page) => (
-                  <MenuItem key={page} onClick={handleCloseNavMenu}>
+                  <MenuItem key={page.label} onClick={handleCloseNavMenu}>
                     <Typography
                       className={michroma.className}
-                      style={{ color: 'white' }}
+                      component="a"
+                      href={page.href}
+                      style={{ color: 'white', textDecoration: 'none' }}
                       sx={{ textAlign: 'center', fontFamily: 'michroma' }}
                     >
-                      {page}
+                      {page.label}
                     </Typography>
                   </MenuItem>
                 ))}
@@ -112,13 +119,15 @@ function ResponsiveAppBar() {
             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
               {pages.map((page) => (
                 <Button
-                  key={page}
+                  key={page.label}
                   onClick={handleCloseNavMenu}
                   className={michroma.className}
+                  component="a"
+                  href={page.href}
                   style={{ color: 'white' }}
                   sx={{ my: 2, display: 'block', fontFamily: 'michroma' }}
                 >
-                  {page}
+                  {page.label}
                 </Button>
               ))}
             </Box>

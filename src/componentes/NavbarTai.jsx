@@ -4,9 +4,9 @@ import BotoinMui from "@/componentes/BotonMui";
 
 export default function NavbarTai(){
 
-    const precios = 'Precios'
-    const Servicios = 'Proyectos'
-    const contacto = 'Servicios'
+    const contratar = 'Contratar'
+    const proyectos = 'Proyectos'
+    const servicios = 'Servicios'
     return(
         <div className="
         flex flex-row
@@ -17,14 +17,18 @@ export default function NavbarTai(){
         font-bold
          ">
         <div>
-  <BotoinMui contenido={precios}></BotoinMui>
+    <Link href={'/comprar'}><BotoinMui contenido={contratar}></BotoinMui></Link>
         </div>
 <div>
-     <BotoinMui contenido={Servicios}></BotoinMui>
+       <Link href={'/portafolio'}><BotoinMui contenido={proyectos}></BotoinMui></Link>
+       
+     
 </div>
   
   <div className="hidden md:block">
- <BotoinMui contenido={contacto}></BotoinMui>
+    <Link href={'/servicios'}><BotoinMui contenido={servicios}></BotoinMui></Link>
+    
+ 
   </div>
    
         

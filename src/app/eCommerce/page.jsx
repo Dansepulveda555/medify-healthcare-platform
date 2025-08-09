@@ -9,6 +9,7 @@ const michroma = Michroma({ subsets: ["latin"], weight: "400" });
 import AccordionUsage from "@/componentes/Acordeon";
 import BotonMui from "@/componentes/BotonMui";
 import Threads from "@/componentes/Threads";
+import Link from "next/link";
 
 export default function Ecommerce() {
   return (
@@ -120,7 +121,7 @@ gap-7
                   <h3 className="tituloResponsive">500.000 CLP</h3>
                   <br />
                   <br />
-                  <BotonMui contenido={"Comprar"} />
+                <Link href={'/comprar'}><BotonMui contenido={"Comprar"} /></Link>
                 </div>
     
                 <br />
