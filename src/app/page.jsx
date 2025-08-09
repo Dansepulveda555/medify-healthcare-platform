@@ -7,6 +7,8 @@ import Portafolio from "./portafolio/page";
 import ScrollReveal from "../componentes/ScrollReveal";
 import Image from "next/image";
 import BotonBlanco from "@/componentes/BotonBlanco";
+import Link from "next/link";
+
 
 export default function Home() {
   return (
@@ -36,7 +38,7 @@ export default function Home() {
           </p><br /><br />
       </div>
           <div className="flex justify-end mr-6 mb-20">
-            <BotonBlanco contenido={'CONTRATAR UN PLAN'}/>
+            <Link href={'/comprar'}><BotonBlanco contenido={'Comprar AHORA'}/></Link>
           </div>
         </div>
         <div></div>
@@ -52,7 +54,7 @@ export default function Home() {
       </div>
 
       <div className="
-       bg-[url('/wall.png')] bg-cover 
+       bg-[url('/morado1.png')] bg-cover 
       w-full 
       ">
         <SobreNosotros></SobreNosotros>

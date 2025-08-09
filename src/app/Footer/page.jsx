@@ -1,5 +1,6 @@
 
 import GradientText from "@/componentes/GradientText";
+import Image from "next/image";
 
 export default function Footer(){
     return(
@@ -61,8 +62,7 @@ export default function Footer(){
             href="#"
             rel="noreferrer"
             target="_blank"
-            className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
-          >
+            className="text-gray-700 transition hover:opacity-75 dark:text-gray-200">
             <span className="sr-only">Facebook</span>
 
             <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -149,6 +149,8 @@ export default function Footer(){
           </a>
         </li>
       </ul>
+    </div>
+    <div>
     </div>
   </div>
 </footer>
