@@ -97,7 +97,7 @@ export default function Home() {
             <br />
           </div>
           <div className="flex justify-end mr-6 mb-20">
-            <Link href={"/comprar"}>
+            <Link href={"/soporte"}>
               <BotonBlanco contenido={"Plan de Soporte"} />
             </Link>
           </div>
