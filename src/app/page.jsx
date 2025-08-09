@@ -65,12 +65,9 @@ export default function Home() {
       <div>
         <Portafolio></Portafolio>
       </div>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
 
+
+ 
 
       <div
         className="      bg-[url('/infinito.png')] bg-cover 
