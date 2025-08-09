@@ -9,7 +9,12 @@ export default function Comprar(){
                   <div>
                     <Aurora></Aurora>
                   </div>
-           <Stepper
+                   <div>
+                                <h1 className="titulosResponsive">Somos tu socio tecnológico. Tú marcas el rumbo, nosotros construimos el camino.</h1>
+
+                   </div>
+<div className="">
+             <Stepper
   initialStep={1}
   onStepChange={(step) => {
     console.log(step);
@@ -25,7 +30,6 @@ export default function Comprar(){
 
   <Step>
     <h2 className="tituloResponsive"> ¿Como te llamas? </h2><br /><br />
-    <input value={name} onChange={(e) => setName(e.target.value)} placeholder="Nombre" />
 
   </Step>
 
@@ -53,6 +57,7 @@ Revisa tu correo para confirmar los detalles.”
   </Step>
 
 </Stepper>
+</div>
 
         </div>
     )
