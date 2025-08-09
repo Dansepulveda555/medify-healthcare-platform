@@ -6,13 +6,13 @@ import FlowingMenu from "@/componentes/FlowingMenu";
 export default function Portafolio() {
   const demoItems = [
     {
-      link: "/paginasWeb",
+      link: "#",
       text: "Paginas Web",
       image: "",
     },
     {
       link: "#",
-      text: "Landing Pages",
+      text: "Paginas para Profesionales",
       image: "",
     },
     {
@@ -20,11 +20,7 @@ export default function Portafolio() {
       text: "Plataformas de E-Comerce",
       image: "",
     },
-    {
-      link: "#",
-      text: "Aplicaciones Web",
-      image: "",
-    },
+
   ];
   return (
     
@@ -39,11 +35,11 @@ export default function Portafolio() {
 
       <div className='hidden sm:block'>
         <TextType className='text text-2xl md:text-7xl font-black px-16 mb-16'
-  text={["Conoce Nuestros Proyectos", "Y Trabaja con", "Expertos en Desarrollo de Software"]}
-  typingSpeed={50}
-  pauseDuration={2500}
+  text={["Conoce Nuestros Proyectos", "y Trabaja con Expertos"]}
+  typingSpeed={100}
+  pauseDuration={700}
   showCursor={true}
-  cursorCharacter="|"
+  cursorCharacter=">_"
 />
       </div>
       <div style={{ height: "600px", position: "relative" }}>

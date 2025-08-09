@@ -70,7 +70,7 @@ export default function Home() {
  
 
       <div
-        className="      bg-[url('/infinito.png')] bg-cover 
+        className="      bg-[url('/wallet.png')] bg-cover 
       w-full 
      
       grid grid-cols-1 md:grid-cols-5
