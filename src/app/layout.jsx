@@ -4,6 +4,8 @@ import "./globals.css";
 import { Poppins, Dancing_Script } from "next/font/google";
 import FloatingActionButtons from "@/componentes/FloatingActionButtons";
 import Footer from "./Footer/page";
+import Navbar from "@/componentes/Navbar";
+
 
 
 
@@ -38,10 +40,13 @@ export default function RootLayout({ children }) {
       </head>
       <body className={`${poppins.className} ${geistSans.variable} ${geistMono.variable} antialiased`}>
         <FloatingActionButtons tooltip={'Hablar con Manager IT'} position={{ bottom: 16, right: 16 }} />
-        {children}
-            <div>
-        <Footer></Footer>
-      </div>
+        <div className="min-h-screen flex flex-col">
+          <Navbar />
+          <main className="flex-1">
+            {children}
+          </main>
+          <Footer />
+        </div>
       </body>
     </html>
   );

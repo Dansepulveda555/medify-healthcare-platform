@@ -114,7 +114,7 @@ function ResponsiveAppBar() {
                 fontSize: { xs: '0.9rem', sm: '1rem', md: '1.25rem' }
               }}
             >
-             Desarrollo Web Premium
+             Ingenieria de Software
             </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
               {pages.map((page) => (

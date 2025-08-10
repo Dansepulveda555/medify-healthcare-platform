@@ -38,14 +38,14 @@ export default function Footer(){
     >
       <ul className="flex flex-wrap justify-center gap-4 text-xs lg:justify-end">
         <li>
-          <a href="#" className="text-gray-500 transition hover:opacity-75 dark:text-gray-400">
-            Terminos y Condiciones
+          <a href="/contacto" className="text-gray-500 transition hover:opacity-75 dark:text-gray-400">
+            Contactanos
           </a>
         </li>
 
         <li>
-          <a href="#" className="text-gray-500 transition hover:opacity-75 dark:text-gray-400">
-            Politica de Privacidad
+          <a href="/soporte" className="text-gray-500 transition hover:opacity-75 dark:text-gray-400">
+            Soporte Clientes
           </a>
         </li>
 

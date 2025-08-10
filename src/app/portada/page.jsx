@@ -15,15 +15,15 @@ import Aurora from "@/componentes/Aurora";
 export default function Portada() {
   return (
     <div>
-      <Navbar></Navbar>
+      
       <div>
         <Aurora></Aurora>
       </div>
 
       <div>
-                  <div className="flex justify-center">
+                  <div className="flex justify-center ">
             <h6
-              className={`${michroma.className} text-2xl md:text-4xl justify-center`}
+              className={`${michroma.className} text-2xl md:text-4xl text-center`}
             >
               Your Next Intelligence Online
             </h6>
