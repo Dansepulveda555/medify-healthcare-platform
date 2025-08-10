@@ -59,7 +59,7 @@ export default function Portada() {
         
       </div>
 
-      <div className="w-full">
+      <div className="flex justify-center w-full">
         <NavbarTai></NavbarTai>
       </div>
 

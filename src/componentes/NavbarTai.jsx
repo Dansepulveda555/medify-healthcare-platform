@@ -7,6 +7,7 @@ export default function NavbarTai(){
     const contratar = 'Contratar'
     const proyectos = 'Proyectos'
     const servicios = 'Servicios'
+    const contacto = 'Contacto'
     return(
         <div className="
         flex flex-row
@@ -19,7 +20,12 @@ export default function NavbarTai(){
         <div>
     <Link href={'/comprar'}><BotoinMui contenido={contratar}></BotoinMui></Link>
         </div>
-<div>
+
+        <div>
+    <Link href={'/contacto'}><BotoinMui contenido={contacto}></BotoinMui></Link>
+        </div>
+
+<div className="hidden md:block">
        <Link href={'/portafolio'}><BotoinMui contenido={proyectos}></BotoinMui></Link>
        
      
