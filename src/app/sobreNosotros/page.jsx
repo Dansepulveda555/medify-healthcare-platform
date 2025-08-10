@@ -12,16 +12,15 @@ export default function SobreNosotros() {
         <div>
           <h1 className="titulosResponsive">Sobre Nosotros</h1>
           <br />
-          <p className="textoResponsive">
-            Somos una agencia de desarrollo web conformada por un equipo
-            multidisciplinario, enfocado en ofrecer soluciones de alto nivel y
+          <p className="text-2xl md:text-3xl ">
+            Somos una agencia de desarrollo web , enfocado en ofrecer soluciones de alto nivel y
             personalizadas para profesionales y empresas que buscan soluciones
             digitales.
           </p>
           <br />
 
           <br />
-          <p className="textoResponsive">
+          <p className="text-2xl md:text-3xl">
             Nuestro objetivo es llevar su imagen y negocio al siguiente nivel,
             creando plataformas que transmitan profesionalismo y brinden a sus
             clientes una experiencia excepcional, reflejando la calidad y
@@ -52,7 +51,7 @@ export default function SobreNosotros() {
           </div>
 
           <div>
-            <p className="textoResponsive">
+            <p className="text-2xl md:text-3xl">
               No utilizamos plantillas ni soluciones genéricas, usamos todo el
               poder de la ingeniería de software, trabajando con lenguajes de
               programacion y frameworks de alta performance para crear
@@ -76,7 +75,7 @@ export default function SobreNosotros() {
     className={`${michroma.className} subtitulosResponsive`}
 
   >
-    ¿Estas listo para avanzar al siguiente nivel de tu negocio?
+    ¿ Estas listo para avanzar al siguiente nivel ?
   </h2>
 </div>
         

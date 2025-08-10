@@ -48,18 +48,10 @@ const TextType = ({
 
   useEffect(() => {
     if (!startOnVisible || !containerRef.current) return;
-
     const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setIsVisible(true);
-          }
-        });
-      },
+      (entries) => entries.forEach((e) => e.isIntersecting && setIsVisible(true)),
       { threshold: 0.1 }
     );
-
     observer.observe(containerRef.current);
     return () => observer.disconnect();
   }, [startOnVisible]);
@@ -86,49 +78,60 @@ const TextType = ({
       ? currentText.split("").reverse().join("")
       : currentText;
 
-    const executeTypingAnimation = () => {
+    const tick = () => {
       if (isDeleting) {
-        if (displayedText === "") {
+        // 🔧 Caso especial: queda 1 carácter -> en el MISMO frame cambiamos al siguiente texto
+        if (displayedText.length === 1) {
+          const nextIndex =
+            currentTextIndex === textArray.length - 1 ? 0 : currentTextIndex + 1;
+
+          const rawNext = textArray[nextIndex];
+          const nextProcessed = reverseMode
+            ? rawNext.split("").reverse().join("")
+            : rawNext;
+
+          onSentenceComplete?.(textArray[currentTextIndex], currentTextIndex);
+
+          // Swap “sin hueco”: primer carácter del siguiente texto inmediatamente
           setIsDeleting(false);
-          if (currentTextIndex === textArray.length - 1 && !loop) {
-            return;
-          }
+          setCurrentTextIndex(nextIndex);
+          setCurrentCharIndex(1);
+          setDisplayedText(nextProcessed[0] ?? "");
 
-          if (onSentenceComplete) {
-            onSentenceComplete(textArray[currentTextIndex], currentTextIndex);
-          }
+          // Continuamos tipeando el resto sin dejar el span vacío
+          timeout = setTimeout(tick, variableSpeed ? getRandomSpeed() : typingSpeed);
+          return;
+        }
 
-          setCurrentTextIndex((prev) => (prev + 1) % textArray.length);
-          setCurrentCharIndex(0);
-          timeout = setTimeout(() => { }, pauseDuration);
-        } else {
+        // Borrado normal (aún hay >1 caracteres)
+        if (displayedText.length > 1) {
           timeout = setTimeout(() => {
             setDisplayedText((prev) => prev.slice(0, -1));
           }, deletingSpeed);
+        } else {
+          // Si llegamos aquí es que había 0 (raro con el caso anterior, pero lo dejamos por seguridad)
+          setIsDeleting(false);
         }
       } else {
+        // Escribiendo
         if (currentCharIndex < processedText.length) {
-          timeout = setTimeout(
-            () => {
-              setDisplayedText(
-                (prev) => prev + processedText[currentCharIndex]
-              );
-              setCurrentCharIndex((prev) => prev + 1);
-            },
-            variableSpeed ? getRandomSpeed() : typingSpeed
-          );
-        } else if (textArray.length > 1) {
           timeout = setTimeout(() => {
-            setIsDeleting(true);
-          }, pauseDuration);
+            setDisplayedText((prev) => prev + processedText[currentCharIndex]);
+            setCurrentCharIndex((prev) => prev + 1);
+          }, variableSpeed ? getRandomSpeed() : typingSpeed);
+        } else {
+          // Pausa con texto completo visible, luego borrar (si hay más o si loop)
+          if (textArray.length > 1 || loop) {
+            timeout = setTimeout(() => setIsDeleting(true), pauseDuration);
+          }
         }
       }
     };
 
     if (currentCharIndex === 0 && !isDeleting && displayedText === "") {
-      timeout = setTimeout(executeTypingAnimation, initialDelay);
+      timeout = setTimeout(tick, initialDelay);
     } else {
-      executeTypingAnimation();
+      tick();
     }
 
     return () => clearTimeout(timeout);
@@ -152,7 +155,7 @@ const TextType = ({
 
   const shouldHideCursor =
     hideCursorWhileTyping &&
-    (currentCharIndex < textArray[currentTextIndex].length || isDeleting);
+    (currentCharIndex < (textArray[currentTextIndex] || "").length || isDeleting);
 
   return createElement(
     Component,
@@ -163,14 +166,22 @@ const TextType = ({
     },
     <span
       className="text-type__content"
-      style={{ color: getCurrentTextColor() }}
+      style={{
+        color: getCurrentTextColor(),
+        display: "inline-block",
+        minWidth: "1ch",
+        // 👇 “Seguro” visual: nunca permitir fondo blanco del span
+        backgroundColor: "transparent",
+      }}
     >
-      {displayedText}
+      {displayedText || "\u00A0"}
     </span>,
     showCursor && (
       <span
         ref={cursorRef}
-        className={`text-type__cursor ${cursorClassName} ${shouldHideCursor ? "text-type__cursor--hidden" : ""}`}
+        className={`text-type__cursor ${cursorClassName} ${
+          shouldHideCursor ? "text-type__cursor--hidden" : ""
+        }`}
       >
         {cursorCharacter}
       </span>

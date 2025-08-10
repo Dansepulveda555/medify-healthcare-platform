@@ -66,9 +66,6 @@ export default function Home() {
         <Portafolio></Portafolio>
       </div>
 
-
- 
-
       <div
         className="      bg-[url('/wallet.png')] bg-cover 
       w-full 
@@ -82,13 +79,14 @@ export default function Home() {
         <div className="col-span-4 mt-12">
           <div className="mt-12">
             <h2 className="text-3xl md:text-6xl font-bold p-12 text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]">
-              Tu proyecto <strong className="text-cyan-300">No Termina</strong> en la entrga
+              Tu proyecto <strong className="text-cyan-300">No Termina</strong>{" "}
+              en la entrga
             </h2>
             <p className="text-2xl md:text-3xl   p-12">
-              Seguimos a tu lado después de la entrega, encontrando nuevas
-              formas de optimizar y hacer crecer tu proyecto. <br /><br />
-              Creemos en proyectos vivos que crecen y mejoran. Nuestro soporte postventa asegura esa evolución.
-              
+              No te dejamos solo después de la puesta en marcha. Nuestro compromiso es
+              acompañarte de forma constante, escuchando tus necesidades y
+              aplicando las mejoras que desees para que tu proyecto evolucione y
+              se mantenga siempre a la vanguardia.
             </p>
             <br />
             <br />
@@ -99,7 +97,6 @@ export default function Home() {
             </Link>
           </div>
         </div>
-    
       </div>
 
       <div

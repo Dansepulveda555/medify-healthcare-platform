@@ -21,6 +21,13 @@ export default function Portada() {
       </div>
 
       <div>
+                  <div className="flex justify-center">
+            <h6
+              className={`${michroma.className} text-2xl md:text-4xl justify-center`}
+            >
+              Your Next Intelligence Online
+            </h6>
+          </div><br />
         <div
           style={{
             width: "100%",
@@ -49,6 +56,7 @@ export default function Portada() {
             NEX.IO
           </h1>
         </div>
+        
       </div>
 
       <div className="w-full">
@@ -74,13 +82,17 @@ export default function Portada() {
             <br />
           </div>
 
+          <div className="">
           <ScrollVelocity
             texts={[
-  "Tecnología de Alto Nivel - Experiencia Premium - Soporte Dedicado - Diseño Único - Carga Ultra Rápida -",
+           "Soporte Dedicado - E Commerce - Atención Personalizada - Paginas Web premium - Desarrollo a Medida - Carga Ultra Rápida -",
 ]}
             velocity={30}
-            className="custom-scroll-text"
+            className="custom-scroll-text h-[3vh]"
           />
+          </div>
+
+
           <br />
           <br />
         </div>

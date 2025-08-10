@@ -29,23 +29,31 @@ export default function Comprar(){
 
   <Step>
     <h2 className="tituloResponsive"> ¿Como te llamas? </h2><br /><br />
+     <input className="inputMoradostep" type="text" name="nombre" id="nombre" /><br /><br />
 
   </Step>
 
   <Step>
     <h2 className="tituloResponsive"> ¿Cómo podemos hablar contigo?</h2><br /><br />
-    <p>Necesitamos tus datos para que nuestro equipo se comunique contigo y te explique cómo empezaremos a construir tu página</p>
+    <p>Necesitamos tus datos para que nuestro equipo se comunique contigo y te explique cómo empezaremos a construir tu página</p><br /><br />
+         <input className="inputMoradostep" type="text" name="nombre" id="nombre" /><br /><br />
+
   </Step>
 
     <Step>
     <h2 className="tituloResponsive"> 📦 Elige el plan que más se ajuste a ti </h2><br /><br />
-    <p>Selecciona el plan que te interesa. Si no estás seguro, nuestro desarrollador te ayudará a elegir el ideal para tu negocio.</p>
+    <p>Selecciona el plan que te interesa. Si no estás seguro, nuestro desarrollador te ayudará a elegir el ideal para tu negocio.</p><br /><br />
+         <input className="inputMoradostep" type="text" name="nombre" id="nombre" /><br /><br />
+
   </Step>
 
 
     <Step>
     <h2 className="tituloResponsive"> 💳 Selecciona cómo quieres pagar </h2><br /><br />
-    <p> Elige la forma de pago que prefieras. Tu proyecto comenzará tan pronto confirmemos el pago.</p>
+    <p> Elige la forma de pago que prefieras. Tu proyecto comenzará tan pronto confirmemos el pago.</p><br /><br />
+    <input type="checkbox" name="transferencia" id="transferencias" /><label htmlFor="">Transferencia Bancaria</label><br />
+    <input type="checkbox" name="transferencia" id="transferencias" /><label htmlFor="">Tarjeta de Credito</label><br />
+    <input type="checkbox" name="transferencia" id="transferencias" /><label htmlFor="">Tarjeta de Debito</label>
   </Step>
 
      <Step>
