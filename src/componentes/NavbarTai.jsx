@@ -17,7 +17,7 @@ export default function NavbarTai(){
         text-base md:text-2xl
         font-bold
          ">
-        <div>
+        <div className="hidden md:block">
     <Link href={'/comprar'}><BotoinMui contenido={contratar}></BotoinMui></Link>
         </div>
 
