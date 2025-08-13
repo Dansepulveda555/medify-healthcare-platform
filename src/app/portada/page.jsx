@@ -45,11 +45,11 @@ export default function Portada() {
             forceHoverState={false}
           />
           <h1
-            className={michroma.className}
+             className={`${michroma.className} text-5xl `}
             style={{
               position: "absolute",
               color: "#fff",
-              fontSize: "clamp(1.5rem, 5vw, 3rem)",
+              
               fontWeight: "bold",
             }}
           >
