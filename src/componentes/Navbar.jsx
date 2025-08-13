@@ -1,3 +1,4 @@
+"use client"
 import * as React from 'react';
 import { Michroma } from "next/font/google";
 const michroma = Michroma({ subsets: ["latin"], weight: "400" });

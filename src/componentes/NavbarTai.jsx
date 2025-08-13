@@ -1,43 +1,37 @@
-import Link from "next/link"
-import BotoinMui from "@/componentes/BotonMui";
+'use client'
+import Link from 'next/link'
+import BotoinMui from '@/componentes/BotonMui'
 
+export default function NavbarTai() {
+  const contratar = 'Contratar'
+  const proyectos = 'Proyectos'
+  const servicios = 'Servicios'
+  const contacto = 'Contacto'
 
-export default function NavbarTai(){
+  return (
+    <div className="w-full p-6 text-base md:text-2xl font-bold">
+      {/* Mobile: solo Contacto, perfectamente centrado */}
+      <div className="md:hidden w-full flex justify-center">
+        <Link href={'/contacto'} className="block">
+          <BotoinMui contenido={contacto} />
+        </Link>
+      </div>
 
-    const contratar = 'Contratar'
-    const proyectos = 'Proyectos'
-    const servicios = 'Servicios'
-    const contacto = 'Contacto'
-    return(
-        <div className="
-        flex flex-row
-        justify-center 
-        p-8 
-        space-x-8
-        text-base md:text-2xl
-        font-bold
-         ">
-        <div className="hidden md:block">
-    <Link href={'/comprar'}><BotoinMui contenido={contratar}></BotoinMui></Link>
-        </div>
-
-        <div>
-    <Link href={'/contacto'}><BotoinMui contenido={contacto}></BotoinMui></Link>
-        </div>
-
-<div className="hidden md:block">
-       <Link href={'/portafolio'}><BotoinMui contenido={proyectos}></BotoinMui></Link>
-       
-     
-</div>
-  
-  <div className="hidden md:block">
-    <Link href={'/servicios'}><BotoinMui contenido={servicios}></BotoinMui></Link>
-    
- 
-  </div>
-   
-        
-        </div>
-    )
+      {/* Desktop/Tablet: todos los botones centrados en fila */}
+      <div className="hidden md:flex flex-row justify-center items-center gap-8">
+        <Link href={'/comprar'} className="shrink-0">
+          <BotoinMui contenido={contratar} />
+        </Link>
+        <Link href={'/contacto'} className="shrink-0">
+          <BotoinMui contenido={contacto} />
+        </Link>
+        <Link href={'/portafolio'} className="shrink-0">
+          <BotoinMui contenido={proyectos} />
+        </Link>
+        <Link href={'/servicios'} className="shrink-0">
+          <BotoinMui contenido={servicios} />
+        </Link>
+      </div>
+    </div>
+  )
 }

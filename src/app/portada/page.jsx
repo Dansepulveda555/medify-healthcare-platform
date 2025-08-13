@@ -59,9 +59,9 @@ export default function Portada() {
         
       </div>
 
-      <div className="flex justify-center w-full">
+    
         <NavbarTai></NavbarTai>
-      </div>
+   
 
       <div>
         <div>
@@ -88,11 +88,9 @@ export default function Portada() {
            "Soporte Dedicado - E Commerce - Atención Personalizada - Paginas Web premium - Desarrollo a Medida - Carga Ultra Rápida -",
 ]}
             velocity={30}
-            className="custom-scroll-text h-[3vh]"
+            className="custom-scroll-text h-[7vh] text-base md:text-2xl"
           />
           </div>
-
-
           <br />
           <br />
         </div>

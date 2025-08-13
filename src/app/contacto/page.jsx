@@ -21,7 +21,8 @@ export default function Contacto() {
         <Aurora />
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 justify-items-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 justify-items-center 
+        bg-[url('/wall3.png')] bg-cover ">
         <div className="p-10">
           <h6
             className={`${michroma.className} text-3xl md:text-5xl justify-center`}
