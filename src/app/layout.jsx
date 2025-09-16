@@ -1,7 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Poppins, Dancing_Script } from "next/font/google";
-import FloatingActionButtons from "@/componentes/FloatingActionButtons";
 import Footer from "./Footer/page";
 import Navbar from "@/componentes/Navbar";
 import Script from "next/script";
@@ -152,7 +151,6 @@ export default function RootLayout({ children }) {
         }}
       />
       <body className={`${poppins.className} ${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <FloatingActionButtons tooltip={'Cotizar mi Pagina'} position={{ bottom: 16, right: 16 }} />
         <div className="min-h-screen flex flex-col">
           <Navbar />
           <main className="flex-1">
