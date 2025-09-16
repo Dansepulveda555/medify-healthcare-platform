@@ -6,14 +6,15 @@ const tiers = [
     id: 'tier-estatica',
     href: '/comprar',
     priceMonthly: '$55.000 CLP',
-    description: 'Ideal para presentar tu marca con una landing optimizada que tú mismo puedes editar.',
+    description: 'La forma más rápida y profesional de estar online. Una landing moderna enfocada en conversión, con edición simple por tu equipo y performance superior para captar clientes desde el día uno.',
     features: [
-      '1 página landing responsive',
+      '1 página landing responsive (mobile‑first)',
       'Editor de contenido propio (texto e imágenes)',
-      'SEO básico + formulario de contacto',
-      'Integración de analíticas (básica)',
+      'SEO técnico optimizado (Core Web Vitals)',
+      'Formulario de contacto con protección antispam',
       'Deploy y conexión de dominio',
-      'Hosting (opcional)'
+      'Webpay Plus integrado',
+      'Soporte y contrato de servicios por escrito'
     ],
     featured: false,
   },
@@ -25,11 +26,12 @@ const tiers = [
     description: 'Sitio con varias secciones y agendamiento, pensado para captar clientes y operar en múltiples dispositivos.',
     features: [
       'Varias secciones (home, servicios, contacto, etc.)',
-      'Agendamiento / reservas (calendario)',
-      'Panel básico de administración de contenido',
-      'Integración de pagos (Stripe/MercadoPago) opcional',
-      'SEO avanzado y analíticas',
-      'Hosting incluido (opcional)'
+      'Agendamiento / reservas con calendario',
+      'Panel de administración de contenido',
+      'Webpay Plus integrado (Stripe/MercadoPago opcional)',
+      'SEO técnico optimizado (Core Web Vitals)',
+      'Hosting incluido (opcional)',
+      'Soporte y contrato de servicios por escrito'
     ],
     featured: true,
   },
@@ -45,7 +47,10 @@ const tiers = [
       'API/BD (Node/Express + MySQL/Mongo)',
       'Integraciones externas (ERP, pagos, etc.)',
       'Escalabilidad y soporte',
-      'Cotización por módulos (desde $250.000)'
+      'Cotización por módulos (desde $250.000)',
+      'SEO técnico optimizado (Core Web Vitals)',
+      'Webpay Plus integrado',
+      'Soporte y contrato de servicios por escrito'
     ],
     featured: false,
   },
@@ -57,7 +62,7 @@ function classNames(...classes) {
 
 export default function Example() {
   return (
-    <div className="relative isolate bg-gray-900 px-6 py-24 sm:py-32 lg:px-8">
+    <div className="relative isolate bg-gray-900 px-6 py-24 sm:py-32 lg:px-8 rounded-3xl">
       <div aria-hidden="true" className="absolute inset-x-0 -top-3 -z-10 transform-gpu overflow-hidden px-36 blur-3xl">
         <div
           style={{

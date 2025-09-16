@@ -152,7 +152,7 @@ export default function RootLayout({ children }) {
         }}
       />
       <body className={`${poppins.className} ${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <FloatingActionButtons tooltip={'Hablar con Manager IT'} position={{ bottom: 16, right: 16 }} />
+        <FloatingActionButtons tooltip={'Cotizar mi Pagina'} position={{ bottom: 16, right: 16 }} />
         <div className="min-h-screen flex flex-col">
           <Navbar />
           <main className="flex-1">

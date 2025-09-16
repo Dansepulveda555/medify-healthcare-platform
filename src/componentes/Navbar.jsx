@@ -1,6 +1,8 @@
 "use client"
 import * as React from 'react';
 import { Michroma } from "next/font/google";
+import Image from "next/image";
+import Link from 'next/link';
 const michroma = Michroma({ subsets: ["latin"], weight: "400" });
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -15,7 +17,7 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 
 const pages = [
-  { label: 'Proyectos', href: '/proyectos' },
+  { label: 'Proyectos', href: '/portafolio' },
   { label: 'Servicios', href: '/servicios' },
   { label: 'Quiénes Somos', href: '/sobreNosotros' },
   { label: 'Contacto', href: '/soporte' },
@@ -38,29 +40,47 @@ function ResponsiveAppBar() {
       position="static"
       color="transparent"
       enableColorOnDark
-      sx={{ backgroundColor: '#111 !important' }}
+      sx={{
+        backgroundColor: 'rgba(17,17,17,0.85) !important',
+        backdropFilter: 'blur(8px)',
+        borderBottom: '1px solid rgba(255,255,255,0.08)',
+        boxShadow: '0 4px 20px rgba(0,0,0,0.35)'
+      }}
     >
       <Container maxWidth="xl">
         <Box style={{ color: 'white' }}>
-          <Toolbar disableGutters>
-            <Typography
-              className={michroma.className}
-              variant="h6"
-              noWrap
-              component="a"
-              href="/"
-              style={{ color: 'white' }}
-              sx={{
-                mr: 2,
-                display: { xs: 'none', md: 'flex' },
-                fontFamily: 'michroma',
-                fontWeight: 700,
-                letterSpacing: '.3rem',
-                textDecoration: 'none',
-              }}
-            >
-              NativeCode
-            </Typography>
+          <Toolbar disableGutters sx={{ minHeight: { xs: 64, md: 72 }, gap: { xs: 1, md: 2 } }}>
+            <Box sx={{ display: { xs: 'none', md: 'flex' }, alignItems: 'center', gap: 1.5, mr: 2 }}>
+              <a
+                href="/"
+                style={{ textDecoration: 'none' }}
+              >
+                <Image
+                  src="/ico2.png"
+                  alt="NativeCode logo"
+                  width={88}
+                  height={44}
+                  style={{ objectFit: 'contain', borderRadius: '12px', padding: '4px' }}
+                />
+              </a>
+              <Typography
+                className={michroma.className}
+                component="a"
+                href="/"
+                sx={{
+                  color: 'white',
+                  textDecoration: 'none',
+                  fontWeight: 700,
+                  letterSpacing: '.08em',
+                  fontSize: '1.05rem',
+                  lineHeight: 1,
+                  opacity: 0.9,
+                  '&:hover': { opacity: 1 }
+                }}
+              >
+                Ingenieria de Software
+              </Typography>
+            </Box>
 
             <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
               <IconButton
@@ -91,18 +111,29 @@ function ResponsiveAppBar() {
                 PaperProps={{
                   sx: {
                     backgroundColor: '#111',
-                    color: 'white'
+                    color: 'white',
+                    borderRadius: 2,
+                    border: '1px solid rgba(255,255,255,0.08)',
+                    boxShadow: '0 12px 32px rgba(0,0,0,0.45)',
+                    mt: 1
                   }
                 }}
               >
                 {pages.map((page) => (
-                  <MenuItem key={page.label} onClick={handleCloseNavMenu}>
+                  <MenuItem key={page.label} onClick={handleCloseNavMenu} sx={{ px: 2, py: 1.25 }}>
                     <Typography
                       className={michroma.className}
                       component="a"
                       href={page.href}
-                      style={{ color: 'white', textDecoration: 'none' }}
-                      sx={{ textAlign: 'center', fontFamily: 'michroma' }}
+                      sx={{
+                        color: 'white',
+                        textDecoration: 'none',
+                        fontFamily: 'michroma',
+                        fontSize: '0.95rem',
+                        letterSpacing: '.06em',
+                        display: 'block',
+                        width: '100%'
+                      }}
                     >
                       {page.label}
                     </Typography>
@@ -124,14 +155,15 @@ function ResponsiveAppBar() {
                 flexGrow: 1,
                 fontFamily: 'michroma',
                 fontWeight: 700,
-                letterSpacing: '.3rem',
+                letterSpacing: '.08em',
                 textDecoration: 'none',
-                fontSize: { xs: '0.9rem', sm: '1rem', md: '1.25rem' }
+                fontSize: { xs: '0.95rem', sm: '1.05rem' },
+                lineHeight: 1.1
               }}
             >
              Ingenieria de Software
             </Typography>
-            <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+            <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'flex-end', alignItems: 'center', gap: 0 }}>
               {pages.map((page) => (
                 <Button
                   key={page.label}
@@ -139,8 +171,25 @@ function ResponsiveAppBar() {
                   className={michroma.className}
                   component="a"
                   href={page.href}
-                  style={{ color: 'white' }}
-                  sx={{ my: 2, display: 'block', fontFamily: 'michroma' }}
+                  sx={{
+                    my: 1.5,
+                    mx: 0.5,
+                    px: 2.25,
+                    py: 1,
+                    color: 'white',
+                    fontFamily: 'michroma',
+                    fontSize: '0.92rem',
+                    letterSpacing: '.08em',
+                    textTransform: 'none',
+                    borderRadius: 2,
+                    opacity: 0.9,
+                    transition: 'all .2s ease',
+                    '&:hover': {
+                      opacity: 1,
+                      backgroundColor: 'rgba(255,255,255,0.06)',
+                      transform: 'translateY(-1px)'
+                    }
+                  }}
                 >
                   {page.label}
                 </Button>

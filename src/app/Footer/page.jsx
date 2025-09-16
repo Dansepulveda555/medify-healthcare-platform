@@ -1,6 +1,16 @@
-
 import GradientText from "@/componentes/GradientText";
 import Image from "next/image";
+import { 
+  SiNextdotjs, 
+  SiReact, 
+  SiTypescript, 
+  SiJavascript, 
+  SiNodedotjs, 
+  SiExpress, 
+  SiMysql, 
+  SiMongodb, 
+  SiTailwindcss 
+} from "react-icons/si";
 
 export default function Footer(){
     return(
@@ -24,6 +34,21 @@ export default function Footer(){
       <p className="mx-auto mt-4 max-w-sm text-gray-500 dark:text-gray-400">
       Únete a nosotros y transforma tu visión en realidad. Juntos, impulsaremos tu negocio con la fuerza de desarrolladores y expertos que te acompañarán en cada paso del camino.
       </p>
+
+      <div className="mt-12 pt-8">
+        <h3 className="text-center text-sm font-semibold text-gray-400 mb-6">Tecnologías que usamos</h3>
+        <div className="flex flex-wrap justify-center gap-8">
+          <SiNextdotjs className="text-3xl md:text-4xl opacity-80 hover:opacity-100 transition" title="Next.js" />
+          <SiReact className="text-3xl md:text-4xl opacity-80 hover:opacity-100 transition" title="React" />
+          <SiTypescript className="text-3xl md:text-4xl opacity-80 hover:opacity-100 transition" title="TypeScript" />
+          <SiJavascript className="text-3xl md:text-4xl opacity-80 hover:opacity-100 transition" title="JavaScript" />
+          <SiNodedotjs className="text-3xl md:text-4xl opacity-80 hover:opacity-100 transition" title="Node.js" />
+          <SiExpress className="text-3xl md:text-4xl opacity-80 hover:opacity-100 transition" title="Express" />
+          <SiTailwindcss className="text-3xl md:text-4xl opacity-80 hover:opacity-100 transition" title="Tailwind CSS" />
+          <SiMysql className="text-3xl md:text-4xl opacity-80 hover:opacity-100 transition" title="MySQL" />
+          <SiMongodb className="text-3xl md:text-4xl opacity-80 hover:opacity-100 transition" title="MongoDB" />
+        </div>
+      </div>
 
       <a
         href="/"

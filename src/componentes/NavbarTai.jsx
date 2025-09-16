@@ -15,9 +15,6 @@ export default function NavbarTai() {
 
       {/* Desktop/Tablet: todos los botones centrados en fila */}
       <div className="hidden md:flex flex-row justify-center items-center gap-8">
-        <Link href={'/comprar'} className="shrink-0">
-          <BotoinMui contenido={contratar} />
-        </Link>
         <Link href={'/portafolio'} className="shrink-0">
           <BotoinMui contenido={proyectos} />
         </Link>
