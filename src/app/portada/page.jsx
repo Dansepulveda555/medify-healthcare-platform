@@ -18,12 +18,12 @@ export default function Portada() {
       <div className="block md:hidden mb-8">
         <div className="pt-8 pb-6 px-2">
           <div className="text-center mb-3">
-            <span className="inline-block rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/80 backdrop-blur">
+            <span className="inline-block rounded-full border border-violet-400 bg-violet-600/50 px-5 py-2 text-base sm:text-lg font-extrabold text-white shadow-lg shadow-black/40 backdrop-blur">
               Agencia de desarrollo web premium
             </span>
           </div>
 
-          <h1 className={`${michroma.className} text-center text-2xl sm:text-3xl leading-tight font-bold text-white`}>
+          <h1 className={`${michroma.className} text-center text-4xl sm:text-4xl leading-tight font-bold text-white`}>
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-white/70">
               NativeCode
             </span>
@@ -47,7 +47,7 @@ export default function Portada() {
         <div className="grid grid-cols-1 md:grid-cols-5 gap-10 md:gap-6 items-center">
           {/* Columna de texto */}
           <div className="md:col-span-3">
-            <div className="text-2xl hidden md:inline-block rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/80 backdrop-blur">
+            <div className="text-4xl hidden md:inline-block rounded-full border border-white/10 bg-white/5 px-5 py-2 text-white/80 backdrop-blur">
               Agencia de Desarrollo Web
             </div>
 
@@ -60,7 +60,7 @@ export default function Portada() {
             </h1>
 
             <p
-              className={`${michroma.className} mt-4 md:mt-6 text-sm sm:text-base md:text-xl text-white/80 max-w-2xl`}
+              className={`${michroma.className} mt-4 md:mt-6 text-2xl sm:text-base md:text-xl text-white/80 max-w-2xl`}
             >
               Disfrute de una plataforma web hecha a su medida, sin plantillas genéricas, con
               interfaces claras y fáciles de usar. Rendimiento, seguridad y soporte profesional.
