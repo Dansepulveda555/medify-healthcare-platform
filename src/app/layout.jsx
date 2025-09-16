@@ -4,46 +4,57 @@ import { Poppins, Dancing_Script } from "next/font/google";
 import FloatingActionButtons from "@/componentes/FloatingActionButtons";
 import Footer from "./Footer/page";
 import Navbar from "@/componentes/Navbar";
+import Script from "next/script";
 
 // ==========================
 // SEO Metadata (App Router)
 // ==========================
 export const metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
-  applicationName: 'NEXIO',
+  applicationName: 'NativeCode',
   title: {
-    default: 'NEXIO | Páginas web inteligentes',
-    template: '%s | NEXIO',
+    default: 'NativeCode | Páginas web y desarrollo a medida',
+    template: '%s | NativeCode',
   },
-  description: 'Desarrollo de páginas web premium para negocios de alto nivel',
+  description: 'Agencia NativeCode: páginas web profesionales, sitios dinámicos con agendamiento y aplicaciones web a medida. SEO técnico, rendimiento y despliegue en Chile.',
   keywords: [
-    'página web',
+    'NativeCode',
+    'páginas web',
+    'paginas web',
+    'crear página web',
+    'sitios web profesionales',
     'landing page',
-    'página de venta en línea',
-    'desarrollo a medida',
+    'diseño web',
     'desarrollo web',
-    'programador web',
+    'desarrollo a medida',
+    'ecommerce',
+    'Next.js',
+    'Node.js',
+    'SEO',
+    'agencia web',
+    'Valdivia',
+    'Chile'
   ],
   openGraph: {
     type: 'website',
     locale: 'es_CL',
     url: '/',
-    siteName: 'NEXIO',
-    title: 'NEXIO | Páginas web inteligentes',
-    description: 'Desarrollo de páginas web premium para negocios de alto nivel',
+    siteName: 'NativeCode',
+    title: 'NativeCode | Páginas web y desarrollo a medida',
+    description: 'Agencia NativeCode: páginas web profesionales, sitios dinámicos con agendamiento y aplicaciones web a medida. SEO técnico, rendimiento y despliegue en Chile.',
     images: [
       {
         url: '/og.jpg', // Reemplaza si tienes una imagen OG
         width: 1200,
         height: 630,
-        alt: 'NEXIO – Desarrollo web premium',
+        alt: 'NativeCode – Desarrollo web premium',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NEXIO | Páginas web inteligentes',
-    description: 'Desarrollo de páginas web premium para negocios de alto nivel',
+    title: 'NativeCode | Páginas web y desarrollo a medida',
+    description: 'Agencia NativeCode: páginas web profesionales, sitios dinámicos con agendamiento y aplicaciones web a medida. SEO técnico, rendimiento y despliegue en Chile.',
     images: ['/og.jpg'],
   },
   alternates: {
@@ -106,6 +117,40 @@ const geistMono = Geist_Mono({
 export default function RootLayout({ children }) {
   return (
     <html lang="es" suppressHydrationWarning>
+      <Script
+        id="ld-org"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "NativeCode",
+            "url": process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
+            "logo": (process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000") + "/og.jpg",
+            "sameAs": [
+              "https://www.instagram.com/",
+              "https://www.linkedin.com/"
+            ]
+          })
+        }}
+      />
+      <Script
+        id="ld-website"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "NativeCode",
+            "url": process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": (process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000") + "/buscar?q={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          })
+        }}
+      />
       <body className={`${poppins.className} ${geistSans.variable} ${geistMono.variable} antialiased`}>
         <FloatingActionButtons tooltip={'Hablar con Manager IT'} position={{ bottom: 16, right: 16 }} />
         <div className="min-h-screen flex flex-col">

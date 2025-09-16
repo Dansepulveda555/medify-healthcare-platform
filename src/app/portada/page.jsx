@@ -15,45 +15,40 @@ import Aurora from "@/componentes/Aurora";
 export default function Portada() {
   return (
     <div>
-      
       <div>
         <Aurora></Aurora>
       </div>
 
-      <div>
-                  <div className="flex justify-center ">
-            <h6
-              className={`${michroma.className} text-2xl md:text-4xl text-center`}
+
+
+                  <GradientText
+              colors={["#5227FF", "#40E0D0", "#5227FF"]}
+              animationSpeed={3}
+              showBorder={false}
+              className=""
             >
-              Your Next Intelligence Online
-            </h6>
-          </div><br />
-        <div
-          style={{
-            width: "100%",
-            height: "600px",
-            position: "relative",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold leading-snug text-center px-4">
+                Desarrollo web premium para negocios de alto nivel
+              </h3>
+            </GradientText><br />
+
+
+
+
+      <div className="mt-[-50px]">
+
+        <div className="w-full h-[600px] relative flex justify-center items-center mt-[-50px]">
           <Orb
             hoverIntensity={0.5}
             rotateOnHover={true}
             hue={0}
             forceHoverState={false}
+            size={100}
           />
           <h1
-             className={`${michroma.className} text-5xl `}
-            style={{
-              position: "absolute",
-              color: "#fff",
-              
-              fontWeight: "bold",
-            }}
+            className={`${michroma.className} text-2xl md:text-4xl absolute text-white font-bold`}
           >
-            NEX.IO
+            NativeCode
           </h1>
         </div>
         
@@ -66,19 +61,8 @@ export default function Portada() {
       <div>
         <div>
           <div className="flex justify-center w-full">
-            <GradientText
-              colors={["#5227FF", "#40E0D0", "#5227FF"]}
-              animationSpeed={3}
-              showBorder={false}
-              className=""
-            >
-              <h3 className="text-2xl md:text-3xl font-black text-center">
-                Desarrollo web premium para negocios de alto nivel
-              </h3>
-            </GradientText>
-            <br />
-            <br />
-            <br />
+
+     
             <br />
           </div>
 

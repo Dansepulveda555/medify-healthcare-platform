@@ -22,7 +22,11 @@ export default function BasicButtons({contenido}) {
           '&:hover': { 
             backgroundColor: '#1E003A',
             backgroundImage: 'linear-gradient(145deg, #2A004D, #1E003A)',
-            boxShadow: '0px 6px 12px rgba(0, 0, 0, 0.3)'
+            boxShadow: '0px 6px 12px rgba(0, 0, 0, 0.3)',
+            border: '2px solid #ffffff',
+            color: '#e0e0e0',
+            textShadow: '0 0 4px rgba(255, 255, 255, 0.7)',
+            filter: 'brightness(0.85)',
           },
           borderRadius: '9999px',
           paddingLeft: { xs: '16px', sm: '20px', md: '24px' },
@@ -35,7 +39,11 @@ export default function BasicButtons({contenido}) {
           minWidth: '140px',
           width: '180px',
           textShadow: '0 0 5px rgba(255, 255, 255, 0.7)',
-          textAlign: 'center'
+          textAlign: 'center',
+          border: '2px solid #bb86fc',
+          color: '#ffffff',
+          textShadow: '0 0 8px rgba(255, 255, 255, 0.9)',
+          boxShadow: '0 0 8px rgba(187, 134, 252, 0.6)',
         }}
       >
         {contenido}

@@ -11,10 +11,14 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Typography from '@mui/material/Typography';
 import { Label } from '@headlessui/react';
+import IconButton from '@mui/material/IconButton';
+import MenuIcon from '@mui/icons-material/Menu';
 
 const pages = [
-  { label: 'Soporte', href: '/soporte' },
-  { label: 'Contacto', href: '/contacto' },
+  { label: 'Proyectos', href: '/proyectos' },
+  { label: 'Servicios', href: '/servicios' },
+  { label: 'Quiénes Somos', href: '/sobreNosotros' },
+  { label: 'Contacto', href: '/soporte' },
   { label: 'Contratación', href: '/comprar' }
 ];
 
@@ -44,7 +48,7 @@ function ResponsiveAppBar() {
               variant="h6"
               noWrap
               component="a"
-              href="#app-bar-with-responsive-menu"
+              href="/"
               style={{ color: 'white' }}
               sx={{
                 mr: 2,
@@ -55,10 +59,20 @@ function ResponsiveAppBar() {
                 textDecoration: 'none',
               }}
             >
-              NEX.IO
+              NativeCode
             </Typography>
 
             <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+              <IconButton
+                size="large"
+                aria-label="menu"
+                aria-controls="menu-appbar"
+                aria-haspopup="true"
+                onClick={handleOpenNavMenu}
+                color="inherit"
+              >
+                <MenuIcon />
+              </IconButton>
               <Menu
                 id="menu-appbar"
                 anchorEl={anchorElNav}
@@ -102,7 +116,7 @@ function ResponsiveAppBar() {
               variant="h5"
               noWrap
               component="a"
-              href="#app-bar-with-responsive-menu"
+              href="/"
               style={{ color: 'white' }}
               sx={{
                 mr: 2,
