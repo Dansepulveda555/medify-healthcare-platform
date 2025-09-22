@@ -29,8 +29,6 @@ export default function Portada() {
           }}
         />
         {/* brillo diagonal */}
-        <div className="absolute -top-24 -left-24 h-[36rem] w-[36rem] rounded-full bg-fuchsia-500/20 blur-3xl" />
-        <div className="absolute -bottom-24 -right-24 h-[36rem] w-[36rem] rounded-full bg-cyan-400/20 blur-3xl" />
       </div>
 
       {/* Contenido */}
@@ -38,7 +36,7 @@ export default function Portada() {
         {/* Cinta/top badge */}
         <div className="flex justify-center sm:justify-start">
           <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-[13px] font-semibold text-white/80 backdrop-blur">
-            <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
+            <span className="h-1.5 w-1.5 rounded-full bg-cyan-400 animate-pulse" />
             Agencia de Desarrollo
           </span>
         </div>
@@ -103,7 +101,7 @@ export default function Portada() {
           <div className="lg:col-span-5">
             <div className="relative mx-auto w-full max-w-[520px]">
               {/* halo */}
-              <div className="absolute -inset-6 rounded-[2rem] bg-gradient-to-tr from-violet-500/30 via-fuchsia-400/25 to-cyan-400/30 blur-2xl" />
+              <div className="absolute -inset-6 rounded-[2rem] bg-gradient-to-tr from-violet-500/30 to-cyan-400/30 blur-2xl" />
               <div className="relative rounded-[1.75rem] ring-1 ring-white/15 shadow-2xl overflow-hidden bg-black/40 backdrop-blur">
 
               </div>

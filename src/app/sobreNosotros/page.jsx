@@ -63,7 +63,67 @@ export default function SobreNosotros() {
         </div>
       </section>
 
-      {/* Bloque 3: CTA con fondo dinámico */}
+      {/* Bloque 3: Misión / Visión / Valores / Propuesta de Valor */}
+      <section className="relative overflow-hidden px-4 sm:px-6 md:px-10 lg:px-14 py-12 sm:py-16 md:py-20 lg:py-24 bg-neutral-900/40 ring-1 ring-white/10 rounded-3xl md:rounded-4xl shadow-2xl backdrop-blur-sm">
+        <h2 className={`${michroma.className} leading-tight tracking-tight text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white text-center`}>
+          Nuestro ADN
+        </h2>
+        <p className="mt-4 sm:mt-6 text-center text-base sm:text-lg md:text-xl text-white/90 max-w-3xl mx-auto">
+          Somos una startup de desarrollo que combina diseño moderno, tecnología robusta y un enfoque
+          cercano para entregar productos digitales que generan valor real.
+        </p>
+
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+          {/* Misión */}
+          <div className="group rounded-2xl ring-1 ring-white/10 bg-black/30 p-6 hover:ring-cyan-400/40 transition">
+            <h3 className={`${michroma.className} text-xl sm:text-2xl text-white flex items-center gap-2`}>
+              <span aria-hidden>🎯</span> Misión
+            </h3>
+            <p className="mt-3 text-white/85">
+              Desarrollar soluciones digitales a medida que optimizan procesos, potencian la presencia
+              online y mejoran la competitividad de empresas y profesionales.
+            </p>
+          </div>
+
+          {/* Visión */}
+          <div className="group rounded-2xl ring-1 ring-white/10 bg-black/30 p-6 hover:ring-cyan-400/40 transition">
+            <h3 className={`${michroma.className} text-xl sm:text-2xl text-white flex items-center gap-2`}>
+              <span aria-hidden>🚀</span> Visión
+            </h3>
+            <p className="mt-3 text-white/85">
+              Ser referente en Latinoamérica por la calidad, personalización y escalabilidad de nuestras
+              plataformas web y aplicaciones.
+            </p>
+          </div>
+
+          {/* Valores */}
+          <div className="group rounded-2xl ring-1 ring-white/10 bg-black/30 p-6 hover:ring-cyan-400/40 transition">
+            <h3 className={`${michroma.className} text-xl sm:text-2xl text-white flex items-center gap-2`}>
+              <span aria-hidden>💎</span> Valores
+            </h3>
+            <ul className="mt-3 space-y-2 text-white/85">
+              <li><strong className="text-white">Innovación:</strong> usamos tecnologías actuales y creativas.</li>
+              <li><strong className="text-white">Calidad:</strong> foco en rendimiento, seguridad y diseño.</li>
+              <li><strong className="text-white">Compromiso:</strong> acompañamiento de punta a punta.</li>
+              <li><strong className="text-white">Cercanía:</strong> comunicación clara y transparente.</li>
+              <li><strong className="text-white">Adaptabilidad:</strong> soluciones realmente a medida.</li>
+            </ul>
+          </div>
+
+          {/* Propuesta de Valor */}
+          <div className="group rounded-2xl ring-1 ring-white/10 bg-black/30 p-6 hover:ring-cyan-400/40 transition">
+            <h3 className={`${michroma.className} text-xl sm:text-2xl text-white flex items-center gap-2`}>
+              <span aria-hidden>🔑</span> Propuesta de Valor
+            </h3>
+            <p className="mt-3 text-white/85">
+              Nada de plantillas genéricas. Creamos plataformas personalizadas que reflejan tu marca y se
+              conectan con tus procesos, para entregar resultados medibles y crecimiento sostenible.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Bloque 4: CTA con fondo dinámico */}
       <section className="relative overflow-hidden rounded-3xl md:rounded-4xl ring-1 ring-white/10 shadow-2xl px-4 sm:px-6 md:px-10 lg:px-14 py-16 sm:py-20 md:py-24 lg:py-28 text-center">
         {/* Contenedor para Threads como fondo absoluto */}
         <div className="absolute inset-0 -z-10">
