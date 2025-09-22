@@ -3,6 +3,7 @@ import { Michroma } from "next/font/google";
 const michroma = Michroma({ subsets: ["latin"], weight: "400", display: "swap" });
 
 import Image from "next/image";
+import { HandThumbUpIcon, BoltIcon, ShieldCheckIcon, GlobeAltIcon } from "@heroicons/react/24/solid";
 
 export default function Portada() {
   return (
@@ -16,19 +17,7 @@ export default function Portada() {
       />
       {/* Fondo pro: gradiente + patrón sutil */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0B0F1A]/70 via-[#0B0F1A]/60 to-[#0B0F1A]/80" />
-        {/* textura de puntos suave */}
-        <div
-          className="absolute inset-0 opacity-[0.08]"
-          style={{
-            backgroundImage:
-              "radial-gradient(currentColor 1px, transparent 1px), radial-gradient(currentColor 1px, transparent 1px)",
-            backgroundPosition: "0 0, 16px 16px",
-            backgroundSize: "32px 32px",
-            color: "#8B5CF6",
-          }}
-        />
-        {/* brillo diagonal */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0B0F1A]/70 via-[#0B0F1A]/80 to-black" />
       </div>
 
       {/* Contenido */}
@@ -80,31 +69,46 @@ export default function Portada() {
               </a>
             </div>
 
-            {/* Indicadores de confianza / highlights */}
-            <div className="mt-8 grid grid-cols-2 gap-4 max-w-xl sm:grid-cols-3">
-              <div className="rounded-2xl border border-white/10 bg-white/5 p-4 text-center">
-                <p className="text-2xl font-extrabold text-white">99.9%</p>
-                <p className="text-xs text-white/70">Uptime & performance</p>
-              </div>
-              <div className="rounded-2xl border border-white/10 bg-white/5 p-4 text-center">
-                <p className="text-2xl font-extrabold text-white">SEO</p>
-                <p className="text-xs text-white/70">Optimización técnica</p>
-              </div>
-              <div className="rounded-2xl border border-white/10 bg-white/5 p-4 text-center">
-                <p className="text-2xl font-extrabold text-white">Soporte</p>
-                <p className="text-xs text-white/70">Dedicado y cercano</p>
-              </div>
-            </div>
+     
           </div>
+
+
 
           {/* Columna visual (mockup/product shot) */}
           <div className="lg:col-span-5">
+
+                        {/* Indicadores de confianza / highlights */}
+            <div className="mt-8 grid grid-cols-2 gap-4 max-w-xl sm:grid-cols-3 sm:ml-20 justify-items-center">
+  <div className="rounded-2xl border border-white/10 bg-white/5 p-4 text-center hover:scale-105 transition-transform h-28 w-full flex flex-col justify-center">
+    <p className="text-2xl font-extrabold text-cyan-400">99.9%</p>
+    <p className="text-xs text-white/80">Disponibilidad garantizada</p>
+  </div>
+  <div className="rounded-2xl border border-white/10 bg-white/5 p-4 text-center hover:scale-105 transition-transform h-28 w-full flex flex-col justify-center">
+    <p className="text-2xl font-extrabold text-cyan-400">SEO</p>
+    <p className="text-xs text-white/80">Optimización avanzada</p>
+  </div>
+  <div className="rounded-2xl border border-white/10 bg-white/5 p-4 text-center hover:scale-105 transition-transform h-28 w-full flex flex-col justify-center">
+    <HandThumbUpIcon className="mx-auto h-10 w-10 text-cyan-400" />
+    <p className="text-xs text-white/80">Soporte cercano y confiable</p>
+  </div>
+  <div className="rounded-2xl border border-white/10 bg-white/5 p-4 text-center hover:scale-105 transition-transform h-28 w-full flex flex-col justify-center">
+    <BoltIcon className="mx-auto h-10 w-10 text-cyan-400" />
+    <p className="text-xs text-white/80">Velocidad de carga óptima</p>
+  </div>
+  <div className="rounded-2xl border border-white/10 bg-white/5 p-4 text-center hover:scale-105 transition-transform h-28 w-full flex flex-col justify-center">
+    <ShieldCheckIcon className="mx-auto h-10 w-10 text-cyan-400" />
+    <p className="text-xs text-white/80">Seguridad de nivel empresarial</p>
+  </div>
+  <div className="rounded-2xl border border-white/10 bg-white/5 p-4 text-center hover:scale-105 transition-transform h-28 w-full flex flex-col justify-center">
+    <GlobeAltIcon className="mx-auto h-10 w-10 text-cyan-400" />
+    <p className="text-xs text-white/80">Escalabilidad global</p>
+  </div>
+</div> 
+
+            
             <div className="relative mx-auto w-full max-w-[520px]">
               {/* halo */}
-              <div className="absolute -inset-6 rounded-[2rem] bg-gradient-to-tr from-violet-500/30 to-cyan-400/30 blur-2xl" />
-              <div className="relative rounded-[1.75rem] ring-1 ring-white/15 shadow-2xl overflow-hidden bg-black/40 backdrop-blur">
-
-              </div>
+      
               {/* mini tarjetas flotantes */}
               <div className="pointer-events-none absolute -left-4 -bottom-6 hidden sm:block">
               </div>

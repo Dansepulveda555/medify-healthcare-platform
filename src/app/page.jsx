@@ -28,26 +28,27 @@ export default function Home() {
     aria-hidden="true"
   ></div>
 
-  <div className="relative grid grid-cols-1 md:grid-cols-5 items-center px-6 md:px-10 lg:px-14 py-16 md:py-24">
-    <div className="col-span-4">
-      <h2 className="text-3xl md:text-6xl font-bold text-white tracking-tight leading-tight">
-        ¿Buscas una <strong>Página web</strong> para tu empresa?
-      </h2>
-      <p className="mt-6 text-lg md:text-2xl text-white/90 max-w-3xl">
-        Impulsa tu proyecto con tecnología de alto rendimiento. Desde
-        arquitecturas escalables hasta experiencias digitales ultra
-        rápidas: todas nuestras soluciones están diseñadas para maximizar
-        el rendimiento, optimizar procesos y escalar tu negocio con
-        eficiencia.
-      </p>
+  <div className="relative">
+    {/* Black gradient overlay at bottom */}
+    <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/80 to-transparent pointer-events-none" />
 
-      <div className="mt-10 flex md:justify-end">
-        <Link href={"/comprar"}>
-          <BotonBlanco contenido={"Comprar pagina web"} />
-        </Link>
+    <div className="relative grid grid-cols-1 md:grid-cols-5 items-center px-6 md:px-10 lg:px-14 py-16 md:py-24">
+      <div className="col-span-4">
+        <h2 className="text-3xl md:text-6xl font-extrabold text-white tracking-tight leading-snug">
+          ¿Buscas una <strong className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">Página web</strong> para tu empresa?
+        </h2>
+        <p className="mt-6 text-lg md:text-2xl text-white/85 leading-relaxed max-w-3xl">
+          Impulsa tu proyecto con tecnología de alto rendimiento. Desde arquitecturas escalables hasta experiencias digitales ultra rápidas: todas nuestras soluciones están diseñadas para maximizar el rendimiento, optimizar procesos y escalar tu negocio con eficiencia.
+        </p>
+
+        <div className="mt-10 flex justify-center md:justify-end">
+          <Link href={"/comprar"}>
+            <BotonBlanco contenido={"Comprar página web"} />
+          </Link>
+        </div>
       </div>
+      <div className="hidden md:block"></div>
     </div>
-    <div className="hidden md:block"></div>
   </div>
 </div>
 

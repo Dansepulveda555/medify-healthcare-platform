@@ -3,7 +3,7 @@ import * as React from 'react';
 import { Michroma } from "next/font/google";
 import Image from "next/image";
 import Link from 'next/link';
-const michroma = Michroma({ subsets: ["latin"], weight: "400" });
+const michroma = Michroma({ subsets: ["latin"], weight: "400", display: "swap" });
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -37,6 +37,7 @@ function ResponsiveAppBar() {
 
   return (
     <AppBar
+      className={michroma.className}
       position="sticky"
       color="transparent"
       enableColorOnDark
@@ -44,7 +45,8 @@ function ResponsiveAppBar() {
         backgroundColor: 'rgba(17,17,17,0.85) !important',
         backdropFilter: 'blur(8px)',
         borderBottom: '1px solid rgba(255,255,255,0.08)',
-        boxShadow: '0 6px 28px rgba(0,0,0,0.35)'
+        boxShadow: '0 6px 28px rgba(0,0,0,0.35)',
+        fontFamily: michroma.style.fontFamily,
       }}
     >
       <Container maxWidth="xl">
@@ -72,8 +74,9 @@ function ResponsiveAppBar() {
                   color: 'white',
                   textDecoration: 'none',
                   fontWeight: 700,
+                  fontFamily: michroma.style.fontFamily,
                   letterSpacing: '.10em',
-                  fontSize: '1.12rem',
+                  fontSize: '1.0rem',
                   lineHeight: 1.05,
                   opacity: 0.92,
                   '&:hover': { opacity: 1 }
@@ -116,7 +119,8 @@ function ResponsiveAppBar() {
                     borderRadius: 2,
                     border: '1px solid rgba(255,255,255,0.08)',
                     boxShadow: '0 12px 32px rgba(0,0,0,0.45)',
-                    mt: 1
+                    mt: 1,
+                    fontFamily: michroma.style.fontFamily,
                   }
                 }}
               >
@@ -130,6 +134,8 @@ function ResponsiveAppBar() {
                         color: 'white',
                         textDecoration: 'none',
                         fontSize: '0.98rem',
+                        fontWeight: 700,
+                        fontFamily: michroma.style.fontFamily,
                         letterSpacing: '.06em',
                         display: 'block',
                         width: '100%',
@@ -155,7 +161,9 @@ function ResponsiveAppBar() {
                 flexGrow: 1,
                 textDecoration: 'none',
                 letterSpacing: '.06em',
-                fontSize: { xs: '1.08rem', sm: '1.15rem' },
+                fontSize: { xs: '1.0rem', sm: '1.05rem' },
+                fontWeight: 700,
+                fontFamily: michroma.style.fontFamily,
                 lineHeight: 1.15,
                 whiteSpace: 'normal',
                 wordBreak: 'break-word',
@@ -178,7 +186,8 @@ function ResponsiveAppBar() {
                     px: 2.25,
                     py: 1,
                     color: 'white',
-                    fontFamily: 'michroma',
+                    fontFamily: michroma.style.fontFamily,
+                    fontWeight: 700,
                     fontSize: '0.92rem',
                     letterSpacing: '.08em',
                     textTransform: 'none',
@@ -207,6 +216,8 @@ function ResponsiveAppBar() {
                   px: 2.75,
                   py: 1.1,
                   color: '#0ff',
+                  fontFamily: michroma.style.fontFamily,
+                  fontWeight: 700,
                   borderColor: 'rgba(255,255,255,0.22)',
                   textTransform: 'none',
                   letterSpacing: '.08em',
