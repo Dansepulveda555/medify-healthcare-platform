@@ -1,15 +1,22 @@
 "use client";
 import { Michroma } from "next/font/google";
-const michroma = Michroma({ subsets: ["latin"], weight: "400" });
+const michroma = Michroma({ subsets: ["latin"], weight: "400", display: "swap" });
 
 import Image from "next/image";
 
 export default function Portada() {
   return (
     <div className="relative w-full min-h-[88vh] sm:min-h-screen overflow-hidden">
+      <Image
+        src="/portada7.png"
+        alt="Fondo portada"
+        fill
+        priority
+        className="object-cover object-center -z-10"
+      />
       {/* Fondo pro: gradiente + patrón sutil */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0B0F1A] via-[#0B0F1A]/95 to-[#0B0F1A]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0B0F1A]/70 via-[#0B0F1A]/60 to-[#0B0F1A]/80" />
         {/* textura de puntos suave */}
         <div
           className="absolute inset-0 opacity-[0.08]"
@@ -32,7 +39,7 @@ export default function Portada() {
         <div className="flex justify-center sm:justify-start">
           <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-[13px] font-semibold text-white/80 backdrop-blur">
             <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
-            Agencia de desarrollo web premium
+            Agencia de Desarrollo
           </span>
         </div>
 
@@ -40,9 +47,11 @@ export default function Portada() {
           {/* Columna de texto */}
           <div className="lg:col-span-7">
             <h1
-              className={`${michroma.className} text-balance text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.05] tracking-tight text-white`}
+              className={`${michroma.className} antialiased flex items-center gap-3 text-6xl sm:text-7xl md:text-7xl lg:text-8xl leading-[1.03] tracking-tight text-white drop-shadow-[0_0_12px_rgba(255,255,255,0.9)]`}
+              style={{ fontFamily: michroma.style.fontFamily }}
             >
-          NativeCode
+    
+              NativeCode
             </h1>
 
             <p className="mt-5 text-pretty text-base sm:text-lg md:text-xl text-white/80 max-w-2xl">
@@ -57,7 +66,7 @@ export default function Portada() {
                 href="https://wa.me/56966091038?text=Quiero%20cotizar%20proyecto"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-xl bg-violet-600 px-5 py-3 text-sm sm:text-base font-semibold text-white shadow-xl shadow-violet-900/30 ring-1 ring-white/10 transition hover:bg-violet-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-300"
+                className="inline-flex items-center gap-2 rounded-xl px-6 py-3.5 text-base font-semibold text-white bg-violet-700 hover:bg-violet-600 shadow-[0_0_25px_rgba(139,92,246,0.8)] ring-1 ring-violet-400/40 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-400"
                 aria-label="Cotizar proyecto por WhatsApp"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5">
@@ -68,7 +77,7 @@ export default function Portada() {
 
               <a
                 href="/servicios"
-                className="inline-flex items-center rounded-xl border border-white/15 bg-white/10 px-5 py-3 text-sm sm:text-base font-medium text-white shadow-lg shadow-black/20 backdrop-blur transition hover:bg-white/15"
+                className="inline-flex items-center rounded-xl px-6 py-3.5 text-base font-semibold text-cyan-100 border border-cyan-400/40 bg-white/5 backdrop-blur-md shadow-[0_6px_24px_rgba(0,0,0,0.35)] hover:bg-white/10 hover:text-white transition-all"
               >
                 Ver servicios
               </a>
@@ -97,15 +106,7 @@ export default function Portada() {
               {/* halo */}
               <div className="absolute -inset-6 rounded-[2rem] bg-gradient-to-tr from-violet-500/30 via-fuchsia-400/25 to-cyan-400/30 blur-2xl" />
               <div className="relative rounded-[1.75rem] ring-1 ring-white/15 shadow-2xl overflow-hidden bg-black/40 backdrop-blur">
-                <Image
-                  src="/portada2.png"
-                  alt="Mockup NativeCode"
-                  width={900}
-                  height={600}
-                  sizes="(min-width: 1024px) 520px, 90vw"
-                  className="w-full h-auto object-cover"
-                  priority
-                />
+
               </div>
               {/* mini tarjetas flotantes */}
               <div className="pointer-events-none absolute -left-4 -bottom-6 hidden sm:block">

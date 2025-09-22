@@ -37,14 +37,14 @@ function ResponsiveAppBar() {
 
   return (
     <AppBar
-      position="static"
+      position="sticky"
       color="transparent"
       enableColorOnDark
       sx={{
         backgroundColor: 'rgba(17,17,17,0.85) !important',
         backdropFilter: 'blur(8px)',
         borderBottom: '1px solid rgba(255,255,255,0.08)',
-        boxShadow: '0 4px 20px rgba(0,0,0,0.35)'
+        boxShadow: '0 6px 28px rgba(0,0,0,0.35)'
       }}
     >
       <Container maxWidth="xl">
@@ -67,14 +67,15 @@ function ResponsiveAppBar() {
                 className={michroma.className}
                 component="a"
                 href="/"
+                style={{ color: 'white', fontFamily: michroma.style.fontFamily }}
                 sx={{
                   color: 'white',
                   textDecoration: 'none',
                   fontWeight: 700,
-                  letterSpacing: '.08em',
-                  fontSize: '1.05rem',
-                  lineHeight: 1,
-                  opacity: 0.9,
+                  letterSpacing: '.10em',
+                  fontSize: '1.12rem',
+                  lineHeight: 1.05,
+                  opacity: 0.92,
                   '&:hover': { opacity: 1 }
                 }}
               >
@@ -128,11 +129,12 @@ function ResponsiveAppBar() {
                       sx={{
                         color: 'white',
                         textDecoration: 'none',
-                        fontFamily: 'michroma',
-                        fontSize: '0.95rem',
+                        fontSize: '0.98rem',
                         letterSpacing: '.06em',
                         display: 'block',
-                        width: '100%'
+                        width: '100%',
+                        lineHeight: 1.2,
+                        whiteSpace: 'normal'
                       }}
                     >
                       {page.label}
@@ -144,21 +146,20 @@ function ResponsiveAppBar() {
 
             <Typography
               className={michroma.className}
-              variant="h5"
-              noWrap
               component="a"
               href="/"
-              style={{ color: 'white' }}
+              style={{ color: 'white', fontFamily: michroma.style.fontFamily }}
               sx={{
                 mr: 2,
                 display: { xs: 'flex', md: 'none' },
                 flexGrow: 1,
-                fontFamily: 'michroma',
-                fontWeight: 700,
-                letterSpacing: '.08em',
                 textDecoration: 'none',
-                fontSize: { xs: '0.95rem', sm: '1.05rem' },
-                lineHeight: 1.1
+                letterSpacing: '.06em',
+                fontSize: { xs: '1.08rem', sm: '1.15rem' },
+                lineHeight: 1.15,
+                whiteSpace: 'normal',
+                wordBreak: 'break-word',
+                overflow: 'visible'
               }}
             >
              Ingenieria de Software
@@ -194,6 +195,36 @@ function ResponsiveAppBar() {
                   {page.label}
                 </Button>
               ))}
+              <Button
+                component="a"
+                href="https://wa.me/56966091038?text=Quiero%20cotizar%20proyecto"
+                target="_blank"
+                rel="noopener"
+                className={michroma.className}
+                sx={{
+                  my: 1.5,
+                  ml: 1.5,
+                  px: 2.75,
+                  py: 1.1,
+                  color: '#0ff',
+                  borderColor: 'rgba(255,255,255,0.22)',
+                  textTransform: 'none',
+                  letterSpacing: '.08em',
+                  fontSize: '0.94rem',
+                  borderRadius: 2,
+                  border: '1px solid rgba(255,255,255,0.18)',
+                  background: 'linear-gradient(to right, rgba(99,102,241,0.15), rgba(34,211,238,0.15))',
+                  boxShadow: '0 6px 20px rgba(0,0,0,0.35)',
+                  transition: 'all .2s ease',
+                  '&:hover': {
+                    background: 'linear-gradient(to right, rgba(99,102,241,0.22), rgba(34,211,238,0.22))',
+                    transform: 'translateY(-1px)',
+                    borderColor: 'rgba(255,255,255,0.28)'
+                  }
+                }}
+              >
+                Cotizar
+              </Button>
             </Box>
           </Toolbar>
         </Box>
