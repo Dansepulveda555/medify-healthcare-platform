@@ -47,10 +47,10 @@ export default function Portada() {
           {/* Columna de texto */}
           <div className="lg:col-span-7">
             <h1
-              className={`${michroma.className} antialiased flex items-center gap-3 text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[1.05] tracking-tight text-white drop-shadow-[0_0_12px_rgba(255,255,255,0.9)] max-w-full break-words`}
+              className={`${michroma.className} antialiased flex items-center gap-3 text-[clamp(2rem,8.5vw,6rem)] md:text-[clamp(3rem,6.5vw,7rem)] lg:text-[clamp(3.5rem,5vw,8rem)] leading-[1.05] tracking-tight text-white drop-shadow-[0_0_12px_rgba(255,255,255,0.9)] max-w-full whitespace-nowrap`}
               style={{ fontFamily: michroma.style.fontFamily }}
             >
-              Native<wbr/>Code
+              NativeCode
             </h1>
 
             <p className="mt-5 text-pretty text-base sm:text-lg md:text-xl text-white/80 max-w-2xl">
