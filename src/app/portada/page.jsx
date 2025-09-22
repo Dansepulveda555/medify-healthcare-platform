@@ -46,8 +46,9 @@ export default function Portada() {
             </h1>
 
             <p className="mt-5 text-pretty text-base sm:text-lg md:text-xl text-white/80 max-w-2xl">
-              Sitios & apps a medida sin plantillas genéricas. Performance, seguridad y una UI que
-              proyecta tu marca como una empresa de primera.
+              Creamos páginas web y aplicaciones a medida que ayudan a empresas y profesionales a 
+              simplificar su trabajo, atraer más clientes y mostrar una imagen moderna y confiable. 
+              Soluciones digitales pensadas para optimizar tus procesos y hacer crecer tu negocio.
             </p>
 
             {/* CTA */}
