@@ -35,15 +35,15 @@ export default function Home() {
     <div className="relative grid grid-cols-1 md:grid-cols-5 items-center px-6 md:px-10 lg:px-14 py-16 md:py-24">
       <div className="col-span-4">
         <h2 className="text-3xl md:text-6xl font-extrabold text-white tracking-tight leading-snug">
-          ¿Buscas una <strong className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">Página web</strong> para tu empresa?
+          ¿Necesitas <strong className="bg-gradient-to-r from-blue-400 to-teal-500 bg-clip-text text-transparent">digitalizar</strong> tu práctica médica?
         </h2>
         <p className="mt-6 text-lg md:text-2xl text-white/85 leading-relaxed max-w-3xl">
-          Impulsa tu proyecto con tecnología de alto rendimiento. Desde arquitecturas escalables hasta experiencias digitales ultra rápidas: todas nuestras soluciones están diseñadas para maximizar el rendimiento, optimizar procesos y escalar tu negocio con eficiencia.
+          Moderniza tu consulta con tecnología médica especializada. Desde sistemas de gestión de pacientes hasta plataformas de telemedicina: todas nuestras soluciones están diseñadas para optimizar la atención médica, proteger datos sensibles y cumplir con estándares de salud.
         </p>
 
         <div className="mt-10 flex justify-center md:justify-end">
           <Link href={"/comprar"}>
-            <BotonBlanco contenido={"Comprar página web"} />
+            <BotonBlanco contenido={"Solicitar demostración"} />
           </Link>
         </div>
       </div>
@@ -77,18 +77,17 @@ export default function Home() {
   <div className="relative grid grid-cols-1 md:grid-cols-5 items-center px-6 md:px-10 lg:px-14 py-16 md:py-24">
     <div className="col-span-4">
       <h2 className="text-3xl md:text-6xl font-bold text-white tracking-tight leading-tight">
-        Tu proyecto <strong className="text-cyan-300">No Termina</strong> en la entrega
+        Tu sistema médico <strong className="text-blue-300">se actualiza</strong> contigo
       </h2>
       <p className="mt-6 text-lg md:text-2xl text-white/90 max-w-3xl">
-        No te dejamos solo después de la puesta en marcha. Nuestro compromiso es
-        acompañarte de forma constante, escuchando tus necesidades y
-        aplicando las mejoras que desees para que tu proyecto evolucione y
-        se mantenga siempre a la vanguardia.
+        No te dejamos solo después de la implementación. Nuestro compromiso es
+        acompañarte constantemente, adaptando el sistema a los cambios en tu práctica médica,
+        actualizaciones regulatorias y nuevas necesidades de atención al paciente.
       </p>
 
       <div className="mt-10 flex md:justify-end">
         <Link href={"/soporte"}>
-          <BotonBlanco contenido={"Plan de Soporte"} />
+          <BotonBlanco contenido={"Soporte Médico Especializado"} />
         </Link>
       </div>
     </div>

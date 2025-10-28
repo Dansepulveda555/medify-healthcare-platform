@@ -25,8 +25,8 @@ export default function Portada() {
         {/* Cinta/top badge */}
         <div className="flex justify-center sm:justify-start">
           <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-[13px] font-semibold text-white/80 backdrop-blur">
-            <span className="h-1.5 w-1.5 rounded-full bg-cyan-400 animate-pulse" />
-            Agencia de Desarrollo
+            <span className="h-1.5 w-1.5 rounded-full bg-blue-400 animate-pulse" />
+            El control total de tu propia consulta Médica
           </span>
         </div>
 
@@ -37,35 +37,34 @@ export default function Portada() {
               className={`${michroma.className} antialiased flex items-center gap-3 text-[clamp(2rem,8.5vw,6rem)] md:text-[clamp(3rem,6.5vw,7rem)] lg:text-[clamp(3.5rem,5vw,8rem)] leading-[1.05] tracking-tight text-white drop-shadow-[0_0_12px_rgba(255,255,255,0.9)] max-w-full whitespace-nowrap`}
               style={{ fontFamily: michroma.style.fontFamily }}
             >
-              NativeCode
+              Medify
             </h1>
 
             <p className="mt-5 text-pretty text-base sm:text-lg md:text-xl text-white/80 max-w-2xl">
-              Creamos páginas web y aplicaciones a medida que ayudan a empresas y profesionales a 
-              simplificar su trabajo, atraer más clientes y mostrar una imagen moderna y confiable. 
-              Soluciones digitales pensadas para optimizar tus procesos y hacer crecer tu negocio.
+              Es la herramienta para tener el control de tus consultas médicas, pacientes y reservas,
+              adaptando tus necesidades a tu servicio y manteniendo tus horarios de forma profesional.
             </p>
 
             {/* CTA */}
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <a
-                href="https://wa.me/56966091038?text=Quiero%20cotizar%20proyecto"
+                href="https://wa.me/56966091038?text=Quiero%20cotizar%20una%20solución%20médica"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-xl px-6 py-3.5 text-base font-semibold text-white bg-violet-700 hover:bg-violet-600 shadow-[0_0_25px_rgba(139,92,246,0.8)] ring-1 ring-violet-400/40 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-400"
-                aria-label="Cotizar proyecto por WhatsApp"
+                className="inline-flex items-center gap-2 rounded-xl px-6 py-3.5 text-base font-semibold text-white bg-blue-700 hover:bg-blue-600 shadow-[0_0_25px_rgba(59,130,246,0.8)] ring-1 ring-blue-400/40 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400"
+                aria-label="Cotizar solución médica por WhatsApp"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5">
                   <path d="M20.52 3.48A11.94 11.94 0 0 0 12 .06 11.94 11.94 0 0 0 3.48 3.48C.51 6.46-.52 10.73.6 14.64L.03 23.97l9.33-.57a11.94 11.94 0 0 0 4.91 1.02h.01c3.19 0 6.2-1.24 8.46-3.5A11.94 11.94 0 0 0 24 12a11.94 11.94 0 0 0-3.48-8.52ZM12 21.5h-.01a9.9 9.9 0 0 1-4.45-1.05l-.32-.15-5.53.34.35-5.5-.15-.33A9.9 9.9 0 0 1 2.5 12 9.5 9.5 0 1 1 12 21.5Zm5.21-7.16c-.29-.15-1.7-.84-1.96-.94-.26-.1-.45-.15-.64.15-.19.29-.74.94-.91 1.13-.17.19-.34.21-.63.08-.29-.15-1.22-.45-2.33-1.45-.86-.77-1.44-1.72-1.61-2.01-.17-.29-.02-.45.13-.6.13-.13.29-.34.43-.51.15-.17.19-.29.29-.48.1-.19.05-.36-.02-.51-.08-.15-.64-1.55-.88-2.12-.23-.56-.47-.48-.64-.49l-.55-.01c-.19 0-.5.07-.77.36-.26.29-1.01.98-1.01 2.39 0 1.41 1.03 2.77 1.18 2.96.15.19 2.03 3.1 4.92 4.35.69.3 1.23.48 1.65.61.69.22 1.31.19 1.8.11.55-.08 1.7-.7 1.94-1.37.24-.67.24-1.25.17-1.37-.07-.12-.26-.19-.55-.34Z" />
                 </svg>
-                Cotizar proyecto
+                Solicitar consulta
               </a>
 
               <a
                 href="/servicios"
-                className="inline-flex items-center rounded-xl px-6 py-3.5 text-base font-semibold text-cyan-100 border border-cyan-400/40 bg-white/5 backdrop-blur-md shadow-[0_6px_24px_rgba(0,0,0,0.35)] hover:bg-white/10 hover:text-white transition-all"
+                className="inline-flex items-center rounded-xl px-6 py-3.5 text-base font-semibold text-blue-100 border border-blue-400/40 bg-white/5 backdrop-blur-md shadow-[0_6px_24px_rgba(0,0,0,0.35)] hover:bg-white/10 hover:text-white transition-all"
               >
-                Ver servicios
+                Ver soluciones
               </a>
             </div>
 
@@ -77,31 +76,31 @@ export default function Portada() {
           {/* Columna visual (mockup/product shot) */}
           <div className="lg:col-span-5">
 
-                        {/* Indicadores de confianza / highlights */}
+                        {/* Indicadores de confianza / highlights médicos */}
             <div className="mt-8 grid grid-cols-2 gap-4 max-w-xl sm:grid-cols-3 sm:ml-20 justify-items-center">
   <div className="rounded-2xl border border-white/10 bg-white/5 p-4 text-center hover:scale-105 transition-transform h-28 w-full flex flex-col justify-center">
-    <p className="text-2xl font-extrabold text-cyan-400">99.9%</p>
-    <p className="text-xs text-white/80">Disponibilidad garantizada</p>
+    <p className="text-2xl font-extrabold text-blue-400">99.9%</p>
+    <p className="text-xs text-white/80">Disponibilidad médica</p>
   </div>
   <div className="rounded-2xl border border-white/10 bg-white/5 p-4 text-center hover:scale-105 transition-transform h-28 w-full flex flex-col justify-center">
-    <p className="text-2xl font-extrabold text-cyan-400">SEO</p>
-    <p className="text-xs text-white/80">Optimización avanzada</p>
+    <p className="text-2xl font-extrabold text-blue-400">HIPAA</p>
+    <p className="text-xs text-white/80">Cumplimiento total</p>
   </div>
   <div className="rounded-2xl border border-white/10 bg-white/5 p-4 text-center hover:scale-105 transition-transform h-28 w-full flex flex-col justify-center">
-    <HandThumbUpIcon className="mx-auto h-10 w-10 text-cyan-400" />
-    <p className="text-xs text-white/80">Soporte cercano y confiable</p>
+    <HandThumbUpIcon className="mx-auto h-10 w-10 text-blue-400" />
+    <p className="text-xs text-white/80">Soporte especializado</p>
   </div>
   <div className="rounded-2xl border border-white/10 bg-white/5 p-4 text-center hover:scale-105 transition-transform h-28 w-full flex flex-col justify-center">
-    <BoltIcon className="mx-auto h-10 w-10 text-cyan-400" />
-    <p className="text-xs text-white/80">Velocidad de carga óptima</p>
+    <BoltIcon className="mx-auto h-10 w-10 text-blue-400" />
+    <p className="text-xs text-white/80">Acceso instantáneo</p>
   </div>
   <div className="rounded-2xl border border-white/10 bg-white/5 p-4 text-center hover:scale-105 transition-transform h-28 w-full flex flex-col justify-center">
-    <ShieldCheckIcon className="mx-auto h-10 w-10 text-cyan-400" />
-    <p className="text-xs text-white/80">Seguridad de nivel empresarial</p>
+    <ShieldCheckIcon className="mx-auto h-10 w-10 text-blue-400" />
+    <p className="text-xs text-white/80">Seguridad de datos médicos</p>
   </div>
   <div className="rounded-2xl border border-white/10 bg-white/5 p-4 text-center hover:scale-105 transition-transform h-28 w-full flex flex-col justify-center">
-    <GlobeAltIcon className="mx-auto h-10 w-10 text-cyan-400" />
-    <p className="text-xs text-white/80">Escalabilidad global</p>
+    <GlobeAltIcon className="mx-auto h-10 w-10 text-blue-400" />
+    <p className="text-xs text-white/80">Telemedicina global</p>
   </div>
 </div> 
 

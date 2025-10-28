@@ -4,15 +4,21 @@
 :root {
   --background: #000000;
   --foreground: #ededed;
+  
+  /* Medify - Paleta de colores para sector salud */
+  --medical-blue-primary: #0066cc;
+  --medical-blue-secondary: #004499;
+  --medical-blue-light: #3388dd;
+  --medical-green-primary: #28a745;
+  --medical-green-secondary: #20c944;
+  --medical-green-light: #48d164;
+  --medical-white: #ffffff;
+  --medical-light-blue: #e6f3ff;
+  --medical-navy: #1a365d;
+  --medical-teal: #0d9488;
+  --medical-gray: #6b7280;
+  --medical-dark: #111827;
 }
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
 
 body {
   background: var(--background);
@@ -21,115 +27,157 @@ body {
 }
 
 .titulosResponsive{
-  @apply text-5xl font-bold mb-4 p-8 text-justify;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  padding: 2rem;
+  text-align: justify;
 }
 
-
 .subtitulosResponsive{
-  @apply   md:text-3xl font-bold mb-4 p-8 text-center;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .subtitulosResponsive{
+    font-size: 1.875rem;
+  }
 }
 
 .textoResponsive{
-  @apply md:text-2xl font-bold text-justify ;
+  font-weight: bold;
+  text-align: justify;
+}
+
+@media (min-width: 768px) {
+  .textoResponsive{
+    font-size: 1.5rem;
+  }
 }
 
 .textoResponsive2{
-  @apply text-xs md:text-2xl font-bold text-justify ;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-align: justify;
+}
+
+@media (min-width: 768px) {
+  .textoResponsive2{
+    font-size: 1.5rem;
+  }
 }
 
 .estiloPlanes{
-  @apply 
-border
-rounded-2xl
-p-8
-bg-blue-950
+  border: 1px solid;
+  border-radius: 1rem;
+  padding: 2rem;
+  background-color: #1e3a8a;
 }
 
-.estiloPlanesCayan{
-  @apply 
-border
-rounded-2xl
-p-8
-bg-cyan-950
+.estiloPlanesMedical{
+  border: 1px solid;
+  border-radius: 1rem;
+  padding: 2rem;
+  background-color: #134e4a;
 }
 
-
-.estiloPlanesFuccia{
-  @apply 
-border
-rounded-2xl
-p-8
-bg-fuchsia-950
+.estiloPlanesMedicalGreen{
+  border: 1px solid;
+  border-radius: 1rem;
+  padding: 2rem;
+  background-color: #14532d;
 }
 
 .textoNormalResponsive{
-  @apply
-  text-lg
-  
-  
+  font-size: 1.125rem;
 }
 
-
 .tituloResponsive{
-  @apply
-  text-4xl
-  font-bold
+  font-size: 2.25rem;
+  font-weight: bold;
 }
 
 .textoNormalResposivo{
-  @apply
-  text-sm
-  md:text-3xl
-  justify-center
-  p-2
-  
+  font-size: 0.875rem;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .textoNormalResposivo{
+    font-size: 1.875rem;
+  }
 }
 
 .textoBoldResponsivo{
-  @apply
-  text-sm
-  md:text-3xl
-  font-bold
-  my-4
-  justify-center
-  p-2
-
+  font-size: 0.875rem;
+  font-weight: bold;
+  margin: 1rem 0;
+  justify-content: center;
+  padding: 0.5rem;
 }
 
-.inputMorado{
-  @apply
-  bg-black 
-  border-2 border-purple-500 rounded-2xl 
-  w-80 md:w-120 
-  h-8 md:h-12 
-  text-sm md:text-2xl
-  p-4
-  justify-center
+@media (min-width: 768px) {
+  .textoBoldResponsivo{
+    font-size: 1.875rem;
+  }
 }
 
-
-
-.textAreaMorado{
-  @apply
-  bg-black 
-  border-2 border-purple-500 rounded-2xl 
-  w-80 md:w-120 
-  h-30 md:h-60
-  text-sm md:text-2xl
-  justify-center
-  
+.inputMedical{
+  background-color: black;
+  border: 2px solid #3b82f6;
+  border-radius: 1rem;
+  width: 20rem;
+  height: 2rem;
+  font-size: 0.875rem;
+  padding: 1rem;
+  justify-content: center;
 }
 
-.inputMoradostep{
-  @apply
-    bg-black 
-  border-2 border-purple-500 rounded-2xl 
-  w-80 
-  h-8 md:h-12 
-  text-sm md:text-2xl
-  
-  justify-center
+@media (min-width: 768px) {
+  .inputMedical{
+    width: 30rem;
+    height: 3rem;
+    font-size: 1.5rem;
+  }
+}
 
+.textAreaMedical{
+  background-color: black;
+  border: 2px solid #3b82f6;
+  border-radius: 1rem;
+  width: 20rem;
+  height: 7.5rem;
+  font-size: 0.875rem;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .textAreaMedical{
+    width: 30rem;
+    height: 15rem;
+    font-size: 1.5rem;
+  }
+}
+
+.inputMedicalStep{
+  background-color: black;
+  border: 2px solid #3b82f6;
+  border-radius: 1rem;
+  width: 20rem;
+  height: 2rem;
+  font-size: 0.875rem;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .inputMedicalStep{
+    height: 3rem;
+    font-size: 1.5rem;
+  }
 }
 
 

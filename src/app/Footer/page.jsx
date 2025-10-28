@@ -28,33 +28,34 @@ export default function Footer(){
   <div className="mx-auto max-w-screen-xl px-4 pt-16 pb-8 sm:px-6 lg:px-8 lg:pt-24">
     <div className="text-center">
       <h2 className="text-3xl font-extrabold text-gray-900 sm:text-5xl dark:text-white">
-        El mundo cambio
+        La medicina digital hecha para ti con <GradientText>Medify</GradientText>
       </h2>
 
       <p className="mx-auto mt-4 max-w-sm text-gray-500 dark:text-gray-400">
-      Únete a nosotros y transforma tu visión en realidad. Juntos, impulsaremos tu negocio con la fuerza de desarrolladores y expertos que te acompañarán en cada paso del camino.
+      Únete a la revolución de la salud digital. Transforma la manera de administrar tu consultas médicas con Medify, 
+      intuitiva y conforme con estándares médicos internacionales.
       </p>
 
       <div className="mt-12 pt-8">
-        <h3 className="text-center text-sm font-semibold text-gray-400 mb-6">Tecnologías que usamos</h3>
+        <h3 className="text-center text-sm font-semibold text-gray-400 mb-6">Tecnologías médicas especializadas</h3>
         <div className="flex flex-wrap justify-center gap-8">
-          <SiNextdotjs className="text-3xl md:text-4xl opacity-80 hover:opacity-100 transition" title="Next.js" />
-          <SiReact className="text-3xl md:text-4xl opacity-80 hover:opacity-100 transition" title="React" />
-          <SiTypescript className="text-3xl md:text-4xl opacity-80 hover:opacity-100 transition" title="TypeScript" />
-          <SiJavascript className="text-3xl md:text-4xl opacity-80 hover:opacity-100 transition" title="JavaScript" />
-          <SiNodedotjs className="text-3xl md:text-4xl opacity-80 hover:opacity-100 transition" title="Node.js" />
-          <SiExpress className="text-3xl md:text-4xl opacity-80 hover:opacity-100 transition" title="Express" />
-          <SiTailwindcss className="text-3xl md:text-4xl opacity-80 hover:opacity-100 transition" title="Tailwind CSS" />
-          <SiMysql className="text-3xl md:text-4xl opacity-80 hover:opacity-100 transition" title="MySQL" />
-          <SiMongodb className="text-3xl md:text-4xl opacity-80 hover:opacity-100 transition" title="MongoDB" />
+          <SiNextdotjs className="text-3xl md:text-4xl opacity-80 hover:opacity-100 transition text-blue-400" title="Next.js" />
+          <SiReact className="text-3xl md:text-4xl opacity-80 hover:opacity-100 transition text-blue-400" title="React" />
+          <SiTypescript className="text-3xl md:text-4xl opacity-80 hover:opacity-100 transition text-blue-400" title="TypeScript" />
+          <SiJavascript className="text-3xl md:text-4xl opacity-80 hover:opacity-100 transition text-blue-400" title="JavaScript" />
+          <SiNodedotjs className="text-3xl md:text-4xl opacity-80 hover:opacity-100 transition text-green-400" title="Node.js" />
+          <SiExpress className="text-3xl md:text-4xl opacity-80 hover:opacity-100 transition text-green-400" title="Express" />
+          <SiTailwindcss className="text-3xl md:text-4xl opacity-80 hover:opacity-100 transition text-teal-400" title="Tailwind CSS" />
+          <SiMysql className="text-3xl md:text-4xl opacity-80 hover:opacity-100 transition text-blue-500" title="MySQL" />
+          <SiMongodb className="text-3xl md:text-4xl opacity-80 hover:opacity-100 transition text-green-500" title="MongoDB" />
         </div>
       </div>
 
       <a
         href="/"
-        className="mt-8 inline-block rounded-full border border-indigo-600 px-12 py-3 text-sm font-medium text-white hover:bg-indigo-600 hover:text-white focus:ring-3 focus:outline-none"
+        className="mt-8 inline-block rounded-full border border-blue-600 px-12 py-3 text-sm font-medium text-white hover:bg-blue-600 hover:text-white focus:ring-3 focus:outline-none"
       >
-        Ir a Inicio
+        Volver a Medify
       </a>
     </div>
 
@@ -64,19 +65,19 @@ export default function Footer(){
       <ul className="flex flex-wrap justify-center gap-4 text-xs lg:justify-end">
         <li>
           <a href="/contacto" className="text-gray-500 transition hover:opacity-75 dark:text-gray-400">
-            Contactanos
+            Contacto Médico
           </a>
         </li>
 
         <li>
           <a href="/soporte" className="text-gray-500 transition hover:opacity-75 dark:text-gray-400">
-            Soporte Clientes
+            Soporte Especializado
           </a>
         </li>
 
         <li>
           <a href="#" className="text-gray-500 transition hover:opacity-75 dark:text-gray-400">
-            Cookies
+            Privacidad HIPAA
           </a>
         </li>
       </ul>

@@ -17,11 +17,11 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 
 const pages = [
-  { label: 'Proyectos', href: '/portafolio' },
-  { label: 'Servicios', href: '/servicios' },
-  { label: 'Quiénes Somos', href: '/sobreNosotros' },
+  { label: 'Casos de Éxito', href: '/portafolio' },
+  { label: 'Soluciones', href: '/servicios' },
+  { label: 'Sobre Medify', href: '/sobreNosotros' },
   { label: 'Contacto', href: '/soporte' },
-  { label: 'Contratación', href: '/comprar' }
+  { label: 'Solicitar Demo', href: '/comprar' }
 ];
 
 function ResponsiveAppBar() {
@@ -59,7 +59,7 @@ function ResponsiveAppBar() {
               >
                 <Image
                   src="/ico2.png"
-                  alt="NativeCode logo"
+                  alt="Medify logo"
                   width={88}
                   height={44}
                   style={{ objectFit: 'contain', borderRadius: '12px', padding: '4px' }}
@@ -82,7 +82,7 @@ function ResponsiveAppBar() {
                   '&:hover': { opacity: 1 }
                 }}
               >
-                Ingenieria de Software
+                Tecnología Médica Digital
               </Typography>
             </Box>
 
