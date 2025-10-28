@@ -80,7 +80,7 @@ const TextType = ({
 
     const tick = () => {
       if (isDeleting) {
-        // 🔧 Caso especial: queda 1 carácter -> en el MISMO frame cambiamos al siguiente texto
+        // SPECIAL CASE: When only 1 character remains -> change to next text in the SAME frame
         if (displayedText.length === 1) {
           const nextIndex =
             currentTextIndex === textArray.length - 1 ? 0 : currentTextIndex + 1;

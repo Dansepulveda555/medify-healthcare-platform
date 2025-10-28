@@ -113,7 +113,7 @@ export default function SobreNosotros() {
           {/* Propuesta de Valor */}
           <div className="group rounded-2xl ring-1 ring-white/10 bg-black/30 p-6 hover:ring-blue-400/40 transition">
             <h3 className={`${michroma.className} text-xl sm:text-2xl text-white flex items-center gap-2`}>
-              <span aria-hidden>⚕️</span> Propuesta de Valor
+              <span aria-hidden>+</span> Propuesta de Valor
             </h3>
             <p className="mt-3 text-white/85">
               Sistemas médicos personalizados que garantizan seguridad de datos, cumplimiento 
