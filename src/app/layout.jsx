@@ -123,7 +123,7 @@ export default function RootLayout({ children }) {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Organization",
-            "name": "NativeCode",
+            "name": "Medify Healthcare Solutions",
             "url": process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
             "logo": (process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000") + "/og.jpg",
             "sameAs": [
@@ -140,7 +140,7 @@ export default function RootLayout({ children }) {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebSite",
-            "name": "NativeCode",
+            "name": "Medify Healthcare Solutions",
             "url": process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
             "potentialAction": {
               "@type": "SearchAction",

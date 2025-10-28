@@ -206,7 +206,7 @@ function ResponsiveAppBar() {
               ))}
               <Button
                 component="a"
-                href="https://wa.me/56966091038?text=Quiero%20cotizar%20proyecto"
+                href="https://wa.me/56977889900?text=Quiero%20cotizar%20solución%20médica%20Medify"
                 target="_blank"
                 rel="noopener"
                 className={michroma.className}

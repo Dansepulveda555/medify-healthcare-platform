@@ -39,9 +39,9 @@ export default function () {
             {/* WhatsApp */}
             <div className="rounded-3xl ring-1 ring-white/10 bg-white/5 backdrop-blur-md p-6 shadow-xl transition hover:scale-105 hover:ring-white/20">
               <h4 className="text-white font-semibold tracking-tight">WhatsApp</h4>
-              <p className="mt-1 text-white/80">+56 9 6609 1038</p>
+              <p className="mt-1 text-white/80">+56 9 7788 9900</p>
               <a
-                href="https://wa.me/56966091038"
+                href="https://wa.me/56977889900?text=Hola,%20necesito%20soporte%20técnico%20para%20Medify"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-3 inline-flex items-center rounded-xl px-4 py-2 bg-gradient-to-r from-cyan-400 to-purple-500 text-white font-semibold shadow hover:opacity-90 transition"
@@ -53,10 +53,10 @@ export default function () {
             {/* Correo */}
             <div className="rounded-3xl ring-1 ring-white/10 bg-white/5 backdrop-blur-md p-6 shadow-xl transition hover:scale-105 hover:ring-white/20">
               <h4 className="text-white font-semibold tracking-tight">Correo electrónico</h4>
-              <p className="mt-1 text-white/80">desarrollo.native.code@gmail.com</p>
+              <p className="mt-1 text-white/80">soporte@medify.healthcare</p>
               <a
-                href="mailto:desarrollo.native.code@gmail.com"
-                className="mt-3 inline-flex items-center rounded-xl px-4 py-2 bg-gradient-to-r from-cyan-400 to-purple-500 text-white font-semibold shadow hover:opacity-90 transition"
+                href="mailto:soporte@medify.healthcare"
+                className="mt-3 inline-flex items-center rounded-xl px-4 py-2 bg-gradient-to-r from-blue-500 to-teal-600 text-white font-semibold shadow hover:opacity-90 transition"
               >
                 Escribir por correo
               </a>

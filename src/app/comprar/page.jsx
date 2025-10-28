@@ -40,11 +40,11 @@ export default function Comprar(){
             <dl className="mt-3 space-y-2 text-sm md:text-base">
               <div className="flex justify-between items-center gap-4 border-b border-white/10 pb-2">
                 <dt className="text-white/60">Nombre</dt>
-                <dd className="text-white text-right">Native Code SpA</dd>
+                <dd className="text-white text-right">Medify Healthcare Solutions</dd>
               </div>
               <div className="flex justify-between items-center gap-4 border-b border-white/10 pb-2">
                 <dt className="text-white/60">RUT</dt>
-                <dd className="text-white text-right">78.184.828-K</dd>
+                <dd className="text-white text-right">77.845.123-7</dd>
               </div>
               <div className="flex justify-between items-center gap-4 border-b border-white/10 pb-2">
                 <dt className="text-white/60">Teléfono</dt>
@@ -67,15 +67,15 @@ export default function Comprar(){
               </div>
               <div className="flex justify-between items-center gap-4 border-b border-white/10 pb-2">
                 <dt className="text-white/60">N° de cuenta</dt>
-                <dd className="text-white text-right">0098765443</dd>
+                <dd className="text-white text-right">1234567890</dd>
               </div>
               <div className="flex justify-between items-center gap-4 border-b border-white/10 pb-2">
                 <dt className="text-white/60">Titular</dt>
-                <dd className="text-white text-right">NativeCode SpA</dd>
+                <dd className="text-white text-right">Medify Healthcare Solutions</dd>
               </div>
               <div className="flex justify-between items-center gap-4 border-b border-white/10 pb-2">
                 <dt className="text-white/60">Correo pagos</dt>
-                <dd className="text-white text-right">desarrollo.native.code@gmail.com</dd>
+                <dd className="text-white text-right">pagos@medify.healthcare</dd>
               </div>
             </dl>
           </div>
@@ -85,16 +85,16 @@ export default function Comprar(){
         <div className="rounded-3xl ring-1 ring-white/10 bg-white/5 backdrop-blur-md p-6 shadow-xl">
           <h3 className="text-lg font-semibold text-white tracking-tight">Instrucciones</h3>
           <ul className="mt-3 list-disc list-inside text-sm md:text-base text-white/90 space-y-1.5">
-            <li>En el asunto de la transferencia indica: <span className="text-white">Servicio + Nombre de tu empresa</span>.</li>
-            <li>Envía el comprobante a <span className="text-white">desarrollo.native.code@gmail.com</span> o al WhatsApp <span className="text-white">+56 9 6609 1038</span>.</li>
-            <li>Te contactaremos para levantar requerimientos y calendarizar la puesta en marcha.</li>
+            <li>En el asunto de la transferencia indica: <span className="text-white">Servicio + Nombre de tu institución médica</span>.</li>
+            <li>Envía el comprobante a <span className="text-white">ventas@medify.healthcare</span> o al WhatsApp <span className="text-white">+56 9 7788 9900</span>.</li>
+            <li>Te contactaremos para levantar requerimientos médicos y calendarizar la implementación.</li>
           </ul>
           <p className="mt-4 text-white/85 break-all">
-            Correo de contacto: <span className="text-white">desarrollo.native.code@gmail.com</span>
+            Correo de contacto: <span className="text-white">ventas@medify.healthcare</span>
           </p>
           <div className="mt-5 flex flex-wrap gap-3">
-            <a href="mailto:desarrollo.native.code@gmail.com" className="inline-flex items-center rounded-xl px-4 py-2 bg-gradient-to-r from-cyan-400 to-purple-500 text-white font-semibold shadow hover:opacity-90 transition">Escribir por correo</a>
-            <a href="https://wa.me/56966091038" target="_blank" rel="noopener noreferrer" className="inline-flex items-center rounded-xl px-4 py-2 bg-gradient-to-r from-cyan-400 to-purple-500 text-white font-semibold shadow hover:opacity-90 transition">Escribir por WhatsApp</a>
+            <a href="mailto:ventas@medify.healthcare" className="inline-flex items-center rounded-xl px-4 py-2 bg-gradient-to-r from-blue-500 to-teal-600 text-white font-semibold shadow hover:opacity-90 transition">Escribir por correo</a>
+            <a href="https://wa.me/56977889900" target="_blank" rel="noopener noreferrer" className="inline-flex items-center rounded-xl px-4 py-2 bg-gradient-to-r from-blue-500 to-teal-600 text-white font-semibold shadow hover:opacity-90 transition">Escribir por WhatsApp</a>
           </div>
         </div>
       </div>

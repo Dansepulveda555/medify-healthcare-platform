@@ -48,7 +48,7 @@ export default function Portada() {
             {/* CTA */}
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <a
-                href="https://wa.me/56966091038?text=Quiero%20cotizar%20una%20solución%20médica"
+                href="https://wa.me/56977889900?text=Quiero%20cotizar%20una%20solución%20médica%20de%20Medify"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-xl px-6 py-3.5 text-base font-semibold text-white bg-blue-700 hover:bg-blue-600 shadow-[0_0_25px_rgba(59,130,246,0.8)] ring-1 ring-blue-400/40 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400"
