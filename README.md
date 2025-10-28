@@ -1,55 +1,115 @@
 
-## PAGINA WEB / LANDING PAGE PRO NexusDev ##
+# 🏥 Medify - Healthcare Digital Platform
 
-1️⃣ Hero / Portada llamativa
-	•	Título fuerte: “Creamos sitios web modernos y rápidos”
-	•	Subtítulo: “Diseño profesional, tecnología de vanguardia y resultados medibles”
-	•	Un CTA (Call to Action): “Pide tu cotización” o “Agenda una reunión”
-	•	Imagen o ilustración (puede ser una animación, un mockup, etc.)
+[![Next.js](https://img.shields.io/badge/Next.js-15.4.4-black?logo=next.js)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-19.1.0-blue?logo=react)](https://reactjs.org/)
+[![Material-UI](https://img.shields.io/badge/Material--UI-7.2.0-blue?logo=mui)](https://mui.com/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.0-38B2AC?logo=tailwind-css)](https://tailwindcss.com/)
 
+## 📋 Overview
 
- 2️⃣ Sección de Servicios
-Aquí explicas qué tipo de sitios web haces.
-	•	Landing Pages → para campañas y productos.
-	•	Sitios Corporativos → empresas y profesionales.
-	•	E-commerce / Tiendas Online → venta de productos.
-	•	Desarrollo a medida → sistemas personalizados.
+**Medify** is a comprehensive healthcare digital platform designed to revolutionize medical practice management. Our solution combines telemedicine capabilities, patient management systems, and hospital management tools in one integrated platform.
 
+## ✨ Features
 
-📌 Cada servicio debería tener:
-	•	Un icono/imagen.
-	•	Un título claro.
-	•	Una breve descripción (2–3 líneas).
-	•	Opción de “Ver más” o “Solicitar info”.
+### 🎯 Core Services
+- **Patient Management System** - Complete patient data management and tracking ($199,000)
+- **Telemedicine Platform** - Secure video consultations and remote care ($349,000)
+- **Hospital Management System (HMS)** - Full hospital operations management ($599,000)
 
+### 🔒 Security & Compliance
+- HIPAA compliant infrastructure
+- End-to-end encryption
+- Secure data storage and transmission
+- Role-based access control
 
-3️⃣ Beneficios / Por qué elegirnos
+## 🚀 Getting Started
 
-Diferénciate de la competencia:
-	•	🔥 Velocidad y rendimiento (optimización SEO, Core Web Vitals)
-	•	🎨 Diseño moderno y responsive
-	•	⚙️ Tecnologías actualizadas (Next.js, React, Tailwind, etc.)
-	•	🔒 Seguridad y buenas prácticas
-	•	📞 Soporte y mantenimiento
+### Installation
 
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Dansepulveda555/medify-healthcare-platform.git
+   cd medify-healthcare-platform
+   ```
 
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-4️⃣ Proceso de trabajo
+3. **Run the development server**
+   ```bash
+   npm run dev
+   ```
 
-Explica cómo trabajas en pasos simples:
-	1.	Reunión inicial → Entendemos tu necesidad.
-	2.	Diseño y prototipo → Te mostramos una propuesta visual.
-	3.	Desarrollo → Construimos el sitio con tecnologías modernas.
-	4.	Lanzamiento y soporte → Subimos el sitio y lo mantenemos.
+4. **Open your browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
 
-⸻
+## �️ Tech Stack
 
+- **Frontend**: Next.js 15.4.4, React 19.1.0
+- **UI**: Material-UI 7.2.0, Tailwind CSS 4.0
+- **Animations**: Framer Motion, GSAP
+- **Typography**: Michroma, Roboto
 
+## 📦 Service Tiers
 
- 5️⃣ Portafolio (Proyectos recientes)
+### 🥉 Patient Management - $199,000
+- Complete patient database management
+- Appointment scheduling
+- Basic reporting
+- Email support
 
-📌 Si ya tienes trabajos previos, muestra ejemplos:
-	•	Capturas de pantalla / mockups.
+### 🥈 Telemedicine Platform - $349,000
+- All Patient Management features
+- Video consultation platform
+- Prescription management
+- Advanced analytics
+- Phone support
+
+### 🥇 Hospital Management System - $599,000
+- All Telemedicine features
+- Complete hospital operations
+- Staff management
+- Financial reporting
+- 24/7 priority support
+- Custom integrations
+
+## 🛠️ Project Structure
+
+```
+medify-healthcare-platform/
+├── src/
+│   ├── app/                    # Next.js App Router pages
+│   │   ├── portada/           # Landing page
+│   │   ├── servicios/         # Services page
+│   │   ├── sobreNosotros/     # About us
+│   │   ├── portafolio/        # Portfolio/cases
+│   │   └── comprar/           # Purchase/demo
+│   ├── componentes/           # Reusable components
+│   └── estilos/               # Custom CSS styles
+└── public/                    # Static assets
+```
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Push to the branch
+5. Open a Pull Request
+
+## 📞 Contact
+
+**Dan Sepúlveda** - Developer
+- GitHub: [@Dansepulveda555](https://github.com/Dansepulveda555)
+
+---
+
+<div align="center">
+  <strong>🏥 Transforming Healthcare Through Technology 🚀</strong>
+</div>
 	•	Links a las páginas en vivo.
 	•	Breve descripción del proyecto y resultados.
 
