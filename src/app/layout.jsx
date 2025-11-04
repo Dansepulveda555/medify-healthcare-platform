@@ -3,6 +3,7 @@ import "./globals.css";
 import { Poppins, Dancing_Script } from "next/font/google";
 import Footer from "./Footer/page";
 import Navbar from "@/componentes/Navbar";
+import CardNavMedical from "@/componentes/CardNavMedical";
 import Script from "next/script";
 
 // ==========================
@@ -152,7 +153,12 @@ export default function RootLayout({ children }) {
       />
       <body className={`${poppins.className} ${geistSans.variable} ${geistMono.variable} antialiased`}>
         <div className="min-h-screen flex flex-col">
+          {/* Navbar tradicional Material-UI (restaurado) */}
           <Navbar />
+          
+          {/* CardNav moderno (desactivado) */}
+          {/* <CardNavMedical /> */}
+          
           <main className="flex-1">
             {children}
           </main>

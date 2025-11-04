@@ -42,36 +42,55 @@ function ResponsiveAppBar() {
       color="transparent"
       enableColorOnDark
       sx={{
-        backgroundColor: 'rgba(17,17,17,0.85) !important',
-        backdropFilter: 'blur(8px)',
-        borderBottom: '1px solid rgba(255,255,255,0.08)',
-        boxShadow: '0 6px 28px rgba(0,0,0,0.35)',
+        backgroundColor: '#ffffff !important',
+        backdropFilter: 'blur(12px)',
+        borderBottom: '1px solid rgba(30, 58, 138, 0.08)',
+        boxShadow: '0 2px 20px rgba(30, 58, 138, 0.12)',
         fontFamily: michroma.style.fontFamily,
       }}
     >
       <Container maxWidth="xl">
-        <Box style={{ color: 'white' }}>
+        <Box style={{ color: '#1e3a8a' }}>
           <Toolbar disableGutters sx={{ minHeight: { xs: 64, md: 72 }, gap: { xs: 1, md: 2 } }}>
             <Box sx={{ display: { xs: 'none', md: 'flex' }, alignItems: 'center', gap: 1.5, mr: 2 }}>
               <a
                 href="/"
                 style={{ textDecoration: 'none' }}
               >
-                <Image
-                  src="/ico2.png"
-                  alt="Medify logo"
+                <video
+                  src="/Archivo2.mp4"
                   width={88}
                   height={44}
-                  style={{ objectFit: 'contain', borderRadius: '12px', padding: '4px' }}
-                />
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  preload="metadata"
+                  controls={false}
+                  disablePictureInPicture
+                  style={{ 
+                    objectFit: 'contain', 
+                    borderRadius: '12px', 
+                    padding: '4px'
+                  }}
+                >
+                  {/* Fallback para navegadores que no soporten el video */}
+                  <img 
+                    src="/medify.JPG" 
+                    alt="Medify logo" 
+                    width={88} 
+                    height={44}
+                    style={{ objectFit: 'contain', borderRadius: '12px', padding: '4px' }}
+                  />
+                </video>
               </a>
               <Typography
                 className={michroma.className}
                 component="a"
                 href="/"
-                style={{ color: 'white', fontFamily: michroma.style.fontFamily }}
+                style={{ color: '#1e3a8a', fontFamily: michroma.style.fontFamily }}
                 sx={{
-                  color: 'white',
+                  color: '#1e3a8a',
                   textDecoration: 'none',
                   fontWeight: 700,
                   fontFamily: michroma.style.fontFamily,
@@ -79,7 +98,7 @@ function ResponsiveAppBar() {
                   fontSize: '1.0rem',
                   lineHeight: 1.05,
                   opacity: 0.92,
-                  '&:hover': { opacity: 1 }
+                  '&:hover': { opacity: 1, color: '#0c1426' }
                 }}
               >
                 Tecnología Médica Digital
@@ -114,11 +133,11 @@ function ResponsiveAppBar() {
                 sx={{ display: { xs: 'block', md: 'none' } }}
                 PaperProps={{
                   sx: {
-                    backgroundColor: '#111',
-                    color: 'white',
+                    backgroundColor: '#ffffff',
+                    color: '#1e3a8a',
                     borderRadius: 2,
-                    border: '1px solid rgba(255,255,255,0.08)',
-                    boxShadow: '0 12px 32px rgba(0,0,0,0.45)',
+                    border: '1px solid rgba(30, 58, 138, 0.12)',
+                    boxShadow: '0 8px 32px rgba(30, 58, 138, 0.18)',
                     mt: 1,
                     fontFamily: michroma.style.fontFamily,
                   }
@@ -131,7 +150,7 @@ function ResponsiveAppBar() {
                       component="a"
                       href={page.href}
                       sx={{
-                        color: 'white',
+                        color: '#1e3a8a',
                         textDecoration: 'none',
                         fontSize: '0.98rem',
                         fontWeight: 700,
@@ -140,7 +159,8 @@ function ResponsiveAppBar() {
                         display: 'block',
                         width: '100%',
                         lineHeight: 1.2,
-                        whiteSpace: 'normal'
+                        whiteSpace: 'normal',
+                        '&:hover': { color: '#0c1426' }
                       }}
                     >
                       {page.label}
@@ -154,7 +174,7 @@ function ResponsiveAppBar() {
               className={michroma.className}
               component="a"
               href="/"
-              style={{ color: 'white', fontFamily: michroma.style.fontFamily }}
+              style={{ color: '#1e3a8a', fontFamily: michroma.style.fontFamily }}
               sx={{
                 mr: 2,
                 display: { xs: 'flex', md: 'none' },
@@ -167,7 +187,8 @@ function ResponsiveAppBar() {
                 lineHeight: 1.15,
                 whiteSpace: 'normal',
                 wordBreak: 'break-word',
-                overflow: 'visible'
+                overflow: 'visible',
+                '&:hover': { color: '#0c1426' }
               }}
             >
              Ingenieria de Software
@@ -185,7 +206,7 @@ function ResponsiveAppBar() {
                     mx: 0.5,
                     px: 2.25,
                     py: 1,
-                    color: 'white',
+                    color: '#1e3a8a',
                     fontFamily: michroma.style.fontFamily,
                     fontWeight: 700,
                     fontSize: '0.92rem',
@@ -196,8 +217,9 @@ function ResponsiveAppBar() {
                     transition: 'all .2s ease',
                     '&:hover': {
                       opacity: 1,
-                      backgroundColor: 'rgba(255,255,255,0.06)',
-                      transform: 'translateY(-1px)'
+                      backgroundColor: 'rgba(30, 58, 138, 0.08)',
+                      transform: 'translateY(-1px)',
+                      color: '#0c1426'
                     }
                   }}
                 >
@@ -215,22 +237,23 @@ function ResponsiveAppBar() {
                   ml: 1.5,
                   px: 2.75,
                   py: 1.1,
-                  color: '#0ff',
+                  color: 'white',
                   fontFamily: michroma.style.fontFamily,
                   fontWeight: 700,
-                  borderColor: 'rgba(255,255,255,0.22)',
+                  borderColor: 'rgba(30, 58, 138, 0.3)',
                   textTransform: 'none',
                   letterSpacing: '.08em',
                   fontSize: '0.94rem',
                   borderRadius: 2,
-                  border: '1px solid rgba(255,255,255,0.18)',
-                  background: 'linear-gradient(to right, rgba(99,102,241,0.15), rgba(34,211,238,0.15))',
-                  boxShadow: '0 6px 20px rgba(0,0,0,0.35)',
+                  border: '1px solid rgba(30, 58, 138, 0.3)',
+                  background: 'linear-gradient(to right, #1e3a8a, #2563eb)',
+                  boxShadow: '0 4px 15px rgba(30, 58, 138, 0.3)',
                   transition: 'all .2s ease',
                   '&:hover': {
-                    background: 'linear-gradient(to right, rgba(99,102,241,0.22), rgba(34,211,238,0.22))',
+                    background: 'linear-gradient(to right, #0c1426, #1e3a8a)',
                     transform: 'translateY(-1px)',
-                    borderColor: 'rgba(255,255,255,0.28)'
+                    borderColor: 'rgba(30, 58, 138, 0.5)',
+                    boxShadow: '0 6px 20px rgba(30, 58, 138, 0.4)'
                   }
                 }}
               >

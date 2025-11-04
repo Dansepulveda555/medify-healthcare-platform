@@ -1,9 +1,38 @@
 
 @import "tailwindcss";
 
+/* Optimizaciones de scroll y rendimiento */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 2rem;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(59, 130, 246, 0.5) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.5);
+  border-radius: 3px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: rgba(59, 130, 246, 0.8);
+}
+
 :root {
-  --background: #000000;
-  --foreground: #ededed;
+  --background: linear-gradient(135deg, #0c1426 0%, #172554 50%, #1e3a8a 100%);
+  --background-solid: #0c1426;
+  --foreground: #f8fafc;
   
   /* Medify - Paleta de colores para sector salud */
   --medical-blue-primary: #0066cc;
@@ -14,16 +43,56 @@
   --medical-green-light: #48d164;
   --medical-white: #ffffff;
   --medical-light-blue: #e6f3ff;
-  --medical-navy: #1a365d;
+  --medical-navy: #0c1426;
   --medical-teal: #0d9488;
   --medical-gray: #6b7280;
-  --medical-dark: #111827;
+  --medical-dark: #030712;
+  --medical-bg-primary: #0c1426;
+  --medical-bg-secondary: #172554;
+  --medical-bg-accent: #1e3a8a;
 }
 
 body {
   background: var(--background);
+  background-attachment: fixed;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  will-change: scroll-position;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overscroll-behavior: none;
+}
+
+/* Alternativa para fondos sólidos en caso de incompatibilidad */
+@supports not (background: linear-gradient(135deg, #0c1426 0%, #172554 50%, #1e3a8a 100%)) {
+  body {
+    background: var(--background-solid);
+  }
+}
+
+/* Optimizaciones generales de rendimiento */
+.optimize-performance {
+  will-change: auto;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+.smooth-transition {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gpu-accelerated {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* Prevenir scroll bounce en iOS */
+.no-scroll-bounce {
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: touch;
 }
 
 .titulosResponsive{
@@ -71,24 +140,30 @@ body {
 }
 
 .estiloPlanes{
-  border: 1px solid;
+  border: 1px solid rgba(30, 58, 138, 0.3);
   border-radius: 1rem;
   padding: 2rem;
-  background-color: #1e3a8a;
+  background-color: rgba(23, 37, 84, 0.6);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(12, 20, 38, 0.5);
 }
 
 .estiloPlanesMedical{
-  border: 1px solid;
+  border: 1px solid rgba(13, 148, 136, 0.3);
   border-radius: 1rem;
   padding: 2rem;
-  background-color: #134e4a;
+  background-color: rgba(13, 148, 136, 0.4);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(12, 20, 38, 0.5);
 }
 
 .estiloPlanesMedicalGreen{
-  border: 1px solid;
+  border: 1px solid rgba(40, 167, 69, 0.3);
   border-radius: 1rem;
   padding: 2rem;
-  background-color: #14532d;
+  background-color: rgba(40, 167, 69, 0.4);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(12, 20, 38, 0.5);
 }
 
 .textoNormalResponsive{
@@ -127,14 +202,23 @@ body {
 }
 
 .inputMedical{
-  background-color: black;
-  border: 2px solid #3b82f6;
+  background-color: rgba(12, 20, 38, 0.9);
+  border: 2px solid rgba(30, 58, 138, 0.4);
   border-radius: 1rem;
   width: 20rem;
   height: 2rem;
   font-size: 0.875rem;
   padding: 1rem;
   justify-content: center;
+  color: #f8fafc;
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+}
+
+.inputMedical:focus {
+  border-color: #1e3a8a;
+  box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.3);
+  outline: none;
 }
 
 @media (min-width: 768px) {
@@ -146,13 +230,24 @@ body {
 }
 
 .textAreaMedical{
-  background-color: black;
-  border: 2px solid #3b82f6;
+  background-color: rgba(12, 20, 38, 0.9);
+  border: 2px solid rgba(30, 58, 138, 0.4);
   border-radius: 1rem;
   width: 20rem;
   height: 7.5rem;
   font-size: 0.875rem;
   justify-content: center;
+  color: #f8fafc;
+  padding: 1rem;
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+  resize: vertical;
+}
+
+.textAreaMedical:focus {
+  border-color: #1e3a8a;
+  box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.3);
+  outline: none;
 }
 
 @media (min-width: 768px) {
@@ -164,13 +259,23 @@ body {
 }
 
 .inputMedicalStep{
-  background-color: black;
-  border: 2px solid #3b82f6;
+  background-color: rgba(12, 20, 38, 0.9);
+  border: 2px solid rgba(30, 58, 138, 0.4);
   border-radius: 1rem;
   width: 20rem;
   height: 2rem;
   font-size: 0.875rem;
   justify-content: center;
+  color: #f8fafc;
+  padding: 1rem;
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+}
+
+.inputMedicalStep:focus {
+  border-color: #1e3a8a;
+  box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.3);
+  outline: none;
 }
 
 @media (min-width: 768px) {
@@ -180,8 +285,490 @@ body {
   }
 }
 
+/* Estilos adicionales para el tema médico */
+.medical-card {
+  background: rgba(23, 37, 84, 0.3);
+  border: 1px solid rgba(30, 58, 138, 0.2);
+  border-radius: 1rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(12, 20, 38, 0.4);
+  transition: all 0.3s ease;
+}
 
+.medical-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(12, 20, 38, 0.6);
+  border-color: rgba(30, 58, 138, 0.4);
+}
 
+.medical-button {
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  border: none;
+  border-radius: 0.75rem;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(30, 58, 138, 0.4);
+}
 
+.medical-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(30, 58, 138, 0.6);
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+}
 
+.medical-text-primary {
+  color: #f8fafc;
+}
 
+.medical-text-secondary {
+  color: #e2e8f0;
+}
+
+/* Estilos SpotlightCard */
+.card-spotlight {
+  position: relative;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(252, 252, 252, 0.21);
+  background-color: rgba(16, 29, 58, 0.213);
+  padding: 2rem;
+  overflow: hidden;
+  --mouse-x: 50%;
+  --mouse-y: 50%;
+  --spotlight-color: rgba(30, 59, 138, 0.166);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.card-spotlight::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at var(--mouse-x) var(--mouse-y), var(--spotlight-color), transparent 65%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.card-spotlight:hover::before,
+.card-spotlight:focus-within::before {
+  opacity: 0.8;
+}
+
+.card-spotlight > * {
+  position: relative;
+  z-index: 2;
+}
+
+.card-spotlight:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 40px rgba(30, 59, 138, 0.156);
+  border-color: rgba(246, 247, 248, 0.351);
+}
+
+/* Animaciones adicionales para mejorar la interactividad */
+@keyframes spotlight-pulse {
+  0% { opacity: 0; }
+  50% { opacity: 0.8; }
+  100% { opacity: 0.6; }
+}
+
+.card-spotlight:hover::before {
+  animation: spotlight-pulse 0.8s ease-in-out;
+}
+
+/* Estilos específicos para tarjetas médicas */
+.custom-spotlight-card {
+  background: rgba(12, 20, 38, 0.4);
+  border: 1px solid rgba(0, 229, 255, 0.2);
+  backdrop-filter: blur(15px);
+}
+
+.custom-spotlight-card:hover {
+  border-color: rgba(0, 229, 255, 0.4);
+}
+
+/* Estilos Carousel */
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(121, 158, 234, 0.4);
+  border-radius: 20px;
+  padding: 18px;
+  --outer-r: 20px;
+  --p-distance: 12px;
+  background: rgba(159, 183, 223, 0.1);
+  backdrop-filter: blur(12px);
+  width: 100%;
+  max-width: 520px;
+  box-shadow: 0 4px 20px rgba(59, 130, 246, 0.15);
+  will-change: transform;
+  transform: translateZ(0);
+
+}
+
+.carousel-track {
+  display: flex;
+}
+
+.carousel-item {
+  position: relative;
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  border-radius: 12px;
+  background-color: rgba(59, 130, 246, 0.08);
+  overflow: hidden;
+  cursor: grab;
+  backdrop-filter: blur(15px);
+  clip-path: polygon(0% 0%, 100% 0%, 98% 100%, 2% 100%);
+  transition: all 0.3s ease;
+  min-height: 160px;
+  aspect-ratio: 7/3;
+  box-shadow: 0 2px 15px rgba(59, 130, 246, 0.1);
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+.carousel-item:active {
+  cursor: grabbing;
+}
+
+.carousel-item:hover {
+  transform: translateY(-3px) scale(1.02);
+  background-color: rgba(59, 130, 246, 0.12);
+  border-color: rgba(59, 130, 246, 0.5);
+  box-shadow: 0 8px 30px rgba(59, 130, 246, 0.25);
+}
+
+.carousel-container.round {
+  border: 1px solid rgba(30, 58, 138, 0.2);
+}
+
+.carousel-item.round {
+  background-color: rgba(12, 20, 38, 0.3);
+  position: relative;
+  bottom: 0.1em;
+  border: 1px solid rgba(30, 58, 138, 0.25);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  clip-path: polygon(0% 0%, 100% 0%, 98% 100%, 2% 100%);
+  aspect-ratio: 3/2;
+  min-height: 180px;
+}
+
+.carousel-item-header.round {
+  padding: 0;
+  margin: 0;
+}
+
+.carousel-indicators-container.round {
+  position: absolute;
+  z-index: 2;
+  bottom: 3em;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.carousel-indicator.active {
+  background-color: rgba(30, 58, 138, 0.8);
+}
+
+.carousel-indicator.inactive {
+  background-color: rgba(30, 58, 138, 0.2);
+}
+
+.carousel-item-header {
+  margin-bottom: 12px;
+  padding: 16px 20px;
+  padding-top: 16px;
+  width: 100%;
+}
+
+.carousel-icon-container {
+  display: flex;
+  height: 32px;
+  width: 32px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: rgba(59, 130, 246, 0.8);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+}
+
+.carousel-icon {
+  height: 16px;
+  width: 16px;
+  color: #fff;
+}
+
+.carousel-item-content {
+  padding: 16px 20px;
+  padding-bottom: 16px;
+  flex-grow: 1;
+  width: 100%;
+}
+
+.carousel-item-title {
+  margin-bottom: 6px;
+  font-weight: 900;
+  font-size: 16px;
+  color: #e2e8f0;
+  line-height: 1.2;
+}
+
+.carousel-item-description {
+  font-size: 13px;
+  color: #cbd5e1;
+  line-height: 1.4;
+}
+
+.carousel-indicators-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.carousel-indicators {
+  margin-top: 16px;
+  display: flex;
+  width: 150px;
+  justify-content: space-between;
+  padding: 0 32px;
+}
+
+.carousel-indicator {
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.carousel-indicator.active {
+  background-color: rgba(40, 73, 148, 0.854);
+  transform: scale(1.2);
+}
+
+.carousel-indicator.inactive {
+  background-color: rgba(225, 227, 232, 0.3);
+}
+
+/* ===== CARDSWAP STYLES - MEDICAL THEME ===== */
+.card-swap-container {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translate(5%, 20%);
+  transform-origin: bottom right;
+  perspective: 900px;
+  overflow: visible;
+}
+
+.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(41, 54, 141, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transform-style: preserve-3d;
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  padding: 2rem;
+  color: white;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    0 4px 16px rgba(0, 0, 0, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.card:hover {
+  box-shadow: 
+    0 12px 40px rgba(0, 0, 0, 0.15),
+    0 6px 20px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+.card h3 {
+  font-family: 'Michroma', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #3b82f6;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 1.5rem;
+}
+
+.card .card-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.card .card-features li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.card .card-features li:last-child {
+  border-bottom: none;
+}
+
+.card .card-features li::before {
+  content: '✓';
+  color: #3b82f6;
+  font-weight: bold;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(59, 130, 246, 0.2);
+  font-size: 0.75rem;
+}
+
+.card .card-price {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #3b82f6;
+  margin: 1rem 0;
+  text-align: center;
+  padding: 0.75rem;
+  background: rgba(59, 130, 246, 0.1);
+  border-radius: 8px;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.card .card-cta {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.card .card-cta:hover {
+  background: linear-gradient(135deg, #1d4ed8 0%, #3b82f6 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+/* Diseño uniforme y elegante para todas las tarjetas médicas */
+.card.medical-basic,
+.card.medical-premium,
+.card.medical-enterprise {
+  background: linear-gradient(135deg, 
+    rgba(59, 130, 246, 0.15) 0%, 
+    rgba(37, 99, 235, 0.08) 50%, 
+    rgba(29, 78, 216, 0.12) 100%);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  backdrop-filter: blur(20px);
+  box-shadow: 
+    0 8px 32px rgba(59, 130, 246, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    0 0 0 1px rgba(59, 130, 246, 0.1);
+}
+
+.card.medical-basic h3,
+.card.medical-premium h3,
+.card.medical-enterprise h3 {
+  color: #60a5fa;
+  text-shadow: 0 0 20px rgba(96, 165, 250, 0.3);
+}
+
+.card.medical-basic .card-features li::before,
+.card.medical-premium .card-features li::before,
+.card.medical-enterprise .card-features li::before {
+  color: #3b82f6;
+  background: rgba(59, 130, 246, 0.2);
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
+}
+
+.card.medical-basic .card-price,
+.card.medical-premium .card-price,
+.card.medical-enterprise .card-price {
+  color: #dbeafe;
+  background: linear-gradient(135deg, 
+    rgba(59, 130, 246, 0.2) 0%, 
+    rgba(37, 99, 235, 0.15) 100%);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  backdrop-filter: blur(10px);
+  box-shadow: 
+    0 4px 16px rgba(59, 130, 246, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Efecto hover elegante para todas las tarjetas */
+.card.medical-basic:hover,
+.card.medical-premium:hover,
+.card.medical-enterprise:hover {
+  background: linear-gradient(135deg, 
+    rgba(59, 130, 246, 0.2) 0%, 
+    rgba(37, 99, 235, 0.12) 50%, 
+    rgba(29, 78, 216, 0.18) 100%);
+  border-color: rgba(59, 130, 246, 0.4);
+  box-shadow: 
+    0 12px 40px rgba(59, 130, 246, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15),
+    0 0 0 1px rgba(59, 130, 246, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Efecto para los botones CTA */
+.card.medical-basic .card-cta,
+.card.medical-premium .card-cta,
+.card.medical-enterprise .card-cta {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  color: white;
+  box-shadow: 
+    0 4px 16px rgba(59, 130, 246, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+  .card-swap-container {
+    transform: scale(0.75) translate(25%, 25%);
+  }
+}
+
+@media (max-width: 480px) {
+  .card-swap-container {
+    transform: scale(0.55) translate(25%, 25%);
+  }
+}

@@ -4,19 +4,25 @@ const michroma = Michroma({ subsets: ["latin"], weight: "400", display: "swap" }
 
 import Image from "next/image";
 import { HandThumbUpIcon, BoltIcon, ShieldCheckIcon, GlobeAltIcon } from "@heroicons/react/24/solid";
+import Carousel from '../../componentes/Carousel';
 
 export default function Portada() {
   return (
     <div className="relative w-full min-h-[88vh] sm:min-h-screen overflow-hidden">
       <Image
-        src="/portada7.png"
+        src="/doctorfondo.jpg"
         alt="Fondo portada"
         fill
         priority
+        quality={85}
         className="object-cover object-center -z-10"
+        style={{
+          willChange: 'auto',
+          transform: 'translateZ(0)',
+        }}
       />
       {/* Fondo pro: gradiente + patrón sutil */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0" style={{ willChange: 'auto' }}>
         <div className="absolute inset-0 bg-gradient-to-b from-[#0B0F1A]/70 via-[#0B0F1A]/80 to-black" />
       </div>
 
@@ -30,23 +36,23 @@ export default function Portada() {
           </span>
         </div>
 
-        <div className="mt-6 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+        <div className="mt-8 grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-20 items-center">
           {/* Columna de texto */}
-          <div className="lg:col-span-7">
+          <div className="lg:col-span-7 lg:pr-8">
             <h1
               className={`${michroma.className} antialiased flex items-center gap-3 text-[clamp(2rem,8.5vw,6rem)] md:text-[clamp(3rem,6.5vw,7rem)] lg:text-[clamp(3.5rem,5vw,8rem)] leading-[1.05] tracking-tight text-white drop-shadow-[0_0_12px_rgba(255,255,255,0.9)] max-w-full whitespace-nowrap`}
               style={{ fontFamily: michroma.style.fontFamily }}
             >
-              Medify
+              M e d i f y
             </h1>
 
-            <p className="mt-5 text-pretty text-base sm:text-lg md:text-xl text-white/80 max-w-2xl">
+            <p className="mt-6 text-pretty text-justify text-base sm:text-lg md:text-xl text-white/80 max-w-2xl lg:max-w-xl">
               Es la herramienta para tener el control de tus consultas médicas, pacientes y reservas,
               adaptando tus necesidades a tu servicio y manteniendo tus horarios de forma profesional.
             </p>
 
             {/* CTA */}
-            <div className="mt-8 flex flex-wrap items-center gap-4">
+            <div className="mt-10 flex flex-wrap items-center gap-4">
               <a
                 href="https://wa.me/56977889900?text=Quiero%20cotizar%20una%20solución%20médica%20de%20Medify"
                 target="_blank"
@@ -74,35 +80,23 @@ export default function Portada() {
 
 
           {/* Columna visual (mockup/product shot) */}
-          <div className="lg:col-span-5">
+          <div className="lg:col-span-5 lg:pl-8">
 
-                        {/* Indicadores de confianza / highlights médicos */}
-            <div className="mt-8 grid grid-cols-2 gap-4 max-w-xl sm:grid-cols-3 sm:ml-20 justify-items-center">
-  <div className="rounded-2xl border border-white/10 bg-white/5 p-4 text-center hover:scale-105 transition-transform h-28 w-full flex flex-col justify-center">
-    <p className="text-2xl font-extrabold text-blue-400">99.9%</p>
-    <p className="text-xs text-white/80">Disponibilidad médica</p>
-  </div>
-  <div className="rounded-2xl border border-white/10 bg-white/5 p-4 text-center hover:scale-105 transition-transform h-28 w-full flex flex-col justify-center">
-    <p className="text-2xl font-extrabold text-blue-400">HIPAA</p>
-    <p className="text-xs text-white/80">Cumplimiento total</p>
-  </div>
-  <div className="rounded-2xl border border-white/10 bg-white/5 p-4 text-center hover:scale-105 transition-transform h-28 w-full flex flex-col justify-center">
-    <HandThumbUpIcon className="mx-auto h-10 w-10 text-blue-400" />
-    <p className="text-xs text-white/80">Soporte especializado</p>
-  </div>
-  <div className="rounded-2xl border border-white/10 bg-white/5 p-4 text-center hover:scale-105 transition-transform h-28 w-full flex flex-col justify-center">
-    <BoltIcon className="mx-auto h-10 w-10 text-blue-400" />
-    <p className="text-xs text-white/80">Acceso instantáneo</p>
-  </div>
-  <div className="rounded-2xl border border-white/10 bg-white/5 p-4 text-center hover:scale-105 transition-transform h-28 w-full flex flex-col justify-center">
-    <ShieldCheckIcon className="mx-auto h-10 w-10 text-blue-400" />
-    <p className="text-xs text-white/80">Seguridad de datos médicos</p>
-  </div>
-  <div className="rounded-2xl border border-white/10 bg-white/5 p-4 text-center hover:scale-105 transition-transform h-28 w-full flex flex-col justify-center">
-    <GlobeAltIcon className="mx-auto h-10 w-10 text-blue-400" />
-    <p className="text-xs text-white/80">Telemedicina global</p>
-  </div>
-</div> 
+            
+
+                        {/* Carrusel de servicios médicos */}
+            <div className="mt-16 flex justify-center sm:justify-end sm:mr-16 lg:mr-20 xl:mr-24">
+              <div style={{ height: '280px', position: 'relative', width: '100%', maxWidth: '520px' }}>
+                <Carousel
+                  baseWidth={480}
+                  autoplay={true}
+                  autoplayDelay={3000}
+                  pauseOnHover={true}
+                  loop={true}
+                  round={false}
+                />
+              </div>
+            </div> 
 
             
             <div className="relative mx-auto w-full max-w-[520px]">

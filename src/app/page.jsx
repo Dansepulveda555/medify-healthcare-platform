@@ -18,9 +18,9 @@ export default function Home() {
       <div
   className="
     relative overflow-hidden
-    bg-[url('/wall3.png')] bg-cover bg-center
+    bg-[url('/digital.jpg')] bg-cover bg-center
     w-full
-    ring-1 ring-white/10 rounded-4xl shadow-2xl
+    ring-1 ring-white/10 rounded-4xl shadow-4xl
   "
 >
   <div
@@ -37,11 +37,11 @@ export default function Home() {
         <h2 className="text-3xl md:text-6xl font-extrabold text-white tracking-tight leading-snug">
           ¿Necesitas <strong className="bg-gradient-to-r from-blue-400 to-teal-500 bg-clip-text text-transparent">digitalizar</strong> tu práctica médica?
         </h2>
-        <p className="mt-6 text-lg md:text-2xl text-white/85 leading-relaxed max-w-3xl">
-          Moderniza tu consulta con tecnología médica especializada. Desde sistemas de gestión de pacientes hasta plataformas de telemedicina: todas nuestras soluciones están diseñadas para optimizar la atención médica, proteger datos sensibles y cumplir con estándares de salud.
+        <p className="mt-6 text-justify md:text-2xl text-white/85 leading-relaxed max-w-3xl">
+          Moderniza tu consulta con tecnología médica especializada. Desde sistemas de gestión de pacientes hasta reservas en linea: todas nuestras soluciones están diseñadas para optimizar la atención médica, proteger datos sensibles y darte la mejor herramienta para llevar tu gestión médica al siguiente nivel.
         </p>
 
-        <div className="mt-10 flex justify-center md:justify-end">
+        <div className="mt-12 flex justify-center md:justify-end">
           <Link href={"/comprar"}>
             <BotonBlanco contenido={"Solicitar demostración"} />
           </Link>

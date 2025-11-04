@@ -1,147 +1,145 @@
-import { CheckIcon } from '@heroicons/react/20/solid'
+"use client";
+import { Michroma } from "next/font/google";
+import CardSwap, { Card } from '../../componentes/CardSwap';
 
-const tiers = [
-  {
-    name: 'Sistema de Gestión de Pacientes',
-    id: 'tier-gestion-pacientes',
-    href: '/comprar',
-    priceMonthly: 'Desde $199.000 + IVA',
-    description: 'Gestiona tu consulta médica con seguridad y eficiencia.',
-    features: [
-      'Historias clínicas digitales seguras y encriptadas',
-      'Agenda de citas con recordatorios automáticos',
-      'Gestión de pacientes con búsqueda avanzada',
-      'Cumplimiento HIPAA y protección de datos médicos',
-      'Integración con sistemas de facturación médica',
-      'Respaldos automáticos en la nube médica',
-      'Acceso desde cualquier dispositivo con seguridad',
-      'Soporte técnico especializado 24/7'
-    ],
-    featured: false,
-  },
-  {
-    name: 'Plataforma de Telemedicina Avanzada',
-    id: 'tier-telemedicina',
-    href: '/comprar',
-    priceMonthly: 'Desde $349.990 + IVA',
-    description: 'Consultas virtuales seguras con todas las herramientas médicas necesarias.',
-    features: [
-      'Videoconsultas con cifrado extremo a extremo',
-      'Prescripción electrónica integrada',
-      'Intercambio seguro de exámenes e imágenes médicas',
-      'Monitoreo remoto de signos vitales',
-      'Integración con wearables y dispositivos médicos',
-      'Sala de espera virtual para pacientes',
-      'Grabación segura de consultas (opcional)',
-      'Cumplimiento con regulaciones de telemedicina',
-      'API para integración con equipos médicos',
-      'Dashboard analítico para seguimiento de pacientes'
-    ],
-    featured: true,
-  },
-  {
-    name: 'Hospital Management System',
-    id: 'tier-hospital',
-    href: '/comprar',
-    priceMonthly: 'Desde $599.000 + IVA',
-    description: 'Sistema hospitalario completo para gestión integral de centros médicos.',
-    features: [
-      'Gestión de pacientes hospitalizados y ambulatorios',
-      'Sistema de farmacia y control de medicamentos',
-      'Gestión de quirófanos y programación de cirugías',
-      'Control de inventario médico y suministros',
-      'Facturación médica y gestión de seguros',
-      'Reportes médicos y estadísticas hospitalarias',
-      'Gestión de personal médico y turnos',
-      'Integración con laboratorios externos',
-      'Sistema de emergencias y triaje',
-      'Auditorías médicas y cumplimiento normativo',
-      'Base de datos centralizada con alta disponibilidad'
-    ],
-    featured: false,
-  },
-]
+const michroma = Michroma({ subsets: ["latin"], weight: "400", display: "swap" });
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
-
-export default function Example() {
+export default function ServiciosPage() {
   return (
-    <div className="relative isolate bg-gray-900 px-6 py-24 sm:py-32 lg:px-8 rounded-3xl">
+    <div className="relative isolate min-h-screen overflow-hidden">
+      {/* Imagen de fondo médica */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed"
+        style={{backgroundImage: 'url("/medical.jpg")'}}
+      />
+      
+      {/* Overlay gradiente profesional para legibilidad */}
+      <div className="absolute inset-0 bg-gradient-to-b from-slate-900/60 via-slate-900/75 to-black/90" />
+      
+      {/* Patrón sutil médico */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="h-full w-full" style={{
+          backgroundImage: `radial-gradient(circle at 25% 25%, #3b82f6 1px, transparent 1px),
+                      radial-gradient(circle at 75% 75%, #3b82f6 1px, transparent 1px)`,
+          backgroundSize: '100px 100px'
+        }} />
+      </div>
+      
+      {/* Contenedor principal con padding y z-index */}
+      <div className="relative z-10 px-6 py-24 sm:py-32 lg:px-8">
+      
+      {/* Efectos de fondo */}
       <div aria-hidden="true" className="absolute inset-x-0 -top-3 -z-10 transform-gpu overflow-hidden px-36 blur-3xl">
         <div
           style={{
             clipPath:
               'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
           }}
-          className="mx-auto aspect-1155/678 w-288.75 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-20"
+          className="mx-auto aspect-1155/678 w-288.75 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-20"
         />
       </div>
-      <div className="mx-auto max-w-4xl text-center">
-        <h2 className="text-base/7 font-semibold text-blue-400">Soluciones Médicas</h2>
-        <p className="mt-2 text-5xl font-semibold tracking-tight text-balance text-white sm:text-6xl">
-          Tecnología especializada para profesionales de la salud
-        </p>
-      </div>
-      <p className="mx-auto mt-6 max-w-2xl text-center text-lg font-medium text-pretty text-gray-400 sm:text-xl/8">
-        Ofrecemos tres soluciones tecnológicas especializadas para el sector salud: desde gestión básica de consultorios hasta sistemas hospitalarios completos, todas con cumplimiento HIPAA y máxima seguridad de datos médicos.
-      </p>
-      <div className="mx-auto mt-16 grid max-w-6xl grid-cols-1 gap-6 sm:mt-20 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
-        {tiers.map((tier) => (
-          <div
-            key={tier.id}
-            className={classNames(
-              tier.featured ? 'relative bg-gray-800 ring-blue-400/30' : 'bg-white/2.5',
-              'rounded-3xl p-8 ring-1 ring-white/10 sm:p-10'
-            )}
-          >
-            <h3
-              id={tier.id}
-              className={classNames(tier.featured ? 'text-blue-400' : 'text-blue-400', 'text-base/7 font-semibold')}
-            >
-              {tier.name}
-            </h3>
-            <p className="mt-4 flex items-baseline gap-x-2">
-              <span className={classNames(tier.featured ? 'text-white' : 'text-white', 'text-4xl font-semibold tracking-tight')}>
-                {tier.priceMonthly}
-              </span>
-            </p>
-            <p className={classNames(tier.featured ? 'text-gray-300' : 'text-gray-300', 'mt-6 text-base/7')}>
-              {tier.description}
-            </p>
-            <ul
-              role="list"
-              className={classNames(
-                tier.featured ? 'text-gray-300' : 'text-gray-300',
-                'mt-8 space-y-3 text-sm/6 sm:mt-10',
-              )}
-            >
-              {tier.features.map((feature) => (
-                <li key={feature} className="flex gap-x-3">
-                  <CheckIcon
-                    aria-hidden="true"
-                    className={classNames(tier.featured ? 'text-blue-400' : 'text-blue-400', 'h-6 w-5 flex-none')}
-                  />
-                  {feature}
-                </li>
-              ))}
-            </ul>
-            <a
-              href={tier.href}
-              aria-describedby={tier.id}
-              className={classNames(
-                tier.featured
-                  ? 'bg-blue-500 text-white hover:bg-blue-400 focus-visible:outline-blue-500'
-                  : 'bg-white/10 text-white inset-ring inset-ring-white/5 hover:bg-white/20 focus-visible:outline-white/75',
-                'mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 sm:mt-10',
-              )}
-            >
-              {tier.id === 'tier-hospital' ? 'Solicitar cotización' : 'Solicitar consulta'}
-            </a>
+
+      {/* Header Section */}
+
+      {/* Main Content - Layout Lado a Lado */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+        
+        {/* Columna Izquierda - Texto */}
+        <div className="space-y-8 pl-8 lg:pl-12 pr-4 lg:pr-8 mt-16 lg:mt-35">
+          <div>
+            <h2 className="text-base/7 font-semibold text-blue-400 mb-6">Gestión Médica Innovadora</h2>
+
+            <h1 className={`text-4xl lg:text-5xl font-semibold tracking-tight text-white ${michroma.className}`}>
+              Tecnología que Transforma la Salud
+            </h1>
           </div>
-        ))}
+          <p className="text-justify font-medium text-white/90 text-base lg:text-400 lg:text-xl leading-relaxed lg:leading-relaxed">
+            Descubre nuestras tres soluciones tecnológicas especializadas para el sector salud. 
+            Desde gestión básica hasta sistemas hospitalarios completos, todas con máxima seguridad y cumplimiento HIPAA.
+            Nuestras plataformas están diseñadas para optimizar cada aspecto de la atención médica moderna.
+          </p>
+          
+        </div>
+
+        {/* Columna Derecha - CardSwap */}
+        <div className="relative h-[800px] overflow-hidden w-full">
+          <CardSwap
+            width={500}
+            height={650}
+            cardDistance={70}
+            verticalDistance={80}
+            delay={6000}
+            pauseOnHover={true}
+            easing="elastic"
+          >
+            {/* Card 1 - Sistema Básico */}
+            <Card className="medical-basic">
+              <h3>Sistema de Gestión de Pacientes</h3>
+              <p>Gestiona tu consulta médica con seguridad y eficiencia profesional.</p>
+              
+              <ul className="card-features">
+                <li>Historias clínicas en la nube</li>
+                <li>Agenda con recordatorios automáticos</li>
+                <li>Gestión avanzada de pacientes</li>
+                <li>Respaldos automáticos en la nube</li>
+                <li>Soporte técnico especializado 24/7</li>
+              </ul>
+              
+              
+            </Card>
+
+            {/* Card 2 - Telemedicina Premium */}
+            <Card className="medical-premium">
+              <h3>Plataforma de Telemedicina Avanzada</h3>
+              <p>Consultas virtuales seguras con todas las herramientas médicas necesarias.</p>
+
+              
+              <ul className="card-features">
+                <li>Prescripción electrónica integrada</li>
+                <li>Sala de espera virtual inteligente</li>
+                <li>Grabación segura de consultas</li>
+                <li>Dashboard analítico avanzado</li>
+                <li>Cumplimiento regulaciones telemedicina</li>
+              </ul>
+              
+            </Card>
+
+            {/* Card 3 - Hospital Enterprise */}
+            <Card className="medical-enterprise">
+              <h3>Gestión de agenda</h3>
+              <p>Sistema completo para gestión integral de reservas médicas.</p>
+
+              
+              <ul className="card-features">
+                <li>Gestión de reservas en vivo</li>
+                <li>Control de pacientes en línea</li>
+                <li>Reportes médicos y estadísticas</li>
+                <li>Auditorías y cumplimiento normativo</li>
+              </ul>
+            </Card>
+        </CardSwap>
+        </div>
+      </div>
+
+      {/* Call to Action Section */}
+      <div className="mx-auto max-w-2xl text-center mt-16">
+        <h3 className="text-2xl font-bold text-white mb-8">
+          ¿Necesitas una solución personalizada?
+        </h3>
+        <p className="text-white/90 text-base lg:text-400 mb-8">
+          Nuestro equipo de expertos puede desarrollar una solución médica específicamente diseñada para las necesidades de tu institución de salud.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+            Contactar Especialista
+          </button>
+          <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300">
+            Ver Casos de Éxito
+          </button>
+        </div>
+      </div>
+      
       </div>
     </div>
-  )
+  );
 }
