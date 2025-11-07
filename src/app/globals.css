@@ -5,6 +5,21 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 2rem;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Optimización GPU para animaciones */
+.gpu-accelerated {
+  transform: translateZ(0);
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 * {
@@ -66,7 +81,7 @@ body {
 }
 
 /* Alternativa para fondos sólidos en caso de incompatibilidad */
-@supports not (background: linear-gradient(135deg, #0c1426 0%, #172554 50%, #1e3a8a 100%)) {
+@supports not (background: linear-gradient(135deg, #213b76 0%, #172554 50%, #1e3a8a 100%)) {
   body {
     background: var(--background-solid);
   }
@@ -753,7 +768,7 @@ body {
 .card.medical-basic .card-cta,
 .card.medical-premium .card-cta,
 .card.medical-enterprise .card-cta {
-  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  background: linear-gradient(135deg, #284e8c 0%, #376fe7 100%);
   border: 1px solid rgba(59, 130, 246, 0.3);
   color: white;
   box-shadow: 

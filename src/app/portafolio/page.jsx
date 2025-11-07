@@ -7,11 +7,27 @@ import { Michroma } from "next/font/google";
 import GradientText from "@/componentes/GradientText";
 const michroma = Michroma({ subsets: ["latin"], weight: "400" });
 
-
-
 export default function Portafolio(){
   return(
     <div>
+      {/* PÁGINA COMPLETAMENTE COMENTADA - NO SE MUESTRA NADA */}
+      
+      {/* 
+      TODO: Página de portafolio temporalmente deshabilitada 
+      
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <h1 className={`${michroma.className} text-4xl md:text-5xl font-bold text-white mb-4`}>
+            Portafolio en Construcción
+          </h1>
+          <p className="text-gray-400 text-lg">
+            Esta sección estará disponible próximamente
+          </p>
+        </div>
+      </div>
+      
+      CÓDIGO ORIGINAL COMENTADO - NO BORRAR
+      
       <h1 className={`${michroma.className} py-10 text-4xl md:text-5xl text-center font-bold text-white`}>
         Casos de Éxito Médico
       </h1>
@@ -20,7 +36,6 @@ export default function Portafolio(){
       </p>
 
       <section className="relative bg-neutral-900/40 ring-1 ring-white/10 rounded-4xl shadow-2xl backdrop-blur-sm px-6 md:px-10 lg:px-14 py-16 md:py-24">
-        {/* Encabezado profesional fuera de las cards */}
         <div className="mb-12 md:mb-16 grid grid-cols-1 md:grid-cols-3 items-center gap-8">
           <div className="md:col-span-2 space-y-4">
             <h3 className="text-2xl md:text-3xl font-semibold leading-tight tracking-tight text-white">
@@ -50,9 +65,7 @@ export default function Portafolio(){
           </div>
         </div>
 
-        {/* Cards del portafolio médico */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-          {/* Proyecto Psicóloga */}
           <a href="/proyecto/denisse" target="_blank" rel="noopener noreferrer" className="group block">
             <div className="relative overflow-hidden rounded-2xl ring-1 ring-white/10 shadow-xl transition-transform duration-300 group-hover:scale-[1.02]">
               <Image
@@ -62,7 +75,6 @@ export default function Portafolio(){
                 height={600}
                 className="w-full h-auto object-cover"
               />
-              {/* Overlay negro difuminado y texto azul médico */}
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-300">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/60 to-transparent"></div>
                 <div className="relative h-full w-full flex items-end justify-center p-6">
@@ -74,7 +86,6 @@ export default function Portafolio(){
             </div>
           </a>
 
-          {/* Proyecto Clínica */}
           <a href="https://jpaingenieriasolutions.cl/" target="_blank" rel="noopener noreferrer" className="group block">
             <div className="relative overflow-hidden rounded-2xl ring-1 ring-white/10 shadow-xl transition-transform duration-300 group-hover:scale-[1.02]">
               <Image
@@ -84,7 +95,6 @@ export default function Portafolio(){
                 height={600}
                 className="w-full h-auto object-cover"
               />
-              {/* Overlay negro difuminado y texto azul médico */}
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-300">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/60 to-transparent"></div>
                 <div className="relative h-full w-full flex items-end justify-center p-6">
@@ -97,6 +107,9 @@ export default function Portafolio(){
           </a>
         </div>
       </section>
+      
+      FIN DEL CÓDIGO ORIGINAL COMENTADO
+      */}
     </div>
   )
-}
+} 
