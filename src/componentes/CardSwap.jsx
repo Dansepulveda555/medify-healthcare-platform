@@ -32,6 +32,7 @@ const CardSwap = ({
   height = 400,
   cardDistance = 60,
   verticalDistance = 70,
+  dropDistance = 150,
   delay = 5000,
   pauseOnHover = false,
   onCardClick,
@@ -84,7 +85,7 @@ const CardSwap = ({
       tlRef.current = tl;
 
       tl.to(elFront, {
-        y: '+=500',
+        y: `+=${dropDistance}`,
         duration: config.durDrop,
         ease: config.ease
       });
@@ -133,8 +134,11 @@ const CardSwap = ({
       });
     };
 
-    swap();
-    intervalRef.current = window.setInterval(swap, delay);
+    // Ejecutar primera animación y luego configurar el intervalo
+    const initialTimeout = setTimeout(() => {
+      swap();
+      intervalRef.current = window.setInterval(swap, delay);
+    }, 500);
 
     if (pauseOnHover) {
       const node = container.current;
@@ -152,9 +156,13 @@ const CardSwap = ({
         node.removeEventListener('mouseenter', pause);
         node.removeEventListener('mouseleave', resume);
         clearInterval(intervalRef.current);
+        clearTimeout(initialTimeout);
       };
     }
-    return () => clearInterval(intervalRef.current);
+    return () => {
+      clearInterval(intervalRef.current);
+      clearTimeout(initialTimeout);
+    };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [cardDistance, verticalDistance, delay, pauseOnHover, skewAmount, easing]);
 

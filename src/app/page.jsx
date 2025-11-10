@@ -11,29 +11,37 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="">
-      <div className="mb-32">
+    <div className="min-h-screen w-full bg-[#0f172a] relative">
+      {/* Blue Radial Glow Background */}
+      <div
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: `radial-gradient(circle 600px at 50% 50%, rgba(59,130,246,0.3), transparent)`,
+        }}
+      />
+      
+      {/* Contenido */}
+      <div className="relative z-10 px-4 sm:px-6 md:px-8 lg:px-12">
+      <div className="-mx-4 sm:-mx-6 md:-mx-8 lg:-mx-12">
         <Portada></Portada>
       </div>
+      <div className="-mx-4 sm:-mx-6 md:-mx-8 lg:-mx-12">
       <div
   className="
     relative overflow-hidden
-    bg-[url('/digital.jpg')] bg-cover bg-center
-    w-full
-    ring-1 ring-white/10 rounded-4xl shadow-4xl
-  "
+    bg-[url('/digital.jpg')] bg-cover bg-center w-full ring-0 ring-white/10 rounded-0xl shadow-1xl"
 >
   <div
-    className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/30 to-transparent"
+    className="absolute inset-0 bg-gradient-to-t from-[#0B0F1A]/05 via-[#0B0F1A]/10 to-black"
     aria-hidden="true"
   ></div>
 
   <div className="relative">
     {/* Black gradient overlay at bottom */}
-    <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/80 to-transparent pointer-events-none" />
+    <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/50 to-transparent pointer-events-none" />
 
-    <div className="relative grid grid-cols-1 md:grid-cols-5 items-center px-6 md:px-10 lg:px-14 py-16 md:py-24">
-      <div className="col-span-4">
+    <div className="relative grid grid-cols-1 md:grid-cols-5 items-center px-6 md:px-10 lg:px-14 py-16 md:py-32">
+      <div className="col-span-6">
         <h2 className="text-3xl md:text-6xl font-extrabold text-white tracking-tight leading-snug">
           ¿Necesitas <strong className="bg-gradient-to-r from-blue-400 to-teal-500 bg-clip-text text-transparent">digitalizar</strong> tu práctica médica?
         </h2>
@@ -51,8 +59,9 @@ export default function Home() {
     </div>
   </div>
 </div>
+      </div>
 
-      <div className="my-32">
+      <div className="-mx-4 sm:-mx-6 md:-mx-8 lg:-mx-12 mb-32">
         <Servicios></Servicios>
       </div>
 
@@ -60,6 +69,9 @@ export default function Home() {
         <Portafolio></Portafolio>
       </div>
 
+      <SobreNosotros></SobreNosotros>
+
+{/* Bloque 3: Actualización continua - Fondo wallet 
       <div
   className="
     relative overflow-hidden
@@ -69,6 +81,9 @@ export default function Home() {
     my-32
   "
 >
+*/}
+
+{/*
   <div
     className="absolute inset-0 bg-gradient-to-r from-black/55 via-black/35 to-transparent"
     aria-hidden="true"
@@ -95,6 +110,7 @@ export default function Home() {
   </div>
 </div>
 
+
       <div
   className="
     relative overflow-hidden
@@ -104,13 +120,12 @@ export default function Home() {
     px-6 md:px-10 lg:px-14 py-24 md:py-32
   "
 >
-  <div className="absolute inset-0 bg-black/20" aria-hidden="true"></div>
-  <div className="relative">
-    <SobreNosotros></SobreNosotros>
-  </div>
-</div>
+*/}
+
+
 
       <div></div>
+      </div>
     </div>
   );
 }

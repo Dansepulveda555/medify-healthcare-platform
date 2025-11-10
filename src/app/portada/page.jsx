@@ -15,7 +15,7 @@ export default function Portada() {
         fill
         priority
         quality={85}
-        className="object-cover object-center -z-10"
+        className="object-cover object-center -z-12"
         style={{
           willChange: 'auto',
           transform: 'translateZ(0)',
@@ -23,11 +23,11 @@ export default function Portada() {
       />
       {/* Fondo pro: gradiente + patrón sutil */}
       <div className="absolute inset-0" style={{ willChange: 'auto' }}>
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0B0F1A]/70 via-[#0B0F1A]/80 to-black" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0B0F1A]/5 via-[#0B0F1A]/10 to-black" />
       </div>
 
       {/* Contenido */}
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-16 pb-12 sm:pt-24 sm:pb-16">
+      <div className="relative w-full px-4 sm:px-6 md:px-8 lg:px-12 pt-16 pb-12 sm:pt-24 sm:pb-16">
         {/* Cinta/top badge */}
         <div className="flex justify-center">
           <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-[13px] font-semibold text-white/80 backdrop-blur">

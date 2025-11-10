@@ -6,24 +6,30 @@ const michroma = Michroma({ subsets: ["latin"], weight: "400", display: "swap" }
 
 export default function ServiciosPage() {
   return (
-    <div className="relative isolate min-h-screen overflow-hidden">
-      {/* Imagen de fondo médica */}
-      {/* Video de fondo médico */}
-<video 
-  autoPlay 
-  muted 
-  loop 
-  playsInline 
-  preload="metadata"
-  className="absolute inset-0 w-full h-full object-cover"
->
-  <source src="/videoondas.mp4" type="video/mp4" />
-</video>
+    <div className="min-h-screen w-full bg-[#020617] relative">
+      {/* Cyan Radial Glow Background */}
+      <div
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: `radial-gradient(circle 500px at 50% 100px, rgba(6,182,212,0.4), transparent)`,
+        }}
+      />
+
+      {/* VIDEO DE FONDO - COMENTADO PARA USO FUTURO */}
+      {/* 
+      <video 
+        autoPlay 
+        muted 
+        loop 
+        playsInline 
+        preload="metadata"
+        className="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src="/videoondas.mp4" type="video/mp4" />
+      </video>
       
-      {/* Overlay gradiente profesional para legibilidad */}
       <div className="absolute inset-0 bg-gradient-to-b from-slate-900/60 via-slate-900/75 to-black/90" />
       
-      {/* Patrón sutil médico */}
       <div className="absolute inset-0 opacity-5">
         <div className="h-full w-full" style={{
           backgroundImage: `radial-gradient(circle at 25% 25%, #3b82f6 1px, transparent 1px),
@@ -31,11 +37,12 @@ export default function ServiciosPage() {
           backgroundSize: '100px 100px'
         }} />
       </div>
+      */}
       
-      {/* Contenedor principal sin padding horizontal para full-width */}
-      <div className="relative z-10 py-16 sm:py-20 lg:py-24">
+      {/* Contenedor principal */}
+      <div className="relative z-10 px-4 sm:px-6 md:px-8 lg:px-6 py-8 md:py-12">
       
-      {/* Efectos de fondo */}
+      {/* Efectos de fondo - decorativo */}
       <div aria-hidden="true" className="absolute inset-x-0 -top-3 -z-10 transform-gpu overflow-hidden px-36 blur-3xl">
         <div
           style={{
@@ -47,54 +54,54 @@ export default function ServiciosPage() {
       </div>
 
       {/* Main Section - Texto y Tarjetas lado a lado */}
-      <div className="px-6 lg:px-12 mb-16">
+      <div className="px-12 lg:px-24 mb-18 bg-slate-950/30 backdrop-blur-sm rounded-3xl md:rounded-[2.5rem] py-12 md:py-50 ring-1 ring-white/10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           
           {/* Columna Izquierda - Texto */}
-          <div className="flex flex-col justify-center">
-            <h2 className="text-base/7 font-semibold text-blue-400 mb-4">Gestión Médica Innovadora</h2>
-            <h1 className={`text-4xl lg:text-5xl xl:text-6xl font-semibold tracking-tight text-white mb-6 leading-tight ${michroma.className}`}>
-              Tecnología que Transforma la Salud
+          <div className="flex flex-col items-center">
+            <h2 className="text-base/20 font-semibold text-blue-100/80 mb-4">Gestión Médica Innovadora</h2>
+            <h1 className={`text-center lg:text-5xl xl:text-6xl font-semibold tracking-tight text-white mb-6 leading-tight ${michroma.className}`}>
+            La forma de gestionar tu consulta ha cambiado.
             </h1>
-            <p className="text-lg lg:text-xl text-white/90 leading-relaxed mb-8">
-              Descubre nuestras tres soluciones tecnológicas especializadas para el sector salud. 
-              Desde gestión básica hasta sistemas hospitalarios completos.
+            <p className="text-justify lg:text-xl text-white/90 leading-relaxed mb-8">
+              Descubre nuestras soluciones tecnológicas especializadas para el sector de la salud. 
+              Desde gestión básica hasta sistemas de reservas en la nube.
             </p>
           </div>
 
           {/* Columna Derecha - CardSwap */}
-          <div className="flex items-center justify-center relative" style={{ height: '550px' }}>
+          <div className="flex items-center justify-center relative" style={{ height: '310px' }}>
         <CardSwap 
-          width={650}
-          height={520}
-          cardDistance={70}
+          width={670}
+          height={500}
+          cardDistance={65}
           verticalDistance={80}
           delay={5000}
           pauseOnHover={true}
           skewAmount={8}
-          easing="elastic"
+          easing="bounce"
         >
           <Card customClass="bg-gradient-to-br from-blue-600/90 via-blue-700/90 to-indigo-800/90 backdrop-blur-md shadow-2xl rounded-3xl overflow-hidden border border-blue-400/30">
             <div className="p-10 h-full flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between mb-6">
                   <span className="inline-block px-4 py-2 bg-white/20 rounded-full text-sm font-semibold text-white uppercase tracking-wide">
-                    Agenda en linea
+                    AGENDA EN LINEA
                   </span>
                   <svg className="w-12 h-12 text-white/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                   </svg>
                 </div>
                 <h3 className={`text-4xl font-bold text-white mb-4 leading-tight ${michroma.className}`}>
-                  Sistema de Gestión de Pacientes
+                  Sistema de Gestión de Pacientes.
                 </h3>
-                <p className="text-white/90 text-lg leading-relaxed mb-6">
-                  Gestiona tu consulta médica con seguridad y eficiencia profesional. Historias clínicas digitales, agenda inteligente y respaldos automáticos.
-                </p>
+                <ul className="text-white/90 text-lg leading-relaxed mb-6 space-y-2 list-disc list-inside">
+                  <li>Gestiona tu consulta médica con seguridad y de forma profesional.</li>
+                  <li>Historias clínicas digitales.</li>
+                  <li>Agenda inteligente.</li>
+                  <li>Respaldos automáticos.</li>
+                </ul>
               </div>
-              <button className="w-full bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 border border-white/30 hover:border-white/50">
-                Conocer Más →
-              </button>
             </div>
           </Card>
 
@@ -103,22 +110,22 @@ export default function ServiciosPage() {
               <div>
                 <div className="flex items-center justify-between mb-6">
                   <span className="inline-block px-4 py-2 bg-white/20 rounded-full text-sm font-semibold text-white uppercase tracking-wide">
-                    Conección a video conferencia
+                    CONECCIÓN A CONSULTA REMOTA
                   </span>
                   <svg className="w-12 h-12 text-white/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
                   </svg>
                 </div>
                 <h3 className={`text-4xl font-bold text-white mb-4 leading-tight ${michroma.className}`}>
-                  Plataforma de Telemedicina Avanzada
+                  Plataforma de Telemedicina
                 </h3>
-                <p className="text-white/90 text-lg leading-relaxed mb-6">
-                  Consultas virtuales seguras con videollamadas HD, prescripción electrónica y sala de espera virtual. Todo en cumplimiento con normativas de telemedicina.
-                </p>
+                <ul className="text-white/90 text-lg leading-relaxed mb-6 space-y-2 list-disc list-inside">
+                  <li>Consigue que tus pacientes lleguen a su reserva fácilmente.</li>
+                  <li>Historias clínicas digitales.</li>
+                  <li>Agenda inteligente.</li>
+                  <li>Respaldos automáticos.</li>
+                </ul>
               </div>
-              <button className="w-full bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 border border-white/30 hover:border-white/50">
-                Conocer Más →
-              </button>
             </div>
           </Card>
 
@@ -127,7 +134,7 @@ export default function ServiciosPage() {
               <div>
                 <div className="flex items-center justify-between mb-6">
                   <span className="inline-block px-4 py-2 bg-white/20 rounded-full text-sm font-semibold text-white uppercase tracking-wide">
-                    Gestión total
+                    GESTIÓN TOTAL
                   </span>
                   <svg className="w-12 h-12 text-white/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -140,23 +147,20 @@ export default function ServiciosPage() {
                   Sistema completo para consultas. Gestión de reservas, ingreso de pacientes, analítica avanzada en tiempo real.
                 </p>
               </div>
-              <button className="w-full bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 border border-white/30 hover:border-white/50">
-                Conocer Más →
-              </button>
             </div>
           </Card>
         </CardSwap>
           </div>
         </div>
-      </div>
+      </div> {/* Cierre Main Section rounded */}
 
       {/* Call to Action Section */}
-      <div className="max-w-4xl mx-auto text-center mt-24 mb-12 px-6 lg:px-12">
+      <div className="max-w-4xl mx-auto text-center mt-24 mb-12 px-6 lg:px-12 bg-slate-950/30 backdrop-blur-sm rounded-3xl md:rounded-[2.5rem] py-12 md:py-16 ring-1 ring-white/10">
         <h3 className={`text-pretty text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-balance mb-6 ${michroma.className}`}>
           ¿Necesitas una solución personalizada?
         </h3>
         <p className="mx-auto mt-6 max-w-2xl text-lg text-white/90">
-          Nuestro equipo de expertos puede desarrollar una solución médica específicamente diseñada para las necesidades de tu institución de salud.
+          Nuestro equipo de expertos puede desarrollar una solución médica específicamente diseñada para las necesidades que requiera el cliente.
         </p>
       </div>
       

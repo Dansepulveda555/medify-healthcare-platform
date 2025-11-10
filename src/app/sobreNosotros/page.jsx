@@ -7,9 +7,9 @@ const michroma = Michroma({ subsets: ["latin"], weight: "400" });
 
 export default function SobreNosotros() {
   return (
-    <div className="space-y-8 md:space-y-12 lg:space-y-16 bg-gradient-to-b from-slate-950 via-indigo-950 to-slate-950 scroll-smooth">
+    <div className="w-full space-y-12">
       {/* Bloque 1: Intro - Azul marino claro */}
-      <section className="relative overflow-hidden grid grid-cols-1 md:grid-cols-2 items-center gap-8 md:gap-12 lg:gap-16 px-6 sm:px-8 md:px-12 lg:px-16 py-8 sm:py-12 md:py-16 lg:py-20 bg-gradient-to-br from-blue-900/60 via-blue-950/70 to-slate-900/60 ring-1 ring-blue-500/20 shadow-2xl shadow-blue-900/50 backdrop-blur-sm">
+      <section className="space-x-4 md:space-x-6 lg:space-x-8 relative overflow-hidden grid grid-cols-1 md:grid-cols-2 items-center gap-8 md:gap-12 lg:gap-16 px-6 sm:px-8 md:px-12 lg:px-16 py-8 sm:py-12 md:py-16 lg:py-24 bg-gradient-to-br from-blue-900/60 via-blue-950/70 to-slate-900/60 ring-1 ring-blue-500/20 shadow-2xl shadow-blue-900/50 backdrop-blur-sm rounded-3xl md:rounded-[2.5rem]">
         <div>
           <h1
             className={`${michroma.className} leading-tight tracking-tight text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white`}
@@ -67,7 +67,7 @@ export default function SobreNosotros() {
 */}
 
       {/* Bloque 2: Especialidades Médicas - Azul marino medio */}
-      <section className="relative overflow-hidden px-6 sm:px-8 md:px-12 lg:px-16 py-8 sm:py-12 md:py-16 lg:py-20 bg-gradient-to-br from-blue-950/70 via-slate-900/80 to-blue-900/60 ring-1 ring-blue-400/20 shadow-2xl shadow-blue-800/40 backdrop-blur-sm">
+      <section className="relative overflow-hidden px-6 sm:px-8 md:px-12 lg:px-16 py-8 sm:py-12 md:py-16 lg:py-20 bg-gradient-to-br from-blue-950/70 via-slate-900/80 to-blue-900/60 ring-1 ring-blue-400/20 shadow-2xl shadow-blue-800/40 backdrop-blur-sm rounded-3xl md:rounded-[2.5rem]">
         <div className="text-center mb-12 md:mb-16">
           <h2
             className={`${michroma.className} leading-tight tracking-tight text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white`}
@@ -215,8 +215,8 @@ export default function SobreNosotros() {
         />
       </section>
 
-      {/* Bloque 3: Misión / Visión / Valores / Propuesta de Valor - Azul marino más oscuro */}
-      <section className="relative overflow-hidden px-6 sm:px-8 md:px-12 lg:px-16 py-8 sm:py-12 md:py-16 lg:py-20 bg-gradient-to-br from-slate-900/80 via-blue-950/90 to-slate-950/80 ring-1 ring-blue-600/20 shadow-2xl shadow-blue-950/60 backdrop-blur-sm">
+      {/* Bloque 3: Misión / Visión / Valores / Propuesta de Valor - Azul marino más oscuro 
+      <section className="relative overflow-hidden px-6 sm:px-8 md:px-12 lg:px-16 py-8 sm:py-12 md:py-16 lg:py-20 bg-gradient-to-br from-slate-900/80 via-blue-950/90 to-slate-950/80 ring-1 ring-blue-600/20 shadow-2xl shadow-blue-950/60 backdrop-blur-sm rounded-3xl md:rounded-[2.5rem]">
         <h2
           className={`${michroma.className} leading-tight tracking-tight text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white text-center`}
         >
@@ -229,7 +229,7 @@ export default function SobreNosotros() {
         </p>
 
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-          {/* Misión */}
+          -- Misión 
           <div className="group rounded-2xl ring-1 ring-blue-500/20 bg-gradient-to-br from-blue-900/40 to-slate-900/40 p-6 hover:ring-blue-400/60 hover:bg-blue-900/50 transition-all duration-300 shadow-lg hover:shadow-blue-500/20">
             <h3
               className={`${michroma.className} text-xl sm:text-2xl text-white flex items-center gap-2`}
@@ -244,7 +244,7 @@ export default function SobreNosotros() {
             </p>
           </div>
 
-          {/* Visión */}
+          -- Visión 
           <div className="group rounded-2xl ring-1 ring-blue-500/20 bg-gradient-to-br from-blue-900/40 to-slate-900/40 p-6 hover:ring-blue-400/60 hover:bg-blue-900/50 transition-all duration-300 shadow-lg hover:shadow-blue-500/20">
             <h3
               className={`${michroma.className} text-xl sm:text-2xl text-white flex items-center gap-2`}
@@ -258,7 +258,7 @@ export default function SobreNosotros() {
             </p>
           </div>
 
-          {/* Valores */}
+          -- Valores 
           <div className="group rounded-2xl ring-1 ring-blue-500/20 bg-gradient-to-br from-blue-900/40 to-slate-900/40 p-6 hover:ring-blue-400/60 hover:bg-blue-900/50 transition-all duration-300 shadow-lg hover:shadow-blue-500/20">
             <h3
               className={`${michroma.className} text-xl sm:text-2xl text-white flex items-center gap-2`}
@@ -289,7 +289,7 @@ export default function SobreNosotros() {
             </ul>
           </div>
 
-          {/* Propuesta de Valor */}
+          -- Propuesta de Valor
           <div className="group rounded-2xl ring-1 ring-blue-500/20 bg-gradient-to-br from-blue-900/40 to-slate-900/40 p-6 hover:ring-blue-400/60 hover:bg-blue-900/50 transition-all duration-300 shadow-lg hover:shadow-blue-500/20">
             <h3
               className={`${michroma.className} text-xl sm:text-2xl text-white flex items-center gap-2`}
@@ -305,6 +305,7 @@ export default function SobreNosotros() {
           </div>
         </div>
       </section>
+      */}
 
       {/* Bloque 4: CTA con fondo dinámico - Azul marino muy oscuro */}
       <section className="relative overflow-hidden ring-1 ring-blue-700/30 shadow-2xl shadow-blue-950/80 px-6 sm:px-8 md:px-12 lg:px-16 py-12 sm:py-16 md:py-20 lg:py-24 text-center">
