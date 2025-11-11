@@ -4,7 +4,7 @@ import SobreNosotros from "./sobreNosotros/page";
 import Servicios from "./servicios/page";
 import Footer from "./Footer/page";
 import Portafolio from "./portafolio/page";
-import ScrollReveal from "../componentes/ScrollReveal";
+import FadeInSection from "../componentes/FadeInSection";
 import Image from "next/image";
 import BotonBlanco from "@/componentes/BotonBlanco";
 import Link from "next/link";
@@ -22,9 +22,12 @@ export default function Home() {
       
       {/* Contenido */}
       <div className="relative z-10 px-4 sm:px-6 md:px-8 lg:px-12">
+      <FadeInSection delay={0}>
       <div className="-mx-4 sm:-mx-6 md:-mx-8 lg:-mx-12">
         <Portada></Portada>
       </div>
+      </FadeInSection>
+      <FadeInSection delay={0.2}>
       <div className="-mx-4 sm:-mx-6 md:-mx-8 lg:-mx-12">
       <div
   className="
@@ -60,16 +63,23 @@ export default function Home() {
   </div>
 </div>
       </div>
+      </FadeInSection>
 
+      <FadeInSection delay={0.3}>
       <div className="-mx-4 sm:-mx-6 md:-mx-8 lg:-mx-12 mb-32">
         <Servicios></Servicios>
       </div>
+      </FadeInSection>
 
+      <FadeInSection delay={0.4}>
       <div className="my-32">
         <Portafolio></Portafolio>
       </div>
+      </FadeInSection>
 
+      <FadeInSection delay={0.5}>
       <SobreNosotros></SobreNosotros>
+      </FadeInSection>
 
 {/* Bloque 3: Actualización continua - Fondo wallet 
       <div

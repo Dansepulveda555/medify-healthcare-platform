@@ -1,17 +1,18 @@
 "use client";
 import { Michroma } from "next/font/google";
 import CardSwap, { Card } from '../../componentes/CardSwap';
+import FadeInSection from '../../componentes/FadeInSection';
 
 const michroma = Michroma({ subsets: ["latin"], weight: "400", display: "swap" });
 
 export default function ServiciosPage() {
   return (
-    <div className="min-h-screen w-full bg-[#020617] relative">
-      {/* Cyan Radial Glow Background */}
+    <div className="min-h-screen w-full bg-[#0f172a] relative">
+      {/* Blue Radial Glow Background */}
       <div
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: `radial-gradient(circle 500px at 50% 100px, rgba(6,182,212,0.4), transparent)`,
+          backgroundImage: `radial-gradient(circle 600px at 50% 50%, rgba(59,130,246,0.3), transparent)`,
         }}
       />
 
@@ -54,6 +55,7 @@ export default function ServiciosPage() {
       </div>
 
       {/* Main Section - Texto y Tarjetas lado a lado */}
+      <FadeInSection delay={0}>
       <div className="px-12 lg:px-24 mb-18 bg-slate-950/30 backdrop-blur-sm rounded-3xl md:rounded-[2.5rem] py-12 md:py-50 ring-1 ring-white/10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           
@@ -153,8 +155,10 @@ export default function ServiciosPage() {
           </div>
         </div>
       </div> {/* Cierre Main Section rounded */}
+      </FadeInSection>
 
       {/* Call to Action Section */}
+      <FadeInSection delay={0.2}>
       <div className="max-w-4xl mx-auto text-center mt-24 mb-12 px-6 lg:px-12 bg-slate-950/30 backdrop-blur-sm rounded-3xl md:rounded-[2.5rem] py-12 md:py-16 ring-1 ring-white/10">
         <h3 className={`text-pretty text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-balance mb-6 ${michroma.className}`}>
           ¿Necesitas una solución personalizada?
@@ -163,6 +167,7 @@ export default function ServiciosPage() {
           Nuestro equipo de expertos puede desarrollar una solución médica específicamente diseñada para las necesidades que requiera el cliente.
         </p>
       </div>
+      </FadeInSection>
       
       </div>
     </div>

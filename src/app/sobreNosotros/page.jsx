@@ -2,45 +2,60 @@
 import Image from "next/image";
 import Threads from "@/componentes/Threads";
 import CarruselInfinito from "@/componentes/CarruselInfinito";
+import FadeInSection from "@/componentes/FadeInSection";
 import { Michroma } from "next/font/google";
+import { Safari } from "@/components/ui/safari";
+import { Iphone } from "@/components/ui/iphone";
 const michroma = Michroma({ subsets: ["latin"], weight: "400" });
 
 export default function SobreNosotros() {
   return (
-    <div className="w-full space-y-12">
+    <div className="w-full space-y-12 scroll-smooth">
       {/* Bloque 1: Intro - Azul marino claro */}
-      <section className="space-x-4 md:space-x-6 lg:space-x-8 relative overflow-hidden grid grid-cols-1 md:grid-cols-2 items-center gap-8 md:gap-12 lg:gap-16 px-6 sm:px-8 md:px-12 lg:px-16 py-8 sm:py-12 md:py-16 lg:py-24 bg-gradient-to-br from-blue-900/60 via-blue-950/70 to-slate-900/60 ring-1 ring-blue-500/20 shadow-2xl shadow-blue-900/50 backdrop-blur-sm rounded-3xl md:rounded-[2.5rem]">
-        <div>
-          <h1
-            className={`${michroma.className} leading-tight tracking-tight text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white`}
-          >
-            Sobre Medify
-          </h1>
-          <p className="mt-4 sm:mt-6 text-base sm:text-lg md:text-xl lg:text-2xl text-white/90">
-            Somos especialistas en desarrollo de soluciones tecnológicas para el
-            sector salud, enfocados en crear sistemas seguros, intuitivos y
-            conformes con los más altos estándares de confidencialidad médica.
-          </p>
-          <p className="mt-4 sm:mt-6 text-base sm:text-lg md:text-xl lg:text-2xl text-white/90">
-            Nuestro objetivo es modernizar la práctica médica con herramientas
-            digitales que optimizan la gestión clínica, mejoran la atención al
-            paciente y simplifican los procesos administrativos, siempre
-            priorizando la seguridad de los datos médicos.
-          </p>
-        </div>
-        <div className="order-first md:order-none">
-          <Image
-            src="/medifygrafico.jpg"
-            width={1200}
-            height={800}
-            sizes="(min-width: 1024px) 600px, (min-width: 768px) 50vw, 100vw"
-            alt="Profesionales médicos usando tecnología de Medify"
-            className="rounded-2xl md:rounded-3xl w-full h-auto object-cover ring-1 ring-white/10 shadow-xl"
-            priority
-          />
-        </div>
-      </section>
+      <FadeInSection delay={0}>
+        <section className="space-x-4 md:space-x-6 lg:space-x-8 relative overflow-hidden grid grid-cols-1 md:grid-cols-2 items-center gap-8 md:gap-12 lg:gap-16 px-6 sm:px-8 md:px-12 lg:px-16 py-8 sm:py-12 md:py-16 lg:py-24 bg-gradient-to-br from-blue-900/60 via-blue-950/70 to-slate-900/60 ring-1 ring-blue-500/20 shadow-2xl shadow-blue-900/50 backdrop-blur-sm rounded-3xl md:rounded-[2.5rem]">
+          <div>
+            <h1
+              className={`${michroma.className} leading-tight tracking-tight text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white`}
+            >
+              Sobre Medify
+            </h1>
+            <p className="mt-4 sm:mt-6 text-justify sm:text-lg md:text-xl lg:text-2xl text-white/90">
+              Somos especialistas en desarrollo de soluciones tecnológicas para
+              el sector salud y especialidades que trabajen con sistema de
+              reservas por medio de horas y calendarios, enfocados en crear
+              sistemas seguros, intuitivos y conformes con los más altos
+              estándares de confidencialidad.
+            </p>
+            <p className="mt-4 sm:mt-6 text-justify sm:text-lg md:text-xl lg:text-2xl text-white/90">
+              Nuestro objetivo es modernizar la práctica médica con herramientas
+              digitales que optimizan la gestión clínica, mejoran la atención al
+              paciente y simplifican los procesos administrativos de tu consulta
+              o negocio.
+            </p>
+          </div>
 
+          <div className="order-first md:order-none w-full flex flex-col md:flex-row items-center justify-center gap-6 md:gap-0">
+            {/* iPhone - Móvil */}
+            <div className="w-32 md:w-1/4 lg:w-1/5 flex-shrink-0 md:relative md:z-40 md:mr-[-40px] lg:mr-[-35px] md:drop-shadow-2xl md:mt-6 lg:mt-12">
+              <Iphone
+                src="/medifycel.jpg"
+                objectFit="cover"
+                objectPosition="30% 40%"
+              />
+            </div>
+
+            {/* Safari - Computadora */}
+            <div className="w-full md:w-3/4 lg:w-4/5">
+              <Safari
+                url="medify.cl"
+                imageSrc="/medifylogin.jpg"
+                className="rounded-2xl md:rounded-3xl shadow-xl"
+              />
+            </div>
+          </div>
+        </section>
+      </FadeInSection>{" "}
       {/* Bloque 2: Video + texto 
       <section className="relative overflow-hidden grid grid-cols-1 md:grid-cols-2 items-center gap-8 md:gap-12 lg:gap-16 px-4 sm:px-6 md:px-10 lg:px-14 py-12 sm:py-16 md:py-20 lg:py-24 bg-neutral-900/40 ring-1 ring-white/10 rounded-3xl md:rounded-4xl shadow-2xl backdrop-blur-sm">
         <div>
@@ -65,156 +80,156 @@ export default function SobreNosotros() {
         </div>
       </section>
 */}
-
       {/* Bloque 2: Especialidades Médicas - Azul marino medio */}
-      <section className="relative overflow-hidden px-6 sm:px-8 md:px-12 lg:px-16 py-8 sm:py-12 md:py-16 lg:py-20 bg-gradient-to-br from-blue-950/70 via-slate-900/80 to-blue-900/60 ring-1 ring-blue-400/20 shadow-2xl shadow-blue-800/40 backdrop-blur-sm rounded-3xl md:rounded-[2.5rem]">
-        <div className="text-center mb-12 md:mb-16">
-          <h2
-            className={`${michroma.className} leading-tight tracking-tight text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white`}
-          >
-            Medify es lo que necesitas para tu consutla
-          </h2>
-          <p className="mt-4 sm:mt-6 text-base sm:text-lg md:text-xl text-white/90 max-w-3xl mx-auto">
-            Es la Solución tecnológica especializada para cada área de
-            especialidad
-          </p>
-        </div>
+      <FadeInSection delay={0.2}>
+        <section className="relative overflow-hidden px-6 sm:px-8 md:px-12 lg:px-16 py-8 sm:py-12 md:py-16 lg:py-20 bg-gradient-to-br from-blue-950/70 via-slate-900/80 to-blue-900/60 ring-1 ring-blue-400/20 shadow-2xl shadow-blue-800/40 backdrop-blur-sm rounded-3xl md:rounded-[2.5rem]">
+          <div className="text-center mb-12 md:mb-16">
+            <h2
+              className={`${michroma.className} leading-tight tracking-tight text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white`}
+            >
+              Medify es lo que necesitas para tu consutla
+            </h2>
+            <p className="mt-4 sm:mt-6 text-base sm:text-lg md:text-xl text-white/90 max-w-3xl mx-auto">
+              Es la Solución tecnológica especializada para cada área de
+              especialidad
+            </p>
+          </div>
 
-        <CarruselInfinito
-          especialidades={[
-            {
-              nombre: "Cardiología",
-              imagen: "/medifygrafico.jpg",
-              descripcion:
-                "Monitoreo cardiaco en tiempo real con tecnología de vanguardia para la gestión integral de enfermedades cardiovasculares",
-              tecnologias: ["Holter 24h", "Monitoreo Remoto", "Análisis"],
-            },
-            {
-              nombre: "Pediatría",
-              imagen: "/terapeuta.jpg",
-              descripcion:
-                "Cuidado infantil especializado con seguimiento del desarrollo y sistemas de vacunación automatizados",
-              tecnologias: [
-                "Control Crecimiento",
-                "Control de Vacunas",
-                "Portal Agenda",
-                "Telemedicina",
-              ],
-            },
-            {
-              nombre: "Radiología",
-              imagen: "/medifygrafico.jpg",
-              descripcion:
-                "Diagnóstico por imagen de última generación con inteligencia artificial para detección temprana",
-              tecnologias: ["Diagnóstico", "3D Rendering", "Cloud Storage"],
-            },
-            {
-              nombre: "Medicina General",
-              imagen: "/medgen.jpg",
-              descripcion:
-                "Historia clínica electrónica completa con telemedicina integrada y recetas digitales seguras",
-              tecnologias: [
-                "Historia Clínica",
-                "Recetas Digitales",
-                "Telemedicina",
-                "Seguimiento",
-                "HIPAA",
-              ],
-            },
-            {
-              nombre: "Ginecología",
-              imagen: "/medifygrafico.jpg",
-              descripcion:
-                "Salud femenina integral con control prenatal digital y seguimiento personalizado del embarazo",
-              tecnologias: [
-                "Control Prenatal",
-                "Seguimiento Embarazo",
-                "Calendario",
-                "Prevención",
-                "Educación",
-              ],
-            },
-            {
-              nombre: "Oftalmología",
-              imagen: "/medifygrafico.jpg",
-              descripcion:
-                "Gestión avanzada de exámenes visuales con tecnología láser y seguimiento de tratamientos oculares",
-              tecnologias: [
-                "Campimetría",
-                "Tonometría",
-                "Fondo de Ojo",
-                "Cirugía Láser",
-                "Diagnóstico",
-              ],
-            },
-            {
-              nombre: "Traumatología",
-              imagen: "/medifygrafico.jpg",
-              descripcion:
-                "Ortopedia especializada con planificación quirúrgica 3D y protocolos de rehabilitación avanzados",
-              tecnologias: [
-                "Planificación 3D",
-                "Rehabilitación",
-                "Seguimiento",
-                "Protocolos",
-                "Imaging",
-              ],
-            },
-            {
-              nombre: "Dermatología",
-              imagen: "/maquilladora2.jpg",
-              descripcion:
-                "Análisis dermatológico con inteligencia artificial para prevención y detección temprana de cáncer de piel",
-              tecnologias: [
-                "Dermatoscopia",
-                "Seguimiento Foto",
-                "Tratamientos",
-                "Prevención",
-              ],
-            },
-            {
-              nombre: "Psiquiatría",
-              imagen: "/psico.jpg",
-              descripcion:
-                "Salud mental digital con telepsiquiatría segura y máxima protección de la privacidad del paciente",
-              tecnologias: ["Telepsiquiatría", "Evaluaciones", "Seguimiento"],
-            },
-            {
-              nombre: "Nutrición",
-              imagen: "/nutri.jpg",
-              descripcion:
-                "Planes nutricionales personalizados con IA y seguimiento continuo de objetivos de salud",
-              tecnologias: [
-                "Seguimiento",
-                "Educación",
-                "Objetivos",
-                "Analytics",
-              ],
-            },
-            {
-              nombre: "Odontología",
-              imagen: "/odonto.jpg",
-              descripcion:
-                "Odontograma digital completo con planificación de tratamientos y seguimiento de ortodoncia",
-              tecnologias: ["Ortodoncia", "Recordatorios", "Seguimiento"],
-            },
-            {
-              nombre: "Medicina Deportiva",
-              imagen: "/kine.jpg",
-              descripcion:
-                "Optimización del rendimiento deportivo con prevención de lesiones y rehabilitación especializada",
-              tecnologias: [
-                "Evaluación Física",
-                "Prevención",
-                "Performance",
-                "Rehabilitación",
-                "Analytics",
-              ],
-            },
-          ]}
-        />
-      </section>
-
+          <CarruselInfinito
+            especialidades={[
+              {
+                nombre: "Cardiología",
+                imagen: "/medifygrafico.jpg",
+                descripcion:
+                  "Monitoreo cardiaco en tiempo real con tecnología de vanguardia para la gestión integral de enfermedades cardiovasculares",
+                tecnologias: ["Holter 24h", "Monitoreo Remoto", "Análisis"],
+              },
+              {
+                nombre: "Pediatría",
+                imagen: "/terapeuta.jpg",
+                descripcion:
+                  "Cuidado infantil especializado con seguimiento del desarrollo y sistemas de vacunación automatizados",
+                tecnologias: [
+                  "Control Crecimiento",
+                  "Control de Vacunas",
+                  "Portal Agenda",
+                  "Telemedicina",
+                ],
+              },
+              {
+                nombre: "Radiología",
+                imagen: "/medifygrafico.jpg",
+                descripcion:
+                  "Diagnóstico por imagen de última generación con inteligencia artificial para detección temprana",
+                tecnologias: ["Diagnóstico", "3D Rendering", "Cloud Storage"],
+              },
+              {
+                nombre: "Medicina General",
+                imagen: "/medgen.jpg",
+                descripcion:
+                  "Historia clínica electrónica completa con telemedicina integrada y recetas digitales seguras",
+                tecnologias: [
+                  "Historia Clínica",
+                  "Recetas Digitales",
+                  "Telemedicina",
+                  "Seguimiento",
+                  "HIPAA",
+                ],
+              },
+              {
+                nombre: "Ginecología",
+                imagen: "/medifygrafico.jpg",
+                descripcion:
+                  "Salud femenina integral con control prenatal digital y seguimiento personalizado del embarazo",
+                tecnologias: [
+                  "Control Prenatal",
+                  "Seguimiento Embarazo",
+                  "Calendario",
+                  "Prevención",
+                  "Educación",
+                ],
+              },
+              {
+                nombre: "Oftalmología",
+                imagen: "/medifygrafico.jpg",
+                descripcion:
+                  "Gestión avanzada de exámenes visuales con tecnología láser y seguimiento de tratamientos oculares",
+                tecnologias: [
+                  "Campimetría",
+                  "Tonometría",
+                  "Fondo de Ojo",
+                  "Cirugía Láser",
+                  "Diagnóstico",
+                ],
+              },
+              {
+                nombre: "Traumatología",
+                imagen: "/medifygrafico.jpg",
+                descripcion:
+                  "Ortopedia especializada con planificación quirúrgica 3D y protocolos de rehabilitación avanzados",
+                tecnologias: [
+                  "Planificación 3D",
+                  "Rehabilitación",
+                  "Seguimiento",
+                  "Protocolos",
+                  "Imaging",
+                ],
+              },
+              {
+                nombre: "Dermatología",
+                imagen: "/maquilladora2.jpg",
+                descripcion:
+                  "Análisis dermatológico con inteligencia artificial para prevención y detección temprana de cáncer de piel",
+                tecnologias: [
+                  "Dermatoscopia",
+                  "Seguimiento Foto",
+                  "Tratamientos",
+                  "Prevención",
+                ],
+              },
+              {
+                nombre: "Psiquiatría",
+                imagen: "/psico.jpg",
+                descripcion:
+                  "Salud mental digital con telepsiquiatría segura y máxima protección de la privacidad del paciente",
+                tecnologias: ["Telepsiquiatría", "Evaluaciones", "Seguimiento"],
+              },
+              {
+                nombre: "Nutrición",
+                imagen: "/nutri.jpg",
+                descripcion:
+                  "Planes nutricionales personalizados con IA y seguimiento continuo de objetivos de salud",
+                tecnologias: [
+                  "Seguimiento",
+                  "Educación",
+                  "Objetivos",
+                  "Analytics",
+                ],
+              },
+              {
+                nombre: "Odontología",
+                imagen: "/odonto.jpg",
+                descripcion:
+                  "Odontograma digital completo con planificación de tratamientos y seguimiento de ortodoncia",
+                tecnologias: ["Ortodoncia", "Recordatorios", "Seguimiento"],
+              },
+              {
+                nombre: "Medicina Deportiva",
+                imagen: "/kine.jpg",
+                descripcion:
+                  "Optimización del rendimiento deportivo con prevención de lesiones y rehabilitación especializada",
+                tecnologias: [
+                  "Evaluación Física",
+                  "Prevención",
+                  "Performance",
+                  "Rehabilitación",
+                  "Analytics",
+                ],
+              },
+            ]}
+          />
+        </section>
+      </FadeInSection>
       {/* Bloque 3: Misión / Visión / Valores / Propuesta de Valor - Azul marino más oscuro 
       <section className="relative overflow-hidden px-6 sm:px-8 md:px-12 lg:px-16 py-8 sm:py-12 md:py-16 lg:py-20 bg-gradient-to-br from-slate-900/80 via-blue-950/90 to-slate-950/80 ring-1 ring-blue-600/20 shadow-2xl shadow-blue-950/60 backdrop-blur-sm rounded-3xl md:rounded-[2.5rem]">
         <h2
@@ -306,23 +321,31 @@ export default function SobreNosotros() {
         </div>
       </section>
       */}
-
       {/* Bloque 4: CTA con fondo dinámico - Azul marino muy oscuro */}
-      <section className="relative overflow-hidden ring-1 ring-blue-700/30 shadow-2xl shadow-blue-950/80 px-6 sm:px-8 md:px-12 lg:px-16 py-12 sm:py-16 md:py-20 lg:py-24 text-center">
-        {/* Contenedor para Threads como fondo absoluto */}
-        <div className="absolute inset-0 -z-10">
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-950/90 via-blue-950/95 to-slate-950/90">
-            <Threads amplitude={1} distance={0} enableMouseInteraction={true} />
+      <FadeInSection delay={0.3}>
+        <section className=" rounded-4xl relative overflow-hidden ring-1 ring-blue-700/30 shadow-2xl shadow-blue-950/80 px-6 sm:px-8 md:px-12 lg:px-16 py-12 sm:py-16 md:py-20 lg:py-24 text-center">
+          {/* Contenedor para Threads como fondo absoluto */}
+          <div className="absolute inset-0 -z-10">
+            <div className="rounded-3xl absolute inset-0 bg-gradient-to-br from-slate-950/90 via-blue-950/95 to-slate-950/90">
+              <Threads
+                amplitude={1}
+                distance={0}
+                enableMouseInteraction={true}
+              />
+            </div>
+            <div
+              className="absolute inset-0 bg-gradient-to-t from-blue-950/50 to-transparent"
+              aria-hidden="true"
+            />
           </div>
-          <div className="absolute inset-0 bg-gradient-to-t from-blue-950/50 to-transparent" aria-hidden="true" />
-        </div>
 
-        <h2
-          className={`${michroma.className} leading-tight tracking-tight text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white`}
-        >
-          ¿Listo para modernizar tu consulta?
-        </h2>
-      </section>
+          <h2
+            className={`${michroma.className} leading-tight tracking-tight text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white`}
+          >
+            ¿Listo para modernizar tu consulta?
+          </h2>
+        </section>
+      </FadeInSection>
     </div>
   );
 }
