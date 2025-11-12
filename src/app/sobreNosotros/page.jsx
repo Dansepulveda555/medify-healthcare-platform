@@ -1,11 +1,13 @@
 "use client";
 import Image from "next/image";
+import { motion } from "motion/react";
 import Threads from "@/componentes/Threads";
 import CarruselInfinito from "@/componentes/CarruselInfinito";
 import FadeInSection from "@/componentes/FadeInSection";
 import { Michroma } from "next/font/google";
 import { Safari } from "@/components/ui/safari";
 import { Iphone } from "@/components/ui/iphone";
+import { LampContainer } from "@/components/ui/lamp";
 const michroma = Michroma({ subsets: ["latin"], weight: "400" });
 
 export default function SobreNosotros() {
@@ -13,7 +15,11 @@ export default function SobreNosotros() {
     <div className="w-full space-y-12 scroll-smooth">
       {/* Bloque 1: Intro - Azul marino claro */}
       <FadeInSection delay={0}>
-        <section className="space-x-4 md:space-x-6 lg:space-x-8 relative overflow-hidden grid grid-cols-1 md:grid-cols-2 items-center gap-8 md:gap-12 lg:gap-16 px-6 sm:px-8 md:px-12 lg:px-16 py-8 sm:py-12 md:py-16 lg:py-24 bg-gradient-to-br from-blue-900/60 via-blue-950/70 to-slate-900/60 ring-1 ring-blue-500/20 shadow-2xl shadow-blue-900/50 backdrop-blur-sm rounded-3xl md:rounded-[2.5rem]">
+        <section className="space-x-4 md:space-x-6 lg:space-x-8 relative overflow-hidden grid grid-cols-1 md:grid-cols-2 items-center gap-8 md:gap-12 lg:gap-16 px-6 sm:px-8 md:px-12 lg:px-16 py-8 sm:py-12 md:py-16 lg:py-24 ring-1 shadow-2xl backdrop-blur-sm rounded-3xl md:rounded-[2.5rem]" style={{
+          background: "radial-gradient(70% 55% at 50% 50%, #2a5d77 0%, #184058 18%, #0f2a43 34%, #0a1b30 50%, #071226 66%, #040d1c 80%, #020814 92%, #01040d 97%, #000309 100%)",
+          borderColor: "rgba(42, 93, 119, 0.3)",
+          boxShadow: "0 25px 50px -12px rgba(42, 93, 119, 0.5)"
+        }}>
           <div>
             <h1
               className={`${michroma.className} leading-tight tracking-tight text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white`}
@@ -82,7 +88,11 @@ export default function SobreNosotros() {
 */}
       {/* Bloque 2: Especialidades Médicas - Azul marino medio */}
       <FadeInSection delay={0.2}>
-        <section className="relative overflow-hidden px-6 sm:px-8 md:px-12 lg:px-16 py-8 sm:py-12 md:py-16 lg:py-20 bg-gradient-to-br from-blue-950/70 via-slate-900/80 to-blue-900/60 ring-1 ring-blue-400/20 shadow-2xl shadow-blue-800/40 backdrop-blur-sm rounded-3xl md:rounded-[2.5rem]">
+        <section className="relative overflow-hidden px-6 sm:px-8 md:px-12 lg:px-16 py-8 sm:py-12 md:py-16 lg:py-20 ring-1 shadow-2xl backdrop-blur-sm rounded-3xl md:rounded-[2.5rem]" style={{
+          background: "radial-gradient(70% 55% at 50% 50%, #2a5d77 0%, #184058 18%, #0f2a43 34%, #0a1b30 50%, #071226 66%, #040d1c 80%, #020814 92%, #01040d 97%, #000309 100%)",
+          borderColor: "rgba(42, 93, 119, 0.3)",
+          boxShadow: "0 25px 50px -12px rgba(42, 93, 119, 0.4)"
+        }}>
           <div className="text-center mb-12 md:mb-16">
             <h2
               className={`${michroma.className} leading-tight tracking-tight text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white`}
@@ -90,20 +100,13 @@ export default function SobreNosotros() {
               Medify es lo que necesitas para tu consutla
             </h2>
             <p className="mt-4 sm:mt-6 text-base sm:text-lg md:text-xl text-white/90 max-w-3xl mx-auto">
-              Es la Solución tecnológica especializada para cada área de
+              Solución tecnológica especializada para cada área de
               especialidad
             </p>
           </div>
 
           <CarruselInfinito
             especialidades={[
-              {
-                nombre: "Cardiología",
-                imagen: "/medifygrafico.jpg",
-                descripcion:
-                  "Monitoreo cardiaco en tiempo real con tecnología de vanguardia para la gestión integral de enfermedades cardiovasculares",
-                tecnologias: ["Holter 24h", "Monitoreo Remoto", "Análisis"],
-              },
               {
                 nombre: "Pediatría",
                 imagen: "/terapeuta.jpg",
@@ -116,13 +119,7 @@ export default function SobreNosotros() {
                   "Telemedicina",
                 ],
               },
-              {
-                nombre: "Radiología",
-                imagen: "/medifygrafico.jpg",
-                descripcion:
-                  "Diagnóstico por imagen de última generación con inteligencia artificial para detección temprana",
-                tecnologias: ["Diagnóstico", "3D Rendering", "Cloud Storage"],
-              },
+              
               {
                 nombre: "Medicina General",
                 imagen: "/medgen.jpg",
@@ -136,22 +133,10 @@ export default function SobreNosotros() {
                   "HIPAA",
                 ],
               },
-              {
-                nombre: "Ginecología",
-                imagen: "/medifygrafico.jpg",
-                descripcion:
-                  "Salud femenina integral con control prenatal digital y seguimiento personalizado del embarazo",
-                tecnologias: [
-                  "Control Prenatal",
-                  "Seguimiento Embarazo",
-                  "Calendario",
-                  "Prevención",
-                  "Educación",
-                ],
-              },
+
               {
                 nombre: "Oftalmología",
-                imagen: "/medifygrafico.jpg",
+                imagen: "/oftalmologo.jpg",
                 descripcion:
                   "Gestión avanzada de exámenes visuales con tecnología láser y seguimiento de tratamientos oculares",
                 tecnologias: [
@@ -162,19 +147,7 @@ export default function SobreNosotros() {
                   "Diagnóstico",
                 ],
               },
-              {
-                nombre: "Traumatología",
-                imagen: "/medifygrafico.jpg",
-                descripcion:
-                  "Ortopedia especializada con planificación quirúrgica 3D y protocolos de rehabilitación avanzados",
-                tecnologias: [
-                  "Planificación 3D",
-                  "Rehabilitación",
-                  "Seguimiento",
-                  "Protocolos",
-                  "Imaging",
-                ],
-              },
+
               {
                 nombre: "Dermatología",
                 imagen: "/maquilladora2.jpg",
@@ -321,31 +294,21 @@ export default function SobreNosotros() {
         </div>
       </section>
       */}
-      {/* Bloque 4: CTA con fondo dinámico - Azul marino muy oscuro */}
-      <FadeInSection delay={0.3}>
-        <section className=" rounded-4xl relative overflow-hidden ring-1 ring-blue-700/30 shadow-2xl shadow-blue-950/80 px-6 sm:px-8 md:px-12 lg:px-16 py-12 sm:py-16 md:py-20 lg:py-24 text-center">
-          {/* Contenedor para Threads como fondo absoluto */}
-          <div className="absolute inset-0 -z-10">
-            <div className="rounded-3xl absolute inset-0 bg-gradient-to-br from-slate-950/90 via-blue-950/95 to-slate-950/90">
-              <Threads
-                amplitude={1}
-                distance={0}
-                enableMouseInteraction={true}
-              />
-            </div>
-            <div
-              className="absolute inset-0 bg-gradient-to-t from-blue-950/50 to-transparent"
-              aria-hidden="true"
-            />
-          </div>
-
-          <h2
-            className={`${michroma.className} leading-tight tracking-tight text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white`}
-          >
-            ¿Listo para modernizar tu consulta?
-          </h2>
-        </section>
-      </FadeInSection>
+      {/* Bloque 4: CTA con animación Lamp */}
+      <LampContainer className="rounded-4xl h-[300px] md:h-[600px]">
+        <motion.h2
+          initial={{ opacity: 0.5, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            delay: 0.3,
+            duration: 0.8,
+            ease: "easeInOut",
+          }}
+          className={`${michroma.className} rounded-4xl mt-8 bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight text-transparent`}
+        >
+          ¿Listo para modernizar tu consulta? 
+        </motion.h2>
+      </LampContainer>
     </div>
   );
 }

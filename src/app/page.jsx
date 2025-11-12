@@ -32,7 +32,7 @@ export default function Home() {
       <div
   className="
     relative overflow-hidden
-    bg-[url('/digital.jpg')] bg-cover bg-center w-full ring-0 ring-white/10 rounded-0xl shadow-1xl"
+    bg-[url('/digita.jpg')] bg-cover bg-center w-full ring-0 ring-white/10 rounded-0xl shadow-1xl"
 >
   <div
     className="absolute inset-0 bg-gradient-to-t from-[#0B0F1A]/05 via-[#0B0F1A]/10 to-black"
@@ -54,7 +54,7 @@ export default function Home() {
 
         <div className="mt-12 flex justify-center md:justify-end">
           <Link href={"/comprar"}>
-            <BotonBlanco contenido={"Solicitar demostración"} />
+            <BotonBlanco contenido={"Adquirir Medify"} />
           </Link>
         </div>
       </div>

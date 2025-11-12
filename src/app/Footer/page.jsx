@@ -1,5 +1,6 @@
 import GradientText from "@/componentes/GradientText";
 import Image from "next/image";
+import { Link } from 'next-view-transitions';
 import {
   SiNextdotjs,
   SiReact,
@@ -91,18 +92,18 @@ export default function Footer() {
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
             {/* Links */}
             <nav className="flex flex-wrap justify-center lg:justify-start gap-x-8 gap-y-4">
-              <a
+              <Link
                 href="/contacto"
                 className="text-sm font-medium text-gray-400 hover:text-white transition-colors duration-200 hover:underline decoration-blue-500 underline-offset-4"
               >
                 Contacto Especializado
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/soporte"
                 className="text-sm font-medium text-gray-400 hover:text-white transition-colors duration-200 hover:underline decoration-blue-500 underline-offset-4"
               >
                 Soporte Especializado
-              </a>
+              </Link>
               <a
                 href="#"
                 className="text-sm font-medium text-gray-400 hover:text-white transition-colors duration-200 hover:underline decoration-blue-500 underline-offset-4"

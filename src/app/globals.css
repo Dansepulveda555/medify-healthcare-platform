@@ -411,19 +411,19 @@ body {
 .carousel-container {
   position: relative;
   overflow: hidden;
-  border: 1px solid rgba(121, 158, 234, 0.4);
+  border: 1px solid rgba(42, 93, 119, 0.4);
   border-radius: 20px;
   padding: 18px;
   --outer-r: 20px;
   --p-distance: 12px;
-  background: rgba(159, 183, 223, 0.1);
+  /* Deep Ocean Glow Background */
+  background: radial-gradient(70% 55% at 50% 50%, #2a5d77 0%, #184058 18%, #0f2a43 34%, #0a1b30 50%, #071226 66%, #040d1c 80%, #020814 92%, #01040d 97%, #000309 100%);
   backdrop-filter: blur(12px);
   width: 100%;
   max-width: 520px;
-  box-shadow: 0 4px 20px rgba(59, 130, 246, 0.15);
+  box-shadow: 0 4px 20px rgba(42, 93, 119, 0.25);
   will-change: transform;
   transform: translateZ(0);
-
 }
 
 .carousel-track {
@@ -437,9 +437,10 @@ body {
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  border: 1px solid rgba(59, 130, 246, 0.3);
+  border: 1px solid rgba(42, 93, 119, 0.4);
   border-radius: 12px;
-  background-color: rgba(59, 130, 246, 0.08);
+  /* Deep Ocean Glow Background */
+  background: radial-gradient(circle at 50% 50%, #2a5d77 0%, #184058 20%, #0f2a43 40%, #0a1b30 60%, #071226 80%, #040d1c 100%);
   overflow: hidden;
   cursor: grab;
   backdrop-filter: blur(15px);
@@ -447,7 +448,7 @@ body {
   transition: all 0.3s ease;
   min-height: 160px;
   aspect-ratio: 7/3;
-  box-shadow: 0 2px 15px rgba(59, 130, 246, 0.1);
+  box-shadow: 0 2px 15px rgba(42, 93, 119, 0.2);
   will-change: transform;
   transform: translateZ(0);
 }
@@ -458,9 +459,9 @@ body {
 
 .carousel-item:hover {
   transform: translateY(-3px) scale(1.02);
-  background-color: rgba(59, 130, 246, 0.12);
-  border-color: rgba(59, 130, 246, 0.5);
-  box-shadow: 0 8px 30px rgba(59, 130, 246, 0.25);
+  background: radial-gradient(circle at 50% 50%, #3a6d87 0%, #2a5d77 20%, #184058 40%, #0f2a43 60%, #0a1b30 80%, #071226 100%);
+  border-color: rgba(42, 93, 119, 0.6);
+  box-shadow: 0 8px 30px rgba(42, 93, 119, 0.35);
 }
 
 .carousel-container.round {
@@ -515,9 +516,9 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background-color: rgba(59, 130, 246, 0.8);
+  background: radial-gradient(circle, #2a5d77 0%, #184058 50%, #0f2a43 100%);
   backdrop-filter: blur(5px);
-  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+  box-shadow: 0 2px 8px rgba(42, 93, 119, 0.4);
 }
 
 .carousel-icon {
@@ -786,3 +787,582 @@ body {
     transform: scale(0.55) translate(25%, 25%);
   }
 }
+
+/* ========================================
+   CardNav Styles - Navegación Animada Premium
+   ======================================== */
+
+.card-nav-container {
+  position: absolute;
+  top: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 95%;
+  max-width: 1000px;
+  z-index: 999;
+  box-sizing: border-box;
+}
+
+.card-nav {
+  display: block;
+  height: 65px;
+  padding: 0;
+  background: linear-gradient(130deg, #ffffff 0%, #fafbff 100%);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 1rem;
+  box-shadow: 
+    0 4px 24px rgba(30, 64, 175, 0.12),
+    0 2px 8px rgba(0, 0, 0, 0.02),
+    inset 0 1px 0 rgba(255, 255, 255, 1),
+    0 0 40px rgba(255, 255, 255, 0.5);
+  position: relative;
+  overflow: hidden;
+  will-change: height;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-nav::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(255, 255, 255, 0.8) 50%, 
+    transparent 100%);
+  opacity: 0.8;
+}
+
+.card-nav.open {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%);
+  box-shadow: 
+    0 20px 60px rgba(12, 36, 113, 0.15),
+    0 8px 24px rgba(0, 0, 0, 0.06),
+    0 0 50px rgba(255, 255, 255, 0.6);
+}
+
+.card-nav-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.5rem;
+  z-index: 2;
+}
+
+.hamburger-menu {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  gap: 6px;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  min-width: 40px;
+  min-height: 40px;
+}
+
+.hamburger-menu:hover {
+  background: rgba(30, 64, 175, 0.08);
+}
+
+.hamburger-line {
+  width: 28px;
+  height: 2px;
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+  border-radius: 2px;
+  transition:
+    transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.2s ease,
+    margin 0.3s ease;
+  transform-origin: 50% 50%;
+  box-shadow: 0 1px 2px rgba(30, 64, 175, 0.15);
+}
+
+.hamburger-menu.open .hamburger-line:first-child {
+  transform: translateY(4px) rotate(45deg);
+}
+
+.hamburger-menu.open .hamburger-line:last-child {
+  transform: translateY(-4px) rotate(-45deg);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.75rem;
+  transition: all 0.3s ease;
+  min-width: 160px;
+}
+
+.logo-container:hover {
+  background: rgba(30, 64, 175, 0.04);
+}
+
+.logo {
+  height: 65px;
+  width: auto;
+  max-width: 250px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 6px rgb(255, 255, 255));
+  transition: all 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.03);
+  filter: drop-shadow(0 3px 10px rgba(30, 64, 175, 0.18));
+}
+
+.card-nav-cta-button {
+  background: linear-gradient(135deg, #2a5d77 0%, #4a8da7 100%);
+  color: white;
+  border: none;
+  border-radius: 0.625rem;
+  padding: 0.625rem 1.5rem;
+  height: auto;
+  font-weight: 600;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  display: flex;
+  white-space: nowrap;
+  box-shadow: 
+    0 3px 10px rgba(42, 93, 119, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  position: relative;
+  overflow: hidden;
+  min-width: 110px;
+}
+
+.card-nav-cta-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(255, 255, 255, 0.2), 
+    transparent);
+  transition: left 0.5s ease;
+}
+
+.card-nav-cta-button:hover::before {
+  left: 100%;
+}
+
+.card-nav-cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 8px 20px rgba(42, 93, 119, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  background: linear-gradient(135deg, #184058 0%, #357a96 100%);
+}
+
+.card-nav-cta-button:active {
+  transform: translateY(0);
+}
+
+.card-nav-content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 65px;
+  bottom: 0;
+  padding: 1.25rem 1rem 1rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.875rem;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.card-nav.open .card-nav-content {
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.nav-card {
+  height: auto;
+  max-height: 100%;
+  flex: 1 1 0;
+  min-width: 0;
+  border-radius: 0.75rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem 1.25rem;
+  gap: 0.875rem;
+  user-select: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 
+    0 3px 10px rgba(0, 0, 0, 0.05),
+    0 1px 3px rgba(0, 0, 0, 0.03);
+  overflow: hidden;
+  /* Tono oceánico oscuro acorde con la página */
+  background: linear-gradient(135deg, #0f2a43 0%, #0a1b30 100%);
+  border: 1px solid rgba(42, 93, 119, 0.3);
+}
+
+.nav-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(42, 93, 119, 0.5) 50%, 
+    transparent 100%);
+  opacity: 0.6;
+}
+.nav-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 
+    0 8px 20px rgba(42, 93, 119, 0.4),
+    0 2px 6px rgba(0, 0, 0, 0.04);
+  background: linear-gradient(135deg, #184058 0%, #0f2a43 100%);
+  border-color: rgba(42, 93, 119, 0.5);
+}
+
+.nav-card-label {
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: -0.4px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.nav-card-links {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.nav-card-link {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  margin: -0.5rem -0.75rem;
+  opacity: 0.9;
+}
+
+.nav-card-link:hover {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateX(4px);
+  padding-left: 1rem;
+}
+
+.nav-card-link-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.nav-card-link:hover .nav-card-link-icon {
+  transform: rotate(45deg);
+}
+
+@media (max-width: 768px) {
+  .card-nav-container {
+    width: 95%;
+    top: 1rem;
+  }
+
+  .card-nav {
+    height: 60px;
+  }
+
+  .card-nav-top {
+    height: 60px;
+    padding: 0.625rem 1rem;
+    justify-content: space-between;
+  }
+
+  .hamburger-menu {
+    order: 2;
+    min-width: 40px;
+    min-height: 40px;
+  }
+
+  .logo-container {
+    position: static;
+    transform: none;
+    order: 1;
+    padding: 0.5rem 0.75rem;
+    min-width: auto;
+  }
+
+  .logo {
+    height: 42px;
+    max-width: 180px;
+  }
+
+  .card-nav-cta-button {
+    display: none;
+  }
+
+  .card-nav-content {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+    padding: 1rem;
+    bottom: 0;
+    justify-content: flex-start;
+    top: 60px;
+  }
+
+  .nav-card {
+    height: auto;
+    min-height: 75px;
+    flex: 1 1 auto;
+    max-height: none;
+    padding: 1rem 1.25rem;
+  }
+
+  .nav-card-label {
+    font-size: 1.0625rem;
+  }
+
+  .nav-card-link {
+    font-size: 0.8125rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .logo {
+    height: 52px;
+    max-width: 220px;
+  }
+
+  .card-nav-cta-button {
+    padding: 0.625rem 1.5rem;
+    font-size: 0.875rem;
+    min-width: 100px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .logo {
+    height: 48px;
+    max-width: 200px;
+  }
+
+  .card-nav-cta-button {
+    padding: 0.625rem 1.5rem;
+    font-size: 0.875rem;
+  }
+}
+
+/* ========================================
+   TRANSICIONES DE PÁGINAS - View Transitions
+   ======================================== */
+
+/* Transición suave con fade + scale elegante */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 400ms;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+::view-transition-old(root) {
+  animation-name: fade-scale-out;
+}
+
+::view-transition-new(root) {
+  animation-name: fade-scale-in;
+}
+
+@keyframes fade-scale-out {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+}
+
+@keyframes fade-scale-in {
+  from {
+    opacity: 0;
+    transform: scale(1.03);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Blur suave durante la transición para efecto profesional */
+::view-transition-group(root) {
+  animation-duration: 400ms;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Prevenir flash de contenido durante la transición */
+html:has(:root.transitioning) {
+  overflow: hidden;
+}
+
+/* Optimización de rendimiento para las transiciones */
+::view-transition-old(root),
+::view-transition-new(root) {
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  will-change: transform, opacity;
+}
+
+/* Variante alternativa: slide elegante (comentado por defecto) */
+/*
+::view-transition-old(root) {
+  animation-name: slide-fade-out;
+}
+
+::view-transition-new(root) {
+  animation-name: slide-fade-in;
+}
+
+@keyframes slide-fade-out {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+}
+
+@keyframes slide-fade-in {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+*/
+
+/* Soporte para usuarios que prefieren movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation-duration: 150ms;
+    animation-timing-function: ease;
+  }
+  
+  @keyframes fade-scale-out {
+    from {
+      opacity: 1;
+      transform: none;
+    }
+    to {
+      opacity: 0;
+      transform: none;
+    }
+  }
+  
+  @keyframes fade-scale-in {
+    from {
+      opacity: 0;
+      transform: none;
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
+
+/* ========================================
+   LUSTRE TEXT - Animación de brillo para títulos
+   ======================================== */
+
+.lustre-text {
+  display: inline-block;
+  font-weight: 800;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-size: 200% auto;
+  background-position: 0% center;
+  animation: shine 4s linear infinite;
+  filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.6));
+  padding: 0.25rem 0;
+  overflow: visible;
+}
+
+.lustre-light {
+  background-image: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.05) 0%,
+    rgba(0, 0, 0, 0.3) 30%,
+    rgba(0, 0, 0, 0.7) 45%,
+    #ffffff 50%,
+    rgba(0, 0, 0, 0.7) 55%,
+    rgba(0, 0, 0, 0.3) 70%,
+    rgba(0, 0, 0, 0.05) 100%
+  );
+}
+
+.lustre-dark {
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.5) 25%,
+    rgba(255, 255, 255, 0.8) 40%,
+    #ffffff 50%,
+    rgba(255, 255, 255, 0.8) 60%,
+    rgba(255, 255, 255, 0.5) 75%,
+    rgba(255, 255, 255, 0.2) 100%
+  );
+}
+
+/* Keyframe para la animación de brillo */
+@keyframes shine {
+  0% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: -100%;
+  }
+}
+
+

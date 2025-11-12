@@ -3,13 +3,23 @@ import { Michroma } from "next/font/google";
 const michroma = Michroma({ subsets: ["latin"], weight: "400", display: "swap" });
 
 import Image from "next/image";
+import { Link } from 'next-view-transitions';
 import { HandThumbUpIcon, BoltIcon, ShieldCheckIcon, GlobeAltIcon } from "@heroicons/react/24/solid";
 import Carousel from '../../componentes/Carousel';
+import LustreText from '@/components/ui/lustretext';
+import StatsCount from "@/components/ui/statscount";
 
 export default function Portada() {
+  const stats = [
+    { value: 300, suffix: "+", label: "Profesionales de la salud confían en Medify" },
+    { value: 1000, suffix: "+", label: "Pacientes gestionados mensualmente" },
+    { value: 99, suffix: "%", label: "Cumplimiento de los estándares" },
+  ];
+
   return (
-    <div className="relative w-full min-h-[88vh] sm:min-h-screen overflow-hidden">
-      <Image
+    <div className="relative w-full min-h-[88vh] sm:min-h-screen overflow-hidden bg-black">
+      {/* Imagen de fondo comentada - guardada para uso futuro */}
+      {/* <Image
         src="/doctorfondo.jpg"
         alt="Fondo portada"
         fill
@@ -20,14 +30,24 @@ export default function Portada() {
           willChange: 'auto',
           transform: 'translateZ(0)',
         }}
+      /> */}
+      
+      {/* Deep Ocean Glow Background */}
+      <div
+        className="absolute inset-0 z-0"
+        style={{
+          background:
+            "radial-gradient(70% 55% at 50% 50%, #2a5d77 0%, #184058 18%, #0f2a43 34%, #0a1b30 50%, #071226 66%, #040d1c 80%, #020814 92%, #01040d 97%, #000309 100%), radial-gradient(160% 130% at 10% 10%, rgba(0,0,0,0) 38%, #000309 76%, #000208 100%), radial-gradient(160% 130% at 90% 90%, rgba(0,0,0,0) 38%, #000309 76%, #000208 100%)"
+        }}
       />
-      {/* Fondo pro: gradiente + patrón sutil */}
-      <div className="absolute inset-0" style={{ willChange: 'auto' }}>
+      
+      {/* Gradiente adicional comentado - guardado para uso futuro */}
+      {/* <div className="absolute inset-0" style={{ willChange: 'auto' }}>
         <div className="absolute inset-0 bg-gradient-to-b from-[#0B0F1A]/5 via-[#0B0F1A]/10 to-black" />
-      </div>
+      </div> */}
 
       {/* Contenido */}
-      <div className="relative w-full px-4 sm:px-6 md:px-8 lg:px-12 pt-16 pb-12 sm:pt-24 sm:pb-16">
+      <div className="mt-16 relative w-full px-6 sm:px-6 md:px-8 lg:px-12 pt-16 pb-24 sm:pt-24 sm:pb-16">
         {/* Cinta/top badge */}
         <div className="flex justify-center">
           <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-[13px] font-semibold text-white/80 backdrop-blur">
@@ -37,26 +57,36 @@ export default function Portada() {
         </div>
 
         {/* Contenido centrado */}
-        <div className="mt-16 text-center max-w-4xl mx-auto">
+        <div className="mt-18 text-center max-w-4xl mx-auto">
           <h1
-            className={`${michroma.className} antialiased text-[clamp(2rem,8.5vw,6rem)] md:text-[clamp(3rem,6.5vw,7rem)] lg:text-[clamp(3.5rem,5vw,8rem)] leading-[1.05] tracking-tight text-white drop-shadow-[0_0_12px_rgba(255,255,255,0.9)] mb-8`}
+            className={`${michroma.className} antialiased text-[clamp(2rem,8.5vw,6rem)] md:text-[clamp(3rem,6.5vw,7rem)] lg:text-[clamp(3.5rem,5vw,8rem)] leading-[1.3] tracking-tight drop-shadow-[0_0_12px_rgba(255,255,255,0.9)] mb-8 py-4`}
             style={{ fontFamily: michroma.style.fontFamily }}
           >
-            M e d i f y
+            <LustreText text="M e d i f y" />
           </h1>
 
           <p className="text-lg sm:text-xl md:text-2xl text-white/80 max-w-3xl mx-auto mb-12 leading-relaxed">
-            Es la herramienta para tener el control de tus consultas médicas, pacientes y reservas,
+            La herramienta perfecta para tener el control de tus consultas médicas, pacientes y reservas,
             adaptando tus necesidades a tu servicio y manteniendo tus horarios de forma profesional.
           </p>
 
+          {/* Stats Counter */}
+          <div className="mt-16 mb-16">
+            <StatsCount
+              stats={stats}
+              title="RESULTADOS QUE HABLAN POR SÍ MISMOS"
+              showDividers={true}
+              className=""
+            />
+          </div>
+
           {/* CTA centrados */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href="https://wa.me/56977889900?text=Quiero%20cotizar%20una%20solución%20médica%20de%20Medify"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-xl px-8 py-4 text-lg font-semibold text-white bg-blue-700 hover:bg-blue-600 shadow-[0_0_25px_rgba(59,130,246,0.8)] ring-1 ring-blue-400/40 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400"
+              className="inline-flex items-center gap-2 rounded-xl px-8 py-4 text-lg font-semibold text-white bg-blue-5 hover:bg-blue-500 shadow-[0_0_25px_rgba(59,130,246,0.8)] ring-1 ring-blue-400/40 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400"
               aria-label="Cotizar solución médica por WhatsApp"
             >
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5">
@@ -65,12 +95,12 @@ export default function Portada() {
               Solicitar consulta
             </a>
 
-            <a
+            <Link
               href="/servicios"
               className="inline-flex items-center rounded-xl px-8 py-4 text-lg font-semibold text-blue-100 border border-blue-400/40 bg-white/5 backdrop-blur-md shadow-[0_6px_24px_rgba(0,0,0,0.35)] hover:bg-white/10 hover:text-white transition-all"
             >
-              Ver soluciones
-            </a>
+              Nuestros servicios
+            </Link>
           </div>
         </div>
 

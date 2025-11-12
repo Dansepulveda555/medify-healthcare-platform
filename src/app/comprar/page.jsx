@@ -14,8 +14,10 @@ export default function Comprar(){
 
                    </div>
 <section className="relative overflow-hidden ring-1 ring-white/10 rounded-4xl shadow-2xl">
-  {/* Fondo suave con gradiente */}
-  <div className="absolute inset-0 bg-gradient-to-br from-[#0f0c29] via-[#302b63] to-[#24243e]" />
+  {/* Deep Ocean Glow Background */}
+  <div className="absolute inset-0" style={{
+    background: "radial-gradient(70% 55% at 50% 50%, #2a5d77 0%, #184058 18%, #0f2a43 34%, #0a1b30 50%, #071226 66%, #040d1c 80%, #020814 92%, #01040d 97%, #000309 100%)"
+  }} />
   {/* Degradé a negro en la parte inferior */}
   <div className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/85 to-transparent" />
 
@@ -25,7 +27,7 @@ export default function Comprar(){
       <div className="space-y-8">
         <header>
           <h2 className="tituloResponsive leading-tight tracking-tight font-extrabold">
-            <span className="bg-gradient-to-r from-cyan-400 via-sky-400 to-purple-500 bg-clip-text text-transparent">Contratación</span> y datos de transferencia
+            <span className="bg-gradient-to-r from-[#4a8da7] to-[#2a5d77] bg-clip-text text-transparent">Contratación</span> y datos de transferencia
           </h2>
           <p className="mt-4 text-base md:text-lg text-white/85 leading-relaxed">
             Da el salto hoy mismo. Diseñamos y desarrollamos soluciones a la medida para que tu negocio crezca con tecnología de alto rendimiento. Nuestro equipo te acompaña desde la idea hasta la operación continua.
@@ -75,7 +77,7 @@ export default function Comprar(){
               </div>
               <div className="flex justify-between items-center gap-4 border-b border-white/10 pb-2">
                 <dt className="text-white/60">Correo pagos</dt>
-                <dd className="text-white text-right">pagos@medify.healthcare</dd>
+                <dd className="text-white text-right">pagos@medify.cl</dd>
               </div>
             </dl>
           </div>
@@ -86,14 +88,14 @@ export default function Comprar(){
           <h3 className="text-lg font-semibold text-white tracking-tight">Instrucciones</h3>
           <ul className="mt-3 list-disc list-inside text-sm md:text-base text-white/90 space-y-1.5">
             <li>En el asunto de la transferencia indica: <span className="text-white">Servicio + Nombre de tu institución médica</span>.</li>
-            <li>Envía el comprobante a <span className="text-white">ventas@medify.healthcare</span> o al WhatsApp <span className="text-white">+56 9 7788 9900</span>.</li>
+            <li>Envía el comprobante a <span className="text-white">ventas@medify.cl</span> o al WhatsApp <span className="text-white">+56 9 7788 9900</span>.</li>
             <li>Te contactaremos para levantar requerimientos médicos y calendarizar la implementación.</li>
           </ul>
           <p className="mt-4 text-white/85 break-all">
-            Correo de contacto: <span className="text-white">ventas@medify.healthcare</span>
+            Correo de contacto: <span className="text-white">ventas@medify.cl</span>
           </p>
           <div className="mt-5 flex flex-wrap gap-3">
-            <a href="mailto:ventas@medify.healthcare" className="inline-flex items-center rounded-xl px-4 py-2 bg-gradient-to-r from-blue-500 to-teal-600 text-white font-semibold shadow hover:opacity-90 transition">Escribir por correo</a>
+            <a href="mailto:ventas@medify.cl" className="inline-flex items-center rounded-xl px-4 py-2 bg-gradient-to-r from-blue-500 to-teal-600 text-white font-semibold shadow hover:opacity-90 transition">Escribir por correo</a>
             <a href="https://wa.me/56977889900" target="_blank" rel="noopener noreferrer" className="inline-flex items-center rounded-xl px-4 py-2 bg-gradient-to-r from-blue-500 to-teal-600 text-white font-semibold shadow hover:opacity-90 transition">Escribir por WhatsApp</a>
           </div>
         </div>
@@ -104,7 +106,7 @@ export default function Comprar(){
         <div className="absolute -inset-8 rounded-3xl bg-gradient-to-tr from-purple-600/30 via-fuchsia-500/20 to-cyan-400/30 blur-3xl" aria-hidden="true"></div>
         <div className="relative rounded-3xl ring-1 ring-white/10 bg-white/5 backdrop-blur-md p-4 shadow-2xl transition hover:scale-105">
           <Image
-            src="/portada2.png"
+            src="/portada1.jpg"
             width={1200}
             height={1200}
             alt="Portada del servicio"

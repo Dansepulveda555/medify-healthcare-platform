@@ -18,9 +18,14 @@ const FadeInSection = ({
     const element = sectionRef.current;
     if (!element) return;
 
-    // Animación de fade-in + slide-up al hacer scroll
+    // Animar solo los hijos directos (títulos, párrafos, etc.), NO la sección completa
+    const childElements = element.children;
+    
+    if (childElements.length === 0) return;
+
+    // Animación de fade-in + slide-up al hacer scroll SOLO para los elementos hijos
     gsap.fromTo(
-      element,
+      childElements,
       {
         opacity: 0,
         y: y,
@@ -31,6 +36,7 @@ const FadeInSection = ({
         duration: duration,
         delay: delay,
         ease: 'power2.out',
+        stagger: 0.15, // Los elementos van apareciendo uno tras otro
         scrollTrigger: {
           trigger: element,
           start: 'top 85%', // Comienza cuando el top del elemento está al 85% del viewport

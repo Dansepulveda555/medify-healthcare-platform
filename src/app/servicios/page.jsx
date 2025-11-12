@@ -7,12 +7,12 @@ const michroma = Michroma({ subsets: ["latin"], weight: "400", display: "swap" }
 
 export default function ServiciosPage() {
   return (
-    <div className="min-h-screen w-full bg-[#0f172a] relative">
-      {/* Blue Radial Glow Background */}
+    <div className="min-h-screen w-full relative">
+      {/* Deep Ocean Glow Background */}
       <div
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: `radial-gradient(circle 600px at 50% 50%, rgba(59,130,246,0.3), transparent)`,
+          background: "radial-gradient(70% 55% at 50% 50%, #2a5d77 0%, #184058 18%, #0f2a43 34%, #0a1b30 50%, #071226 66%, #040d1c 80%, #020814 92%, #01040d 97%, #000309 100%)"
         }}
       />
 
@@ -61,7 +61,7 @@ export default function ServiciosPage() {
           
           {/* Columna Izquierda - Texto */}
           <div className="flex flex-col items-center">
-            <h2 className="text-base/20 font-semibold text-blue-100/80 mb-4">Gestión Médica Innovadora</h2>
+            <h2 className="text-base/20 font-semibold text-[#4a8da7] mb-4">Gestión Médica Innovadora</h2>
             <h1 className={`text-center lg:text-5xl xl:text-6xl font-semibold tracking-tight text-white mb-6 leading-tight ${michroma.className}`}>
             La forma de gestionar tu consulta ha cambiado.
             </h1>
@@ -83,7 +83,9 @@ export default function ServiciosPage() {
           skewAmount={8}
           easing="bounce"
         >
-          <Card customClass="bg-gradient-to-br from-blue-600/90 via-blue-700/90 to-indigo-800/90 backdrop-blur-md shadow-2xl rounded-3xl overflow-hidden border border-blue-400/30">
+          <Card customClass="rounded-3xl overflow-hidden border shadow-2xl bg-white/5 backdrop-blur-md" style={{
+            borderColor: "rgba(42, 93, 119, 0.4)"
+          }}>
             <div className="p-10 h-full flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between mb-6">
@@ -107,7 +109,9 @@ export default function ServiciosPage() {
             </div>
           </Card>
 
-          <Card customClass="bg-gradient-to-br from-purple-600/90 via-purple-700/90 to-pink-800/90 backdrop-blur-md shadow-2xl rounded-3xl overflow-hidden border border-purple-400/30">
+          <Card customClass="rounded-3xl overflow-hidden border shadow-2xl bg-white/5 backdrop-blur-md" style={{
+            borderColor: "rgba(42, 93, 119, 0.4)"
+          }}>
             <div className="p-10 h-full flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between mb-6">
@@ -131,7 +135,9 @@ export default function ServiciosPage() {
             </div>
           </Card>
 
-          <Card customClass="bg-gradient-to-br from-cyan-600/90 via-teal-700/90 to-emerald-800/90 backdrop-blur-md shadow-2xl rounded-3xl overflow-hidden border border-cyan-400/30">
+          <Card customClass="rounded-3xl overflow-hidden border shadow-2xl bg-white/5 backdrop-blur-md" style={{
+            borderColor: "rgba(42, 93, 119, 0.4)"
+          }}>
             <div className="p-10 h-full flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between mb-6">
@@ -145,9 +151,12 @@ export default function ServiciosPage() {
                 <h3 className={`text-4xl font-bold text-white mb-4 leading-tight ${michroma.className}`}>
                   Gestión de agenda avanzada
                 </h3>
-                <p className="text-white/90 text-lg leading-relaxed mb-6">
-                  Sistema completo para consultas. Gestión de reservas, ingreso de pacientes, analítica avanzada en tiempo real.
-                </p>
+                <ul className="text-white/90 text-lg leading-relaxed mb-6 space-y-2 list-disc list-inside">
+                  <li>Sitema de consultas completo.</li>
+                  <li>Gestión de reservas.</li>
+                  <li>Ingreso de pacientes.</li>
+                  <li>Analítica avanzada en tiempo real.</li>
+                </ul>
               </div>
             </div>
           </Card>

@@ -2,6 +2,7 @@
 import { useLayoutEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { GoArrowUpRight } from 'react-icons/go';
+import { Link } from 'next-view-transitions';
 
 const CardNav = ({
   logo,
@@ -12,8 +13,7 @@ const CardNav = ({
   baseColor = '#fff',
   menuColor,
   buttonBgColor,
-  buttonTextColor,
-  buttonText = 'Get Started'
+  buttonTextColor
 }) => {
   const [isHamburgerOpen, setIsHamburgerOpen] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
@@ -150,33 +150,45 @@ const CardNav = ({
           </div>
 
           <div className="logo-container">
-            <img src={logo} alt={logoAlt} className="logo" />
+            {logo?.endsWith('.mp4') || logo?.endsWith('.webm') ? (
+              <video 
+                src={logo} 
+                autoPlay 
+                muted 
+                loop 
+                playsInline
+                className="logo"
+                style={{ objectFit: 'contain' }}
+              />
+            ) : (
+              <img src={logo} alt={logoAlt} className="logo" />
+            )}
           </div>
 
-          <button
-            type="button"
+          <Link
+            href="/comprar"
             className="card-nav-cta-button"
             style={{ backgroundColor: buttonBgColor, color: buttonTextColor }}
           >
-            {buttonText}
-          </button>
+            Comenzar
+          </Link>
         </div>
 
         <div className="card-nav-content" aria-hidden={!isExpanded}>
           {(items || []).slice(0, 3).map((item, idx) => (
             <div
               key={`${item.label}-${idx}`}
-              className={`nav-card ${item.className || ''}`}
+              className="nav-card"
               ref={setCardRef(idx)}
               style={{ backgroundColor: item.bgColor, color: item.textColor }}
             >
               <div className="nav-card-label">{item.label}</div>
               <div className="nav-card-links">
                 {item.links?.map((lnk, i) => (
-                  <a key={`${lnk.label}-${i}`} className="nav-card-link" href={lnk.href} aria-label={lnk.ariaLabel}>
+                  <Link key={`${lnk.label}-${i}`} className="nav-card-link" href={lnk.href} aria-label={lnk.ariaLabel}>
                     <GoArrowUpRight className="nav-card-link-icon" aria-hidden="true" />
                     {lnk.label}
-                  </a>
+                  </Link>
                 ))}
               </div>
             </div>

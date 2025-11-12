@@ -2,9 +2,9 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Poppins, Dancing_Script } from "next/font/google";
 import Footer from "./Footer/page";
-import Navbar from "@/componentes/Navbar";
-import CardNavMedical from "@/componentes/CardNavMedical";
+import ClientCardNav from "@/componentes/ClientCardNav";
 import Script from "next/script";
+import { ViewTransitions } from 'next-view-transitions';
 
 // ==========================
 // SEO Metadata (App Router)
@@ -116,17 +116,18 @@ const geistMono = Geist_Mono({
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="es" suppressHydrationWarning>
-      <Script
-        id="ld-org"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "Medify Healthcare Solutions",
-            "url": process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
-            "logo": (process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000") + "/og.jpg",
+    <ViewTransitions>
+      <html lang="es" suppressHydrationWarning>
+        <Script
+          id="ld-org"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Medify Healthcare Solutions",
+              "url": process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
+              "logo": (process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000") + "/og.jpg",
             "sameAs": [
               "https://www.instagram.com/",
               "https://www.linkedin.com/"
@@ -152,12 +153,9 @@ export default function RootLayout({ children }) {
         }}
       />
       <body className={`${poppins.className} ${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <div className="min-h-screen flex flex-col">
-          {/* Navbar tradicional Material-UI (restaurado) */}
-          <Navbar />
-          
-          {/* CardNav moderno (desactivado) */}
-          {/* <CardNavMedical /> */}
+        <div className="min-h-screen flex flex-col relative">
+          {/* CardNav moderno con animaciones GSAP */}
+          <ClientCardNav />
           
           <main className="flex-1">
             {children}
@@ -166,5 +164,6 @@ export default function RootLayout({ children }) {
         </div>
       </body>
     </html>
+    </ViewTransitions>
   );
 }
