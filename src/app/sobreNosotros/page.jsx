@@ -4,11 +4,12 @@ import { motion } from "motion/react";
 import Threads from "@/componentes/Threads";
 import CarruselInfinito from "@/componentes/CarruselInfinito";
 import FadeInSection from "@/componentes/FadeInSection";
-import { Michroma } from "next/font/google";
+import { Michroma, Space_Grotesk } from "next/font/google";
 import { Safari } from "@/components/ui/safari";
 import { Iphone } from "@/components/ui/iphone";
 import { LampContainer } from "@/components/ui/lamp";
 const michroma = Michroma({ subsets: ["latin"], weight: "400" });
+const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], weight: ["400", "500", "600", "700"], display: "swap" });
 
 export default function SobreNosotros() {
   return (
@@ -22,18 +23,18 @@ export default function SobreNosotros() {
         }}>
           <div>
             <h1
-              className={`${michroma.className} leading-tight tracking-tight text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white`}
+              className={`${spaceGrotesk.className} leading-tight tracking-tight text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white font-bold`}
             >
               Sobre Medify
             </h1>
-            <p className="mt-4 sm:mt-6 text-justify sm:text-lg md:text-xl lg:text-2xl text-white/90">
+            <p className={`mt-4 sm:mt-6 text-justify sm:text-lg md:text-xl lg:text-2xl text-white/90 ${spaceGrotesk.className}`}>
               Somos especialistas en desarrollo de soluciones tecnológicas para
               el sector salud y especialidades que trabajen con sistema de
               reservas por medio de horas y calendarios, enfocados en crear
               sistemas seguros, intuitivos y conformes con los más altos
               estándares de confidencialidad.
             </p>
-            <p className="mt-4 sm:mt-6 text-justify sm:text-lg md:text-xl lg:text-2xl text-white/90">
+            <p className={`mt-4 sm:mt-6 text-justify sm:text-lg md:text-xl lg:text-2xl text-white/90 ${spaceGrotesk.className}`}>
               Nuestro objetivo es modernizar la práctica médica con herramientas
               digitales que optimizan la gestión clínica, mejoran la atención al
               paciente y simplifican los procesos administrativos de tu consulta
@@ -77,7 +78,7 @@ export default function SobreNosotros() {
         </div>
 
         <div>
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90">
+          <p className={`text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 ${spaceGrotesk.className}`}>
             Desarrollamos soluciones exclusivamente para el sector salud. Cada sistema 
             que creamos cumple con estrictos protocolos de seguridad, incluyendo 
             cumplimiento HIPAA, cifrado de extremo a extremo y auditorías de seguridad 
@@ -95,11 +96,11 @@ export default function SobreNosotros() {
         }}>
           <div className="text-center mb-12 md:mb-16">
             <h2
-              className={`${michroma.className} leading-tight tracking-tight text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white`}
+              className={`${spaceGrotesk.className} leading-tight tracking-tight text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white font-bold`}
             >
               Medify es lo que necesitas para tu consutla
             </h2>
-            <p className="mt-4 sm:mt-6 text-base sm:text-lg md:text-xl text-white/90 max-w-3xl mx-auto">
+            <p className={`mt-4 sm:mt-6 text-base sm:text-lg md:text-xl text-white/90 max-w-3xl mx-auto ${spaceGrotesk.className}`}>
               Solución tecnológica especializada para cada área de
               especialidad
             </p>
@@ -110,86 +111,95 @@ export default function SobreNosotros() {
               {
                 nombre: "Pediatría",
                 imagen: "/terapeuta.jpg",
-                descripcion:
-                  "Cuidado infantil especializado con seguimiento del desarrollo y sistemas de vacunación automatizados",
+               /* descripcion:
+                  "Cuidado infantil especializado con seguimiento del desarrollo y sistemas de agenda online",
                 tecnologias: [
-                  "Control Crecimiento",
+                  "Control niño sano",
                   "Control de Vacunas",
-                  "Portal Agenda",
-                  "Telemedicina",
-                ],
+                  "Agenda online",
+                  "Historial clinico",
+                ], */
               },
               
               {
                 nombre: "Medicina General",
                 imagen: "/medgen.jpg",
-                descripcion:
-                  "Historia clínica electrónica completa con telemedicina integrada y recetas digitales seguras",
+                /* descripcion:
+                  "Historia clínica en la nube, control ingreso de datos y seguimiento de pacientes",
                 tecnologias: [
                   "Historia Clínica",
-                  "Recetas Digitales",
-                  "Telemedicina",
-                  "Seguimiento",
-                  "HIPAA",
-                ],
+                  "Seguimiento de controles",
+                  "Agenda online",
+                  "Estado de Tratamiento",
+                ], */
               },
 
               {
                 nombre: "Oftalmología",
                 imagen: "/oftalmologo.jpg",
-                descripcion:
-                  "Gestión avanzada de exámenes visuales con tecnología láser y seguimiento de tratamientos oculares",
+                /* descripcion:
+                  "Gestión avanzada y seguimiento de tratamientos oculares",
                 tecnologias: [
-                  "Campimetría",
-                  "Tonometría",
-                  "Fondo de Ojo",
-                  "Cirugía Láser",
+                  "Historia clínica",
+                  "Seguimientos de Controles",
+                  "Agenda online",
                   "Diagnóstico",
-                ],
+                ], */
               },
 
               {
-                nombre: "Dermatología",
+                nombre: "Salón de maquillaje",
                 imagen: "/maquilladora2.jpg",
-                descripcion:
-                  "Análisis dermatológico con inteligencia artificial para prevención y detección temprana de cáncer de piel",
+               /* descripcion:
+                  "Maquillaje profesional con asesoría personalizada y gestión de citas eficiente",
                 tecnologias: [
-                  "Dermatoscopia",
-                  "Seguimiento Foto",
-                  "Tratamientos",
-                  "Prevención",
-                ],
+                  "Maquillajes Profesionales",
+                  "Maquillaje para eventos",
+                  "Agenda online",
+                  "Cuidado de la piel",
+                ], */
               },
               {
                 nombre: "Psiquiatría",
                 imagen: "/psico.jpg",
-                descripcion:
+               /* descripcion:
                   "Salud mental digital con telepsiquiatría segura y máxima protección de la privacidad del paciente",
-                tecnologias: ["Telepsiquiatría", "Evaluaciones", "Seguimiento"],
+                tecnologias: 
+                ["Telepsiquiatría", 
+                  "Evaluaciones", 
+                  "Seguimiento"
+                  ], */
               },
+
               {
                 nombre: "Nutrición",
                 imagen: "/nutri.jpg",
-                descripcion:
-                  "Planes nutricionales personalizados con IA y seguimiento continuo de objetivos de salud",
+                /* descripcion:
+                  "Planes nutricionales personalizados y seguimiento continuo de objetivos de salud",
                 tecnologias: [
                   "Seguimiento",
                   "Educación",
                   "Objetivos",
                   "Analytics",
-                ],
+                ], */
               },
+
               {
                 nombre: "Odontología",
                 imagen: "/odonto.jpg",
-                descripcion:
+                /*descripcion:
                   "Odontograma digital completo con planificación de tratamientos y seguimiento de ortodoncia",
-                tecnologias: ["Ortodoncia", "Recordatorios", "Seguimiento"],
+                tecnologias: 
+                ["Ortodoncia", 
+                  "Recordatorios", 
+                  "Seguimiento"
+                  ], */
               },
+
               {
-                nombre: "Medicina Deportiva",
+                nombre: "Kinesiología",
                 imagen: "/kine.jpg",
-                descripcion:
+               /* descripcion:
                   "Optimización del rendimiento deportivo con prevención de lesiones y rehabilitación especializada",
                 tecnologias: [
                   "Evaluación Física",
@@ -197,7 +207,7 @@ export default function SobreNosotros() {
                   "Performance",
                   "Rehabilitación",
                   "Analytics",
-                ],
+                ], */
               },
             ]}
           />
@@ -206,11 +216,11 @@ export default function SobreNosotros() {
       {/* Bloque 3: Misión / Visión / Valores / Propuesta de Valor - Azul marino más oscuro 
       <section className="relative overflow-hidden px-6 sm:px-8 md:px-12 lg:px-16 py-8 sm:py-12 md:py-16 lg:py-20 bg-gradient-to-br from-slate-900/80 via-blue-950/90 to-slate-950/80 ring-1 ring-blue-600/20 shadow-2xl shadow-blue-950/60 backdrop-blur-sm rounded-3xl md:rounded-[2.5rem]">
         <h2
-          className={`${michroma.className} leading-tight tracking-tight text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white text-center`}
+          className={`${spaceGrotesk.className} leading-tight tracking-tight text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white text-center font-bold`}
         >
           Nuestro Compromiso con la Salud
         </h2>
-        <p className="mt-4 sm:mt-6 text-center text-base sm:text-lg md:text-xl text-white/90 max-w-3xl mx-auto">
+        <p className={`mt-4 sm:mt-6 text-center text-base sm:text-lg md:text-xl text-white/90 max-w-3xl mx-auto ${spaceGrotesk.className}`}>
           Especializados en tecnología médica que combina innovación, seguridad
           y cumplimiento normativo para entregar soluciones que transforman la
           práctica médica.
@@ -220,11 +230,11 @@ export default function SobreNosotros() {
           -- Misión 
           <div className="group rounded-2xl ring-1 ring-blue-500/20 bg-gradient-to-br from-blue-900/40 to-slate-900/40 p-6 hover:ring-blue-400/60 hover:bg-blue-900/50 transition-all duration-300 shadow-lg hover:shadow-blue-500/20">
             <h3
-              className={`${michroma.className} text-xl sm:text-2xl text-white flex items-center gap-2`}
+              className={`${spaceGrotesk.className} text-xl sm:text-2xl text-white flex items-center gap-2 font-semibold`}
             >
               <span aria-hidden>🎯</span> Misión
             </h3>
-            <p className="mt-3 text-white/85">
+            <p className={`mt-3 text-white/85 ${spaceGrotesk.className}`}>
               Desarrollar sistemas médicos digitales seguros que optimizan la
               gestión clínica, mejoran la experiencia del paciente y empoderan a
               los profesionales de la salud con herramientas tecnológicas de
@@ -235,11 +245,11 @@ export default function SobreNosotros() {
           -- Visión 
           <div className="group rounded-2xl ring-1 ring-blue-500/20 bg-gradient-to-br from-blue-900/40 to-slate-900/40 p-6 hover:ring-blue-400/60 hover:bg-blue-900/50 transition-all duration-300 shadow-lg hover:shadow-blue-500/20">
             <h3
-              className={`${michroma.className} text-xl sm:text-2xl text-white flex items-center gap-2`}
+              className={`${spaceGrotesk.className} text-xl sm:text-2xl text-white flex items-center gap-2 font-semibold`}
             >
               <span aria-hidden>👁</span> Visión
             </h3>
-            <p className="mt-3 text-white/85">
+            <p className={`mt-3 text-white/85 ${spaceGrotesk.className}`}>
               Ser líderes en Latinoamérica en tecnología médica, democratizando
               el acceso a soluciones digitales avanzadas para clínicas,
               hospitales y profesionales de la salud independientes.
@@ -249,11 +259,11 @@ export default function SobreNosotros() {
           -- Valores 
           <div className="group rounded-2xl ring-1 ring-blue-500/20 bg-gradient-to-br from-blue-900/40 to-slate-900/40 p-6 hover:ring-blue-400/60 hover:bg-blue-900/50 transition-all duration-300 shadow-lg hover:shadow-blue-500/20">
             <h3
-              className={`${michroma.className} text-xl sm:text-2xl text-white flex items-center gap-2`}
+              className={`${spaceGrotesk.className} text-xl sm:text-2xl text-white flex items-center gap-2 font-semibold`}
             >
               <span aria-hidden>💎</span> Valores
             </h3>
-            <ul className="mt-3 space-y-2 text-white/85">
+            <ul className={`mt-3 space-y-2 text-white/85 ${spaceGrotesk.className}`}>
               <li>
                 <strong className="text-white">Confidencialidad:</strong>{" "}
                 protección absoluta de datos médicos.
@@ -280,11 +290,11 @@ export default function SobreNosotros() {
           -- Propuesta de Valor
           <div className="group rounded-2xl ring-1 ring-blue-500/20 bg-gradient-to-br from-blue-900/40 to-slate-900/40 p-6 hover:ring-blue-400/60 hover:bg-blue-900/50 transition-all duration-300 shadow-lg hover:shadow-blue-500/20">
             <h3
-              className={`${michroma.className} text-xl sm:text-2xl text-white flex items-center gap-2`}
+              className={`${spaceGrotesk.className} text-xl sm:text-2xl text-white flex items-center gap-2 font-semibold`}
             >
               <span aria-hidden>⚡</span> Propuesta de Valor
             </h3>
-            <p className="mt-3 text-white/85">
+            <p className={`mt-3 text-white/85 ${spaceGrotesk.className}`}>
               Sistemas médicos personalizados que garantizan seguridad de datos,
               cumplimiento HIPAA y optimización de flujos de trabajo clínicos,
               permitiendo que los médicos se enfoquen en lo más importante: sus
@@ -304,7 +314,7 @@ export default function SobreNosotros() {
             duration: 0.8,
             ease: "easeInOut",
           }}
-          className={`${michroma.className} rounded-4xl mt-8 bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight text-transparent`}
+          className={`${spaceGrotesk.className} rounded-4xl mt-8 bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-transparent`}
         >
           ¿Listo para modernizar tu consulta? 
         </motion.h2>

@@ -1,6 +1,7 @@
 "use client";
-import { Michroma } from "next/font/google";
+import { Michroma, Space_Grotesk } from "next/font/google";
 const michroma = Michroma({ subsets: ["latin"], weight: "400", display: "swap" });
+const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], weight: ["400", "500", "600", "700"], display: "swap" });
 
 import Image from "next/image";
 import { Link } from 'next-view-transitions';
@@ -46,11 +47,17 @@ export default function Portada() {
         <div className="absolute inset-0 bg-gradient-to-b from-[#0B0F1A]/5 via-[#0B0F1A]/10 to-black" />
       </div> */}
 
+      {/* Gradiente inferior sutil para transición */}
+      <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-[#0f172a]/80 via-[#0f172a]/45 to-transparent pointer-events-none z-5" />
+      
+      {/* Línea decorativa inferior */}
+      <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-blue-400/40 to-transparent z-10" />
+
       {/* Contenido */}
       <div className="mt-16 relative w-full px-6 sm:px-6 md:px-8 lg:px-12 pt-16 pb-24 sm:pt-24 sm:pb-16">
         {/* Cinta/top badge */}
         <div className="flex justify-center">
-          <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-[13px] font-semibold text-white/80 backdrop-blur">
+          <span className={`inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-[13px] font-semibold text-white/80 backdrop-blur ${spaceGrotesk.className}`}>
             <span className="h-1.5 w-1.5 rounded-full bg-blue-400 animate-pulse" />
             El control total de tu propia consulta Médica
           </span>
@@ -65,7 +72,7 @@ export default function Portada() {
             <LustreText text="M e d i f y" />
           </h1>
 
-          <p className="text-lg sm:text-xl md:text-2xl text-white/80 max-w-3xl mx-auto mb-12 leading-relaxed">
+          <p className={`text-lg sm:text-xl md:text-2xl text-white/80 max-w-3xl mx-auto mb-12 leading-relaxed ${spaceGrotesk.className}`}>
             La herramienta perfecta para tener el control de tus consultas médicas, pacientes y reservas,
             adaptando tus necesidades a tu servicio y manteniendo tus horarios de forma profesional.
           </p>
@@ -86,7 +93,7 @@ export default function Portada() {
               href="https://wa.me/56977889900?text=Quiero%20cotizar%20una%20solución%20médica%20de%20Medify"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-xl px-8 py-4 text-lg font-semibold text-white bg-blue-5 hover:bg-blue-500 shadow-[0_0_25px_rgba(59,130,246,0.8)] ring-1 ring-blue-400/40 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400"
+              className={`inline-flex items-center gap-2 rounded-xl px-8 py-4 text-lg font-semibold text-white bg-blue-5 hover:bg-blue-500 shadow-[0_0_25px_rgba(59,130,246,0.8)] ring-1 ring-blue-400/40 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 ${spaceGrotesk.className}`}
               aria-label="Cotizar solución médica por WhatsApp"
             >
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5">
@@ -97,7 +104,7 @@ export default function Portada() {
 
             <Link
               href="/servicios"
-              className="inline-flex items-center rounded-xl px-8 py-4 text-lg font-semibold text-blue-100 border border-blue-400/40 bg-white/5 backdrop-blur-md shadow-[0_6px_24px_rgba(0,0,0,0.35)] hover:bg-white/10 hover:text-white transition-all"
+              className={`inline-flex items-center rounded-xl px-8 py-4 text-lg font-semibold text-blue-100 border border-blue-400/40 bg-white/5 backdrop-blur-md shadow-[0_6px_24px_rgba(0,0,0,0.35)] hover:bg-white/10 hover:text-white transition-all ${spaceGrotesk.className}`}
             >
               Nuestros servicios
             </Link>

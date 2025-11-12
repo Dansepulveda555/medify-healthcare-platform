@@ -3,9 +3,10 @@
 import Aurora from "@/componentes/Aurora";
 import SplashCursor from "@/componentes/Splash";
 import Image from "next/image";
-import { Michroma } from "next/font/google";
+import { Michroma, Space_Grotesk } from "next/font/google";
 import GradientText from "@/componentes/GradientText";
 const michroma = Michroma({ subsets: ["latin"], weight: "400" });
+const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], weight: ["400", "500", "600", "700"], display: "swap" });
 import AccordionUsage from "@/componentes/Acordeon";
 import BotonMui from "@/componentes/BotonMui";
 import Threads from "@/componentes/Threads";
@@ -23,7 +24,7 @@ export default function PaginasWeb() {
             amplitude={1.0}
             speed={0.5}
           />
-          <h1 className={`${michroma.className} titulosResponsive`}>
+          <h1 className={`${spaceGrotesk.className} titulosResponsive font-bold`}>
           
             Página Web Profesional Multipágina
           </h1>
@@ -58,7 +59,7 @@ export default function PaginasWeb() {
           </div>
 
           <div className="flex-col justify-items-center space-y-8 ">
-            <h3 className={`${michroma.className} titulosResponsive`}>
+            <h3 className={`${spaceGrotesk.className} titulosResponsive font-semibold`}>
               Incluye
             </h3>
             <div className="flex-1 estiloPlanesCayan">

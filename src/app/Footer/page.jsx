@@ -32,7 +32,7 @@ export default function Footer() {
                   hecha para ti con
                 </span>
                 <span className="block mt-4">
-                  <GradientText>Medify</GradientText>
+                  <GradientText>M e d i f y</GradientText>
                 </span>
               </h2>
 

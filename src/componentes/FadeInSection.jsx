@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 const FadeInSection = ({ 
   children, 
   delay = 0,
-  duration = 1,
+  duration = 1.2,
   y = 50,
   className = ""
 }) => {
@@ -23,25 +23,30 @@ const FadeInSection = ({
     
     if (childElements.length === 0) return;
 
-    // Animación de fade-in + slide-up al hacer scroll SOLO para los elementos hijos
+    // Animación ultra impactante: fade + slide + scale + blur
     gsap.fromTo(
       childElements,
       {
         opacity: 0,
         y: y,
+        scale: 0.9,
+        filter: 'blur(10px)',
       },
       {
         opacity: 1,
         y: 0,
+        scale: 1,
+        filter: 'blur(0px)',
         duration: duration,
         delay: delay,
-        ease: 'power2.out',
-        stagger: 0.15, // Los elementos van apareciendo uno tras otro
+        ease: 'power3.out',
+        stagger: 0.2, // Stagger más pronunciado para efecto dramático
         scrollTrigger: {
           trigger: element,
-          start: 'top 85%', // Comienza cuando el top del elemento está al 85% del viewport
-          end: 'top 50%',
+          start: 'top 90%', // Inicia antes para que sea más visible
+          end: 'top 40%',
           toggleActions: 'play none none reverse',
+          scrub: 0.5, // Suaviza la animación con el scroll
         },
       }
     );

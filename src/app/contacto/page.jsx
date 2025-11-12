@@ -1,7 +1,8 @@
 "use client";
-import { Michroma } from "next/font/google";
+import { Michroma, Space_Grotesk } from "next/font/google";
 import { Link } from 'next-view-transitions';
 const michroma = Michroma({ subsets: ["latin"], weight: "400", display: "swap" });
+const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], weight: ["400", "500", "600", "700"], display: "swap" });
 
 export default function Contacto() {
   return (
@@ -15,12 +16,12 @@ export default function Contacto() {
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
-            <h1 className={`${michroma.className} text-4xl md:text-6xl font-extrabold text-white leading-tight tracking-tight`}>
+            <h1 className={`${spaceGrotesk.className} text-4xl md:text-6xl font-bold text-white leading-tight tracking-tight`}>
               <span className="bg-gradient-to-r from-[#4a8da7] to-[#2a5d77] bg-clip-text text-transparent">
                 Contacto Médico
               </span>
             </h1>
-            <p className="mt-6 text-xl text-white/85 max-w-3xl mx-auto">
+            <p className={`mt-6 text-xl text-white/85 max-w-3xl mx-auto ${spaceGrotesk.className}`}>
               Conéctate con nuestro equipo especializado en soluciones Tegnologicas. 
               Estamos aquí para digitalizar tu práctica médica.
             </p>
@@ -29,7 +30,7 @@ export default function Contacto() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Información de Contacto */}
             <div className="space-y-8">
-              <h2 className={`${michroma.className} text-2xl text-white mb-6`}>
+              <h2 className={`${spaceGrotesk.className} text-2xl text-white mb-6 font-bold`}>
                 Información de Contacto
               </h2>
               
@@ -129,7 +130,7 @@ export default function Contacto() {
 
             {/* Formulario de Contacto */}
             <div className="rounded-3xl ring-1 ring-white/10 bg-white/5 backdrop-blur-md p-8 shadow-xl">
-              <h2 className={`${michroma.className} text-2xl text-white mb-6`}>
+              <h2 className={`${spaceGrotesk.className} text-2xl text-white mb-6 font-bold`}>
                 Solicitar Información
               </h2>
               
@@ -243,10 +244,10 @@ export default function Contacto() {
           {/* Call to Action Bottom */}
           <div className="mt-16 text-center">
             <div className="rounded-3xl ring-1 ring-white/10 bg-gradient-to-r from-blue-500/20 to-teal-600/20 backdrop-blur-md p-8 shadow-xl">
-              <h3 className={`${michroma.className} text-2xl text-white mb-4`}>
+              <h3 className={`${spaceGrotesk.className} text-2xl text-white mb-4 font-semibold`}>
                 ¿Listo para digitalizar tu práctica médica?
               </h3>
-              <p className="text-white/85 mb-6 max-w-2xl mx-auto">
+              <p className={`text-white/85 mb-6 max-w-2xl mx-auto ${spaceGrotesk.className}`}>
                 Únete a los profesionales de la salud que ya confían en Medify para optimizar 
                 su gestión médica y mejorar la atención a sus pacientes.
               </p>

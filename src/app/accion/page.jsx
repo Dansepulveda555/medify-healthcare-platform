@@ -1,7 +1,8 @@
 "use client";
-import { Michroma } from "next/font/google";
+import { Michroma, Space_Grotesk } from "next/font/google";
 import { Link } from 'next-view-transitions';
 const michroma = Michroma({ subsets: ["latin"], weight: "400", display: "swap" });
+const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], weight: ["400", "500", "600", "700"], display: "swap" });
 
 export default function Accion() {
   return (
@@ -16,7 +17,7 @@ export default function Accion() {
           
           {/* Main CTA Section */}
           <div className="text-center mb-16">
-            <h1 className={`${michroma.className} text-4xl md:text-7xl font-extrabold text-white leading-tight tracking-tight mb-8`}>
+            <h1 className={`${spaceGrotesk.className} text-4xl md:text-7xl font-bold text-white leading-tight tracking-tight mb-8`}>
               <span className="block">Transforma tu</span>
               <span className="bg-gradient-to-r from-[#4a8da7] to-[#2a5d77] bg-clip-text text-transparent">
                 Práctica Médica
@@ -68,8 +69,8 @@ export default function Accion() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                <h3 className={`${michroma.className} text-xl text-white mb-4`}>¡Solo por tiempo limitado!</h3>
-                <p className="text-white/85 mb-4">
+                <h3 className={`${spaceGrotesk.className} text-xl text-white mb-4 font-semibold`}>¡Solo por tiempo limitado!</h3>
+                <p className={`text-white/85 mb-4 ${spaceGrotesk.className}`}>
                   Implementación gratuita para los primeros 10 profesionales médicos
                 </p>
                 <div className="bg-red-500/20 rounded-xl p-4">
@@ -153,8 +154,8 @@ export default function Accion() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
               </div>
-              <h3 className={`${michroma.className} text-2xl text-white mb-4`}>Garantía 100% Sin Riesgo</h3>
-              <p className="text-white/85 text-lg max-w-2xl mx-auto">
+              <h3 className={`${spaceGrotesk.className} text-2xl text-white mb-4 font-semibold`}>Garantía 100% Sin Riesgo</h3>
+              <p className={`text-white/85 text-lg max-w-2xl mx-auto ${spaceGrotesk.className}`}>
                 Si en 30 días no ves mejoras en tu gestión médica, te devolvemos el 100% de tu inversión. 
                 Sin preguntas, sin complicaciones.
               </p>
@@ -163,7 +164,7 @@ export default function Accion() {
 
           {/* Final CTA */}
           <div className="text-center">
-            <h2 className={`${michroma.className} text-3xl md:text-5xl text-white mb-8`}>
+            <h2 className={`${spaceGrotesk.className} text-3xl md:text-5xl text-white mb-8 font-bold`}>
               ¿Qué Esperas Para <span className="text-blue-400">Modernizar</span> Tu Consulta?
             </h2>
             

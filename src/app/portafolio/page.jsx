@@ -3,9 +3,10 @@ import TextType from '@/componentes/TextType';
 import FlowingMenu from "@/componentes/FlowingMenu";
 import { func } from 'prop-types';
 import Image from 'next/image';
-import { Michroma } from "next/font/google";
+import { Michroma, Space_Grotesk } from "next/font/google";
 import GradientText from "@/componentes/GradientText";
 const michroma = Michroma({ subsets: ["latin"], weight: "400" });
+const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], weight: ["400", "500", "600", "700"], display: "swap" });
 
 export default function Portafolio(){
   return(
@@ -17,10 +18,10 @@ export default function Portafolio(){
       
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <h1 className={`${michroma.className} text-4xl md:text-5xl font-bold text-white mb-4`}>
+          <h1 className={`${spaceGrotesk.className} text-4xl md:text-5xl font-bold text-white mb-4`}>
             Portafolio en Construcción
           </h1>
-          <p className="text-gray-400 text-lg">
+          <p className={`text-gray-400 text-lg ${spaceGrotesk.className}`}>
             Esta sección estará disponible próximamente
           </p>
         </div>
@@ -28,7 +29,7 @@ export default function Portafolio(){
       
       CÓDIGO ORIGINAL COMENTADO - NO BORRAR
       
-      <h1 className={`${michroma.className} py-10 text-4xl md:text-5xl text-center font-bold text-white`}>
+      <h1 className={`${spaceGrotesk.className} py-10 text-4xl md:text-5xl text-center font-bold text-white`}>
         Casos de Éxito Médico
       </h1>
       <p className="max-w-2xl mx-auto mb-12 text-center text-gray-400 text-lg">

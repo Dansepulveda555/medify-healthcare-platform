@@ -1,4 +1,5 @@
 "use client";
+import { Space_Grotesk } from "next/font/google";
 import Portada from "./portada/page";
 import SobreNosotros from "./sobreNosotros/page";
 import Servicios from "./servicios/page";
@@ -8,6 +9,8 @@ import FadeInSection from "../componentes/FadeInSection";
 import Image from "next/image";
 import BotonBlanco from "@/componentes/BotonBlanco";
 import Link from "next/link";
+
+const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], weight: ["400", "500", "600", "700"], display: "swap" });
 
 export default function Home() {
   return (
@@ -27,40 +30,24 @@ export default function Home() {
         <Portada></Portada>
       </div>
       </FadeInSection>
-      <FadeInSection delay={0.2}>
+      <FadeInSection delay={0} y={80}>
       <div className="-mx-4 sm:-mx-6 md:-mx-8 lg:-mx-12">
-      <div
-  className="
-    relative overflow-hidden
-    bg-[url('/digita.jpg')] bg-cover bg-center w-full ring-0 ring-white/10 rounded-0xl shadow-1xl"
->
-  <div
-    className="absolute inset-0 bg-gradient-to-t from-[#0B0F1A]/05 via-[#0B0F1A]/10 to-black"
-    aria-hidden="true"
-  ></div>
+      <div className="relative grid grid-cols-1 md:grid-cols-5 items-center px-6 md:px-10 lg:px-14 py-16 md:py-32">
+  <div className="col-span-6">
+    <h2 className={`text-3xl md:text-6xl font-extrabold text-white tracking-tight leading-snug ${spaceGrotesk.className}`}>
+      ¿Necesitas <strong className="bg-gradient-to-r from-blue-400 to-teal-500 bg-clip-text text-transparent">digitalizar</strong> tu práctica médica?
+    </h2>
+    <p className={`mt-6 text-justify md:text-2xl text-white/85 leading-relaxed max-w-3xl ${spaceGrotesk.className}`}>
+      Moderniza tu consulta con tecnología médica especializada. Desde sistemas de gestión de pacientes hasta reservas en linea: todas nuestras soluciones están diseñadas para optimizar la atención médica, proteger datos sensibles y darte la mejor herramienta para llevar tu gestión médica al siguiente nivel.
+    </p>
 
-  <div className="relative">
-    {/* Black gradient overlay at bottom */}
-    <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/50 to-transparent pointer-events-none" />
-
-    <div className="relative grid grid-cols-1 md:grid-cols-5 items-center px-6 md:px-10 lg:px-14 py-16 md:py-32">
-      <div className="col-span-6">
-        <h2 className="text-3xl md:text-6xl font-extrabold text-white tracking-tight leading-snug">
-          ¿Necesitas <strong className="bg-gradient-to-r from-blue-400 to-teal-500 bg-clip-text text-transparent">digitalizar</strong> tu práctica médica?
-        </h2>
-        <p className="mt-6 text-justify md:text-2xl text-white/85 leading-relaxed max-w-3xl">
-          Moderniza tu consulta con tecnología médica especializada. Desde sistemas de gestión de pacientes hasta reservas en linea: todas nuestras soluciones están diseñadas para optimizar la atención médica, proteger datos sensibles y darte la mejor herramienta para llevar tu gestión médica al siguiente nivel.
-        </p>
-
-        <div className="mt-12 flex justify-center md:justify-end">
-          <Link href={"/comprar"}>
-            <BotonBlanco contenido={"Adquirir Medify"} />
-          </Link>
-        </div>
-      </div>
-      <div className="hidden md:block"></div>
+    <div className="mt-12 flex justify-center md:justify-end">
+      <Link href={"/comprar"}>
+        <BotonBlanco contenido={"Adquirir Medify"} />
+      </Link>
     </div>
   </div>
+  <div className="hidden md:block"></div>
 </div>
       </div>
       </FadeInSection>
