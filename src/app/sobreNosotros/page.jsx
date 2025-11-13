@@ -160,7 +160,7 @@ export default function SobreNosotros() {
                 ], */
               },
               {
-                nombre: "Psiquiatría",
+                nombre: "Psicología",
                 imagen: "/psico.jpg",
                /* descripcion:
                   "Salud mental digital con telepsiquiatría segura y máxima protección de la privacidad del paciente",
