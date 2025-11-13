@@ -98,7 +98,7 @@ export default function SobreNosotros() {
             <h2
               className={`${spaceGrotesk.className} leading-tight tracking-tight text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white font-bold`}
             >
-              Medify es lo que necesitas para tu consutla
+              Medify es lo que tu consulta necesita
             </h2>
             <p className={`mt-4 sm:mt-6 text-base sm:text-lg md:text-xl text-white/90 max-w-3xl mx-auto ${spaceGrotesk.className}`}>
               Solución tecnológica especializada para cada área de

@@ -33,7 +33,12 @@ export const metadata = {
     'SEO',
     'tecnología médica',
     'salud digital',
-    'Chile'
+    'Chile',
+    'Agenda médica',
+    'Software para clínicas',
+    'Gestión de consultas',
+    'Historia clínica electrónica',
+    'Citas médicas en línea',
   ],
   openGraph: {
     type: 'website',
@@ -125,7 +130,7 @@ export default function RootLayout({ children }) {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              "name": "Medify Healthcare Solutions",
+              "name": "Medify.cl",
               "url": process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
               "logo": (process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000") + "/og.jpg",
             "sameAs": [
@@ -142,7 +147,7 @@ export default function RootLayout({ children }) {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebSite",
-            "name": "Medify Healthcare Solutions",
+            "name": "Medify.cl",
             "url": process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
             "potentialAction": {
               "@type": "SearchAction",

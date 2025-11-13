@@ -177,7 +177,7 @@ export default function CarruselInfinito({ especialidades }) {
 
       {/* Indicador profesional */}
       <div className="text-center mt-8 text-blue-400/60 text-sm font-medium tracking-wider uppercase">
-        {isDragging ? "↔ Arrastrando" : isPaused ? "◼ Pausado - Arrastra para explorar" : "▶ Desplazamiento continuo"}
+        {isDragging ? "↔ Arrastrando" : isPaused ? "◼ Arrastra para explorar" : "▶ Desplazamiento automático"}
       </div>
 
       {/* CSS para scrollbar oculto */}
